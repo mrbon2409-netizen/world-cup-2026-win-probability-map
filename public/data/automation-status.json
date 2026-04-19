@@ -1,0 +1,14 @@
+{
+  "automationEnabled": true,
+  "timezone": "America/Toronto",
+  "scheduleLabel": "Daily at 08:00 America/Toronto",
+  "lastAutoUpdateAt": "2026-04-19T18:39:56-04:00",
+  "lastSuccessfulSnapshotDate": "2026-04-19",
+  "nextScheduledUpdateAt": "2026-04-20T08:00:00-04:00",
+  "dataSourceStatus": "fresh",
+  "dataSourceLabel": "Local master odds file and generated daily snapshot history",
+  "runMode": "Local scheduled build",
+  "buildTarget": "dist",
+  "lastBuildStatus": "success",
+  "note": "The daily update script refreshes current data, appends or replaces the selected snapshot date, updates automation status, and syncs embedded static JSON for file-based viewing."
+}

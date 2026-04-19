@@ -1,0 +1,42 @@
+{
+  "name": "world-cup-2026-win-probability-map",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "build:static": "node scripts/sync-static-history.mjs && npm run build",
+    "preview": "vite preview",
+    "data:build": "node scripts/build-current-data.mjs",
+    "history:seed": "node scripts/seed-history.mjs",
+    "history:append": "node scripts/append-snapshot.mjs",
+    "snapshot:daily": "node scripts/update-daily-snapshot.mjs",
+    "snapshot:daily:build": "npm run snapshot:daily && npm run build:static"
+  },
+  "dependencies": {
+    "@types/topojson-client": "^3.1.5",
+    "counterapi": "^2.1.2",
+    "flag-icons": "^7.5.0",
+    "html-to-image": "^1.11.11",
+    "maplibre-gl": "^5.23.0",
+    "papaparse": "^5.4.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-simple-maps": "^3.0.0",
+    "recharts": "^2.12.7",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/papaparse": "^5.3.14",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.9",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.2"
+  }
+}
