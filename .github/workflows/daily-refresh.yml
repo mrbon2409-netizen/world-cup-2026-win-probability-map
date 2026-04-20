@@ -34,4 +34,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: daily World Cup snapshot refresh"
-          file_pattern: public/data/*.json src/data/*.json public/worldcup2026_odds.csv dist/**
+          file_pattern: public/data/*.json src/data/*.json public/worldcup2026_odds.csv
