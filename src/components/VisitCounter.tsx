@@ -1,5 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
-import { Counter } from "counterapi";
+import { useEffect, useState } from "react";
 
 type CounterState =
   | { status: "preview"; count: number; message: string }
@@ -20,25 +19,7 @@ function isPreviewEnvironment() {
   );
 }
 
-function getResultValue(result: unknown): number | null {
-  if (typeof result !== "object" || result === null) {
-    return null;
-  }
-
-  const candidate = result as { value?: unknown; data?: unknown };
-  if (typeof candidate.value === "number") {
-    return candidate.value;
-  }
-
-  if (typeof candidate.data === "number") {
-    return candidate.data;
-  }
-
-  return null;
-}
-
 export function VisitCounter() {
-  const workspace = (import.meta.env.VITE_COUNTER_WORKSPACE ?? "").trim();
   const counterName = (import.meta.env.VITE_COUNTER_NAME ?? "world-cup-2026-profile").trim();
   const [state, setState] = useState<CounterState>(() => {
     if (isPreviewEnvironment()) {
@@ -53,60 +34,50 @@ export function VisitCounter() {
       };
     }
 
-    if (!workspace) {
-      return {
-        status: "disabled",
-        message: "Visitor counter is ready to activate after CounterAPI workspace setup.",
-      };
-    }
-
     return {
       status: "loading",
       message: "Loading visit count...",
     };
   });
 
-  const counter = useMemo(() => {
-    if (!workspace) {
-      return null;
-    }
-
-    return new Counter({ workspace });
-  }, [workspace]);
-
   useEffect(() => {
-    if (!counter || !workspace || isPreviewEnvironment()) {
+    if (isPreviewEnvironment()) {
       return;
     }
 
-    const activeCounter = counter;
     let cancelled = false;
     const sessionKey = `visit-counter:${window.location.pathname}:${counterName}`;
     const hasCountedThisSession = sessionStorage.getItem(sessionKey) === "1";
 
     async function loadCounter() {
       try {
-        const result = hasCountedThisSession
-          ? await activeCounter.get(counterName)
-          : await activeCounter.up(counterName);
+        const endpoint = hasCountedThisSession
+          ? "/.netlify/functions/page-views?mode=get"
+          : "/.netlify/functions/page-views?mode=up";
+        const response = await fetch(endpoint, {
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        const result = (await response.json()) as {
+          count?: number;
+          error?: string;
+        };
+
+        if (!response.ok || typeof result.count !== "number") {
+          throw new Error(result.error ?? "Counter request failed.");
+        }
 
         if (!hasCountedThisSession) {
           sessionStorage.setItem(sessionKey, "1");
         }
 
-        const value = getResultValue(result);
         if (!cancelled) {
-          setState(
-            value === null
-              ? {
-                  status: "error",
-                  message: "Visit count is unavailable right now.",
-                }
-              : {
-                  status: "ready",
-                  count: value,
-                },
-          );
+          setState({
+            status: "ready",
+            count: result.count,
+          });
         }
       } catch {
         if (!cancelled) {
@@ -123,7 +94,7 @@ export function VisitCounter() {
     return () => {
       cancelled = true;
     };
-  }, [counter, counterName, workspace]);
+  }, [counterName]);
 
   return (
     <div className="flex justify-center">
