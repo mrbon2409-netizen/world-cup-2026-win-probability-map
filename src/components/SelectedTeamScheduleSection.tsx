@@ -21,7 +21,7 @@ export function SelectedTeamScheduleSection({
           <h2 className="mt-4 text-2xl font-semibold text-ink">{selectedTeam.team} Match Calendar</h2>
         </div>
         <p className="max-w-sm text-sm text-slate-500">
-          This panel tracks the selected team's three group-stage fixtures in the current tournament layout.
+          This panel follows the selected team's official three-match group schedule, with kickoff times shown in the viewer's timezone.
         </p>
       </div>
 

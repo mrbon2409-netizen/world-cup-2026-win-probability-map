@@ -43,7 +43,8 @@ export function MatchRow({ match }: { match: ScheduleMatch }) {
 
       <div className="text-sm text-slate-600 2xl:text-right">
         <p className="font-semibold text-ink">{match.kickoffLabel}</p>
-        <p>{match.venue}</p>
+        <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Your local time</p>
+        <p className="mt-1">{match.venue}</p>
         <span className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusClassName(match.status)}`}>
           {match.status}
         </span>
@@ -66,7 +67,7 @@ export function ScheduleSection({ matches }: ScheduleSectionProps) {
           <h2 className="mt-4 text-2xl font-semibold text-ink">Tournament Schedule Pulse</h2>
         </div>
         <p className="max-w-sm text-sm text-slate-500">
-          A generated tournament calendar tied to the current 48-team group layout, so the odds dashboard can be read alongside upcoming fixtures.
+          Official group-stage fixtures now anchor this panel, while kickoff times automatically shift to the viewer's local timezone.
         </p>
       </div>
 

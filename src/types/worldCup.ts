@@ -87,8 +87,10 @@ export interface ScheduleMatch {
   group: string;
   matchday: number;
   kickoffDate: string;
+  kickoffUtc: string;
   kickoffLabel: string;
   venue: string;
+  hostTimeZone: string;
   teamA: TeamSnapshot;
   teamB: TeamSnapshot;
   status: MatchStatus;

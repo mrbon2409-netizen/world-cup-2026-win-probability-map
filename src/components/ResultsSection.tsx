@@ -50,7 +50,8 @@ function ResultScore({ match, selectedTeamIso }: { match: ScheduleMatch; selecte
 
       <div className="text-sm text-slate-600 md:text-right">
         <p className="font-semibold text-ink">{match.kickoffLabel}</p>
-        <p>{match.venue}</p>
+        <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Your local time</p>
+        <p className="mt-1">{match.venue}</p>
       </div>
     </div>
   );
