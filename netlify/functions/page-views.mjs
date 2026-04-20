@@ -1,12 +1,11 @@
 function json(statusCode, body) {
-  return {
-    statusCode,
+  return new Response(JSON.stringify(body), {
+    status: statusCode,
     headers: {
       "Content-Type": "application/json",
       "Cache-Control": "no-store",
     },
-    body: JSON.stringify(body),
-  };
+  });
 }
 
 function getCount(payload) {
