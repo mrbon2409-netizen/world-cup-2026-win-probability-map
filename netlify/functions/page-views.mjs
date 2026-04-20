@@ -17,12 +17,28 @@ function getCount(payload) {
     return payload.value;
   }
 
+  if (typeof payload.count === "number") {
+    return payload.count;
+  }
+
+  if (typeof payload.up_count === "number") {
+    return payload.up_count;
+  }
+
   if (typeof payload.data === "number") {
     return payload.data;
   }
 
   if (payload.data && typeof payload.data.value === "number") {
     return payload.data.value;
+  }
+
+  if (payload.data && typeof payload.data.count === "number") {
+    return payload.data.count;
+  }
+
+  if (payload.data && typeof payload.data.up_count === "number") {
+    return payload.data.up_count;
   }
 
   return null;
