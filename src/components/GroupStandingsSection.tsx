@@ -46,7 +46,7 @@ export function GroupStandingsSection({
         </p>
       </div>
 
-      <div className="mt-6 grid gap-5 xl:grid-cols-2">
+      <div className="mt-6 grid gap-5 xl:grid-cols-2 2xl:grid-cols-3">
         {groupKeys.map((group) => (
           <article
             key={group}

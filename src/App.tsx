@@ -1,13 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AutomationStatusCard } from "./components/AutomationStatusCard";
-import { ComparisonPanel } from "./components/ComparisonPanel";
+import { SnapshotComparisonCard, TeamComparisonCard } from "./components/ComparisonPanel";
 import { FilterBar } from "./components/FilterBar";
 import { GroupStandingsSection } from "./components/GroupStandingsSection";
 import { HistoryTrendChart } from "./components/HistoryTrendChart";
 import { ProbabilityBarChart } from "./components/ProbabilityBarChart";
 import { CompletedMatchesSection, RecentResultsSection } from "./components/ResultsSection";
 import { ScheduleSection } from "./components/ScheduleSection";
-import { SelectedTeamPanel } from "./components/SelectedTeamPanel";
+import { SelectedTeamSummaryCard, StageTableCard } from "./components/SelectedTeamPanel";
 import { SelectedTeamScheduleSection } from "./components/SelectedTeamScheduleSection";
 import { SummaryCards } from "./components/SummaryCards";
 import { TeamsTable } from "./components/TeamsTable";
@@ -126,6 +126,17 @@ export default function App() {
     [filteredBaseTeams, scope],
   );
 
+  useEffect(() => {
+    if (filteredBaseTeams.length === 0) {
+      return;
+    }
+
+    const selectedStillVisible = filteredBaseTeams.some((team) => team.iso3 === selectedTeamIso);
+    if (!selectedStillVisible) {
+      setSelectedTeamIso(filteredBaseTeams[0]?.iso3 ?? null);
+    }
+  }, [filteredBaseTeams, selectedTeamIso]);
+
   const previousSnapshot = useMemo(
     () =>
       activeSnapshot
@@ -228,52 +239,6 @@ export default function App() {
               automationStatus={automationStatus}
             />
 
-            <section className="card p-6">
-              <SectionHeader
-                eyebrow="Controls"
-                title="Snapshot Controls"
-                description="Choose the date, filter the field, switch the color mode, and export the current dashboard view without jumping between disconnected controls."
-              />
-
-              <div className="mt-6">
-                <FilterBar
-                  confederations={confederations}
-                  groups={groups}
-                  snapshotDates={snapshotDates}
-                  selectedDate={activeSnapshot.metadata.snapshotDate}
-                  currentDate={todayIso}
-                  confederation={confederation}
-                  group={group}
-                  scope={scope}
-                  mode={mode}
-                  onDateChange={handleDateChange}
-                  onConfederationChange={setConfederation}
-                  onGroupChange={setGroup}
-                  onScopeChange={setScope}
-                  onModeChange={setMode}
-                />
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                <button
-                  type="button"
-                  className="rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-                  onClick={() => downloadTeamsCsv(activeSnapshot.teams)}
-                >
-                  Download CSV
-                </button>
-                <button
-                  type="button"
-                  className="rounded-2xl bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-700"
-                  onClick={() =>
-                    downloadNodeAsPng(exportRef.current, "world-cup-2026-dashboard.png")
-                  }
-                >
-                  Download PNG Screenshot
-                </button>
-              </div>
-            </section>
-
             <section className="space-y-6">
               <SectionHeader
                 eyebrow="Match Centre"
@@ -281,46 +246,107 @@ export default function App() {
                 description="The tournament flow is grouped together here, so upcoming matches, completed games, table position, and the selected team's schedule all sit in one reading sequence."
               />
 
-              <div className="grid gap-6 2xl:grid-cols-[0.96fr,1.04fr]">
-                <div className="space-y-6">
+              <div className="grid gap-6 xl:grid-cols-2">
+                <div>
                   <ScheduleSection matches={scheduleMatches} />
+                </div>
+                <div>
                   <CompletedMatchesSection matches={scheduleMatches} />
                 </div>
-                <div className="space-y-6">
-                  <GroupStandingsSection standings={groupStandings} selectedTeamIso={selectedTeam.iso3} />
-                  <SelectedTeamScheduleSection matches={scheduleMatches} selectedTeam={selectedTeam} />
-                </div>
               </div>
+
+              <GroupStandingsSection standings={groupStandings} selectedTeamIso={selectedTeam.iso3} />
             </section>
 
             <div ref={exportRef} className="space-y-6">
-              <WorldMap
-                teams={filteredBaseTeams}
-                mode={mode}
-                snapshotDate={activeSnapshot.metadata.snapshotDate}
-                selectedTeamIso={selectedTeam.iso3}
-                onSelectTeam={setSelectedTeamIso}
-              />
-
               <section className="space-y-6">
                 <SectionHeader
                   eyebrow="Team Focus"
                   title="Selected Team and Comparison View"
-                  description="This zone keeps the chosen team's profile beside the comparison tools, making it easier to move from selection to deeper analysis without the page feeling scattered."
+                  description="The selected team now anchors the center of the dashboard, while recent form and comparison tools are grouped into cleaner rows so the page feels more deliberate."
                 />
 
-                <div className="grid gap-6 xl:grid-cols-[0.95fr,1.05fr]">
-                  <SelectedTeamPanel team={selectedTeam} snapshot={activeSnapshot} />
-                  <ComparisonPanel
+                <section className="card p-6">
+                  <SectionHeader
+                    eyebrow="Controls"
+                    title="Snapshot Controls"
+                    description="Choose the date, filter the field, switch the color mode, and export the current dashboard view right before diving into the selected team's details."
+                  />
+
+                  <div className="mt-6">
+                    <FilterBar
+                      confederations={confederations}
+                      groups={groups}
+                      teams={activeSnapshot.teams}
+                      snapshotDates={snapshotDates}
+                      selectedDate={activeSnapshot.metadata.snapshotDate}
+                      currentDate={todayIso}
+                      confederation={confederation}
+                      group={group}
+                      scope={scope}
+                      selectedTeamIso={selectedTeam.iso3}
+                      mode={mode}
+                      onDateChange={handleDateChange}
+                      onConfederationChange={setConfederation}
+                      onGroupChange={setGroup}
+                      onScopeChange={setScope}
+                      onTeamChange={setSelectedTeamIso}
+                      onModeChange={setMode}
+                    />
+                  </div>
+
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      className="rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+                      onClick={() => downloadTeamsCsv(activeSnapshot.teams)}
+                    >
+                      Download CSV
+                    </button>
+                    <button
+                      type="button"
+                      className="rounded-2xl bg-teal-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-teal-700"
+                      onClick={() =>
+                        downloadNodeAsPng(exportRef.current, "world-cup-2026-dashboard.png")
+                      }
+                    >
+                      Download PNG Screenshot
+                    </button>
+                  </div>
+                </section>
+
+                <WorldMap
+                  teams={filteredBaseTeams}
+                  mode={mode}
+                  snapshotDate={activeSnapshot.metadata.snapshotDate}
+                  selectedTeamIso={selectedTeam.iso3}
+                  onSelectTeam={setSelectedTeamIso}
+                />
+
+                <div className="grid gap-6 xl:grid-cols-2">
+                  <SelectedTeamSummaryCard team={selectedTeam} snapshot={activeSnapshot} />
+                  <SelectedTeamScheduleSection matches={scheduleMatches} selectedTeam={selectedTeam} />
+                </div>
+
+                <div className="mx-auto w-full max-w-5xl">
+                  <RecentResultsSection matches={scheduleMatches} selectedTeam={selectedTeam} />
+                </div>
+
+                <div className="grid gap-6 xl:grid-cols-2">
+                  <StageTableCard team={selectedTeam} />
+                  <SnapshotComparisonCard
                     selectedTeam={selectedTeam}
-                    compareTeamIso={compareTeamIso}
-                    onCompareTeamChange={setCompareTeamIso}
                     snapshot={activeSnapshot}
                     previousSnapshot={previousSnapshot}
                   />
                 </div>
 
-                <RecentResultsSection matches={scheduleMatches} selectedTeam={selectedTeam} />
+                <TeamComparisonCard
+                  selectedTeam={selectedTeam}
+                  compareTeamIso={compareTeamIso}
+                  onCompareTeamChange={setCompareTeamIso}
+                  snapshot={activeSnapshot}
+                />
               </section>
 
               <section className="space-y-6">
