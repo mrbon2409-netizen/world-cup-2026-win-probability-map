@@ -246,13 +246,9 @@ export default function App() {
                 description="The tournament flow is grouped together here, so upcoming matches, completed games, table position, and the selected team's schedule all sit in one reading sequence."
               />
 
-              <div className="grid gap-6 xl:grid-cols-2">
-                <div>
-                  <ScheduleSection matches={scheduleMatches} />
-                </div>
-                <div>
-                  <CompletedMatchesSection matches={scheduleMatches} />
-                </div>
+              <div className="space-y-6">
+                <ScheduleSection matches={scheduleMatches} />
+                <CompletedMatchesSection matches={scheduleMatches} />
               </div>
 
               <GroupStandingsSection standings={groupStandings} selectedTeamIso={selectedTeam.iso3} />

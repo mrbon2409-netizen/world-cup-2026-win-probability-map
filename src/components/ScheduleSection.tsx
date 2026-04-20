@@ -20,7 +20,7 @@ function statusClassName(status: ScheduleMatch["status"]) {
 
 export function MatchRow({ match }: { match: ScheduleMatch }) {
   return (
-    <div className="grid gap-3 rounded-3xl border border-slate-100 bg-slate-50 p-4 md:grid-cols-[1fr,auto,1fr,auto] md:items-center">
+    <div className="grid gap-3 rounded-3xl border border-slate-100 bg-slate-50 p-4 2xl:grid-cols-[1fr,auto,1fr,auto] 2xl:items-center">
       <div className="flex items-center gap-3">
         <FlagIcon iso3={match.teamA.iso3} team={match.teamA.team} className="min-w-10" />
         <div>
@@ -33,7 +33,7 @@ export function MatchRow({ match }: { match: ScheduleMatch }) {
         vs
       </div>
 
-      <div className="flex items-center gap-3 md:justify-start">
+      <div className="flex items-center gap-3 2xl:justify-start">
         <FlagIcon iso3={match.teamB.iso3} team={match.teamB.team} className="min-w-10" />
         <div>
           <p className="font-semibold text-ink">{match.teamB.team}</p>
@@ -41,7 +41,7 @@ export function MatchRow({ match }: { match: ScheduleMatch }) {
         </div>
       </div>
 
-      <div className="text-sm text-slate-600 md:text-right">
+      <div className="text-sm text-slate-600 2xl:text-right">
         <p className="font-semibold text-ink">{match.kickoffLabel}</p>
         <p>{match.venue}</p>
         <span className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusClassName(match.status)}`}>
@@ -70,7 +70,7 @@ export function ScheduleSection({ matches }: ScheduleSectionProps) {
         </p>
       </div>
 
-      <div className="mt-5 grid gap-4 xl:grid-cols-2">
+      <div className="mt-5 grid gap-4 xl:grid-cols-2 xl:items-start">
         <div className="space-y-3">
           {leftColumnMatches.map((match) => (
             <MatchRow key={match.id} match={match} />
