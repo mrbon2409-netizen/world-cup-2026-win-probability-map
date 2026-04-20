@@ -53,7 +53,10 @@ export function MatchRow({ match }: { match: ScheduleMatch }) {
 }
 
 export function ScheduleSection({ matches }: ScheduleSectionProps) {
-  const upcomingMatches = getUpcomingMatches(matches, 8);
+  const upcomingMatches = getUpcomingMatches(matches, 20);
+  const midpoint = Math.ceil(upcomingMatches.length / 2);
+  const leftColumnMatches = upcomingMatches.slice(0, midpoint);
+  const rightColumnMatches = upcomingMatches.slice(midpoint);
 
   return (
     <section className="card p-6">
@@ -67,10 +70,17 @@ export function ScheduleSection({ matches }: ScheduleSectionProps) {
         </p>
       </div>
 
-      <div className="mt-5 space-y-3">
-        {upcomingMatches.map((match) => (
-          <MatchRow key={match.id} match={match} />
-        ))}
+      <div className="mt-5 grid gap-4 xl:grid-cols-2">
+        <div className="space-y-3">
+          {leftColumnMatches.map((match) => (
+            <MatchRow key={match.id} match={match} />
+          ))}
+        </div>
+        <div className="space-y-3">
+          {rightColumnMatches.map((match) => (
+            <MatchRow key={match.id} match={match} />
+          ))}
+        </div>
       </div>
     </section>
   );
