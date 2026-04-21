@@ -1,9 +1,11 @@
+import type { AppCopy } from "../lib/i18n";
 import type { GroupStanding } from "../types/worldCup";
 import { FlagIcon } from "./FlagIcon";
 
 interface GroupStandingsSectionProps {
   standings: GroupStanding[];
   selectedTeamIso: string;
+  labels: AppCopy["groupStandings"];
 }
 
 function formClassName(result: GroupStanding["form"][number]) {
@@ -21,6 +23,7 @@ function formClassName(result: GroupStanding["form"][number]) {
 export function GroupStandingsSection({
   standings,
   selectedTeamIso,
+  labels,
 }: GroupStandingsSectionProps) {
   const standingsByGroup = standings.reduce<Record<string, GroupStanding[]>>((accumulator, standing) => {
     if (!accumulator[standing.group]) {
@@ -37,12 +40,11 @@ export function GroupStandingsSection({
     <section className="card p-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="chip inline-flex">Group Standings</p>
-          <h2 className="mt-4 text-2xl font-semibold text-ink">Live Group Table Snapshot</h2>
+          <p className="chip inline-flex">{labels.eyebrow}</p>
+          <h2 className="mt-4 text-2xl font-semibold text-ink">{labels.title}</h2>
         </div>
         <p className="max-w-2xl text-sm text-slate-500">
-          Each table updates from the generated completed fixtures for the selected snapshot date. Form shows the latest
-          group-stage results for each team using a simple win, draw, loss sequence.
+          {labels.description}
         </p>
       </div>
 
@@ -55,10 +57,10 @@ export function GroupStandingsSection({
             <div className="flex items-center justify-between border-b border-slate-100 bg-white px-5 py-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">Group {group}</p>
-                <p className="mt-1 text-lg font-semibold text-ink">Standings</p>
+                <p className="mt-1 text-lg font-semibold text-ink">{labels.standings}</p>
               </div>
               <span className="rounded-full bg-slate-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
-                Pts / Form
+                {labels.ptsForm}
               </span>
             </div>
 
@@ -67,7 +69,7 @@ export function GroupStandingsSection({
                 <thead className="bg-slate-50 text-slate-500">
                   <tr>
                     <th className="px-4 py-3 font-semibold">#</th>
-                    <th className="px-4 py-3 font-semibold">Team</th>
+                    <th className="px-4 py-3 font-semibold">{labels.team}</th>
                     <th className="px-3 py-3 text-center font-semibold">P</th>
                     <th className="px-3 py-3 text-center font-semibold">W</th>
                     <th className="px-3 py-3 text-center font-semibold">D</th>
@@ -122,7 +124,7 @@ export function GroupStandingsSection({
                                 </span>
                               ))
                             ) : (
-                              <span className="text-xs text-slate-400">No results yet</span>
+                              <span className="text-xs text-slate-400">{labels.noResults}</span>
                             )}
                           </div>
                         </td>

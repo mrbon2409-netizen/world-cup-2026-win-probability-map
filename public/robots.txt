@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://world-cup-2026-win-probability.netlify.app/sitemap.xml

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import type { AppCopy } from "../lib/i18n";
 
 type CounterState =
   | { status: "preview"; count: number; message: string }
@@ -19,7 +20,7 @@ function isPreviewEnvironment() {
   );
 }
 
-export function VisitCounter() {
+export function VisitCounter({ labels }: { labels: AppCopy["counter"] }) {
   const counterName = (import.meta.env.VITE_COUNTER_NAME ?? "world-cup-2026-profile").trim();
   const [state, setState] = useState<CounterState>(() => {
     if (isPreviewEnvironment()) {
@@ -30,13 +31,13 @@ export function VisitCounter() {
       return {
         status: "preview",
         count: nextValue,
-        message: "Preview counter while running locally.",
+        message: labels.previewMessage,
       };
     }
 
     return {
       status: "loading",
-      message: "Loading visit count...",
+      message: labels.loading,
     };
   });
 
@@ -83,7 +84,7 @@ export function VisitCounter() {
         if (!cancelled) {
           setState({
             status: "error",
-            message: "Visit count is unavailable right now.",
+            message: labels.unavailable,
           });
         }
       }
@@ -100,12 +101,12 @@ export function VisitCounter() {
     <div className="flex justify-center">
       <div className="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white/80 px-4 py-2 text-xs text-slate-500 shadow-sm backdrop-blur">
         <span className="font-semibold uppercase tracking-[0.16em] text-slate-400">
-          {state.status === "preview" ? "Preview counter" : "Page views"}
+          {state.status === "preview" ? labels.previewLabel : labels.pageViewsLabel}
         </span>
         <span className="h-1 w-1 rounded-full bg-slate-300" />
         {state.status === "ready" || state.status === "preview" ? (
           <span className="font-semibold text-slate-700">
-            {state.status === "preview" ? "Local page views" : "Page views"}: {state.count.toLocaleString()}
+            {state.status === "preview" ? labels.localViews : labels.pageViews}: {state.count.toLocaleString()}
           </span>
         ) : (
           <span>{state.message}</span>

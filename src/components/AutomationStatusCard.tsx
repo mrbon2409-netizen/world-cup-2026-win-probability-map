@@ -1,3 +1,4 @@
+import type { AppCopy, LanguageCode } from "../lib/i18n";
 import { getSnapshotFreshness } from "../lib/probability";
 import type { AutomationStatus, SnapshotRecord } from "../types/worldCup";
 
@@ -5,6 +6,8 @@ interface AutomationStatusCardProps {
   latestSnapshot: SnapshotRecord;
   currentDate: string;
   automationStatus: AutomationStatus | null;
+  labels: AppCopy["automation"];
+  language: LanguageCode;
 }
 
 function toneClassName(tone: "fresh" | "warning" | "stale") {
@@ -19,8 +22,8 @@ function toneClassName(tone: "fresh" | "warning" | "stale") {
   return "border-rose-200 bg-rose-50 text-rose-900";
 }
 
-function formatDateTime(value: string) {
-  return new Intl.DateTimeFormat("en-CA", {
+function formatDateTime(value: string, language: LanguageCode) {
+  return new Intl.DateTimeFormat(language, {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -45,6 +48,8 @@ export function AutomationStatusCard({
   latestSnapshot,
   currentDate,
   automationStatus,
+  labels,
+  language,
 }: AutomationStatusCardProps) {
   const freshness = getSnapshotFreshness(latestSnapshot.metadata.snapshotDate, currentDate);
   const isStaticBuild = typeof window !== "undefined" && window.location.protocol === "file:";
@@ -54,7 +59,7 @@ export function AutomationStatusCard({
     <section className={`card border p-6 ${toneClassName(cardTone)}`}>
       <div className="flex flex-col gap-5 xl:flex-row xl:items-start xl:justify-between">
         <div className="max-w-2xl">
-          <p className="chip inline-flex border-current/15 bg-white/70 text-current">Daily Update Status</p>
+          <p className="chip inline-flex border-current/15 bg-white/70 text-current">{labels.eyebrow}</p>
           <h2 className="mt-4 text-2xl font-semibold">{freshness.label}</h2>
           <p className="mt-2 text-sm leading-6 opacity-80">
             {automationStatus?.note ?? freshness.detail}
@@ -63,21 +68,25 @@ export function AutomationStatusCard({
 
         <div className="grid gap-3 md:grid-cols-2 xl:min-w-[620px]">
           <div className="rounded-2xl border border-current/10 bg-white/70 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Last auto update</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">{labels.lastAutoUpdate}</p>
             <p className="mt-2 font-semibold">
-              {automationStatus ? formatDateTime(automationStatus.lastAutoUpdateAt) : latestSnapshot.metadata.lastUpdated}
+              {automationStatus
+                ? formatDateTime(automationStatus.lastAutoUpdateAt, language)
+                : latestSnapshot.metadata.lastUpdated}
             </p>
           </div>
 
           <div className="rounded-2xl border border-current/10 bg-white/70 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Next scheduled update</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">{labels.nextScheduledUpdate}</p>
             <p className="mt-2 font-semibold">
-              {automationStatus ? formatDateTime(automationStatus.nextScheduledUpdateAt) : "Not scheduled yet"}
+              {automationStatus
+                ? formatDateTime(automationStatus.nextScheduledUpdateAt, language)
+                : labels.notScheduled}
             </p>
           </div>
 
           <div className="rounded-2xl border border-current/10 bg-white/70 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Data source status</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">{labels.dataSourceStatus}</p>
             <div className="mt-2 flex items-center gap-2">
               <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${sourceTone(automationStatus?.dataSourceStatus)}`}>
                 {automationStatus?.dataSourceStatus ?? freshness.tone}
@@ -89,12 +98,12 @@ export function AutomationStatusCard({
           </div>
 
           <div className="rounded-2xl border border-current/10 bg-white/70 px-4 py-3">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">Run mode</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] opacity-70">{labels.runMode}</p>
             <p className="mt-2 font-semibold">
-              {automationStatus?.runMode ?? (isStaticBuild ? "Static build snapshot" : "Live local app")}
+              {automationStatus?.runMode ?? (isStaticBuild ? labels.staticBuild : labels.liveLocal)}
             </p>
             <p className="mt-1 text-sm opacity-75">
-              Target: {automationStatus?.buildTarget ?? "dist"}
+              {labels.target}: {automationStatus?.buildTarget ?? "dist"}
             </p>
           </div>
         </div>

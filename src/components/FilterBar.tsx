@@ -1,3 +1,4 @@
+import type { AppCopy } from "../lib/i18n";
 import type { TeamSnapshot } from "../types/worldCup";
 import type { MetricMode, ScopeFilter } from "../types/worldCup";
 
@@ -13,6 +14,7 @@ interface FilterBarProps {
   scope: ScopeFilter;
   selectedTeamIso: string | null;
   mode: MetricMode;
+  labels: AppCopy["controls"];
   onDateChange: (value: string) => void;
   onConfederationChange: (value: string) => void;
   onGroupChange: (value: string) => void;
@@ -33,6 +35,7 @@ export function FilterBar({
   scope,
   selectedTeamIso,
   mode,
+  labels,
   onDateChange,
   onConfederationChange,
   onGroupChange,
@@ -61,7 +64,7 @@ export function FilterBar({
       <div className="space-y-4">
         <div className="grid gap-4 xl:grid-cols-[minmax(360px,1.2fr)]">
           <div className="flex flex-col gap-2">
-            <span className="text-sm font-semibold text-slate-600">Snapshot date</span>
+            <span className="text-sm font-semibold text-slate-600">{labels.snapshotDate}</span>
             <div className="grid gap-2 sm:grid-cols-[auto,minmax(145px,1fr),auto,auto]">
               <button
                 type="button"
@@ -69,7 +72,7 @@ export function FilterBar({
                 disabled={currentIndex <= 0}
                 onClick={() => onDateChange(snapshotDates[Math.max(currentIndex - 1, 0)])}
               >
-                Prev
+                {labels.prev}
               </button>
               <input
                 type="date"
@@ -89,31 +92,31 @@ export function FilterBar({
                   )
                 }
               >
-                Next
+                {labels.next}
               </button>
               <button
                 type="button"
                 className={`control min-w-[74px] px-3 text-center ${isTodaySelected ? "border-amber-400 bg-amber-100 font-semibold text-amber-950" : ""}`}
                 onClick={() => onDateChange(currentDate)}
               >
-                Today
+                {labels.today}
               </button>
             </div>
             <p className="text-xs text-slate-400">
-              Future dates stay disabled. Today is highlighted when selected.
+              {labels.futureDatesNote}
             </p>
           </div>
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <label className="flex min-w-0 flex-col gap-2">
-            <span className="text-sm font-semibold text-slate-600">Confederation</span>
+            <span className="text-sm font-semibold text-slate-600">{labels.confederation}</span>
             <select
               className="control min-w-0"
               value={confederation}
               onChange={(event) => onConfederationChange(event.target.value)}
             >
-              <option value="all">All confederations</option>
+              <option value="all">{labels.allConfederations}</option>
               {confederations.map((item) => (
                 <option key={item} value={item}>
                   {item}
@@ -123,13 +126,13 @@ export function FilterBar({
           </label>
 
           <label className="flex min-w-0 flex-col gap-2">
-            <span className="text-sm font-semibold text-slate-600">Group</span>
+            <span className="text-sm font-semibold text-slate-600">{labels.group}</span>
             <select
               className="control min-w-0"
               value={group}
               onChange={(event) => onGroupChange(event.target.value)}
             >
-              <option value="all">All groups</option>
+              <option value="all">{labels.allGroups}</option>
               {groups.map((item) => (
                 <option key={item} value={item}>
                   {item}
@@ -139,20 +142,20 @@ export function FilterBar({
           </label>
 
           <label className="flex min-w-0 flex-col gap-2">
-            <span className="text-sm font-semibold text-slate-600">Scope</span>
+            <span className="text-sm font-semibold text-slate-600">{labels.scope}</span>
             <select
               className="control min-w-0"
               value={scope}
               onChange={(event) => onScopeChange(event.target.value as ScopeFilter)}
             >
-              <option value="all">All 48 teams</option>
-              <option value="top10">Top 10 teams</option>
-              <option value="top20">Top 20 teams</option>
+              <option value="all">{labels.allTeams}</option>
+              <option value="top10">{labels.top10}</option>
+              <option value="top20">{labels.top20}</option>
             </select>
           </label>
 
           <label className="flex min-w-0 flex-col gap-2">
-            <span className="text-sm font-semibold text-slate-600">Team</span>
+            <span className="text-sm font-semibold text-slate-600">{labels.team}</span>
             <select
               className="control min-w-0"
               value={selectedTeamIso ?? ""}
@@ -177,7 +180,7 @@ export function FilterBar({
             }`}
             onClick={() => onModeChange("normalizedProbability")}
           >
-            Color by normalized probability
+            {labels.normalizedMode}
           </button>
           <button
             type="button"
@@ -186,7 +189,7 @@ export function FilterBar({
             }`}
             onClick={() => onModeChange("fifaRank")}
           >
-            Color by FIFA ranking
+            {labels.fifaMode}
           </button>
         </div>
       </div>

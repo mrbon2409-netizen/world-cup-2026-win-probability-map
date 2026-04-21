@@ -1,11 +1,13 @@
 import { formatAmericanOdds, formatPercent, sortTeamsByProbability } from "../lib/probability";
+import type { AppCopy } from "../lib/i18n";
 import type { SnapshotRecord } from "../types/worldCup";
 
 interface SummaryCardsProps {
   snapshot: SnapshotRecord;
+  labels: AppCopy["summary"];
 }
 
-export function SummaryCards({ snapshot }: SummaryCardsProps) {
+export function SummaryCards({ snapshot, labels }: SummaryCardsProps) {
   const teams = sortTeamsByProbability(snapshot.teams);
   const favorite = teams[0];
   const highestRanked = [...snapshot.teams]
@@ -18,26 +20,28 @@ export function SummaryCards({ snapshot }: SummaryCardsProps) {
 
   const cards = [
     {
-      label: "Favorite",
+      label: labels.favorite,
       value: favorite.team,
       detail: `${formatPercent(favorite.normalizedProbability)} | ${formatAmericanOdds(
         favorite.oddsAmerican,
       )}`,
     },
     {
-      label: "Average Probability",
+      label: labels.averageProbability,
       value: formatPercent(averageProbability),
-      detail: "Normalized across the full 48-team field",
+      detail: labels.averageDetail,
     },
     {
-      label: "Highest-Ranked Team",
-      value: highestRanked?.team ?? "N/A",
-      detail: highestRanked?.fifaRank ? `FIFA rank #${highestRanked.fifaRank}` : "N/A",
+      label: labels.highestRanked,
+      value: highestRanked?.team ?? labels.notAvailable,
+      detail: highestRanked?.fifaRank
+        ? `${labels.fifaRank} #${highestRanked.fifaRank}`
+        : labels.notAvailable,
     },
     {
-      label: "Market Source",
+      label: labels.marketSource,
       value: snapshot.metadata.titleOddsLabel,
-      detail: `Snapshot date ${snapshot.metadata.snapshotDate}`,
+      detail: `${labels.snapshotDate} ${snapshot.metadata.snapshotDate}`,
     },
   ];
 

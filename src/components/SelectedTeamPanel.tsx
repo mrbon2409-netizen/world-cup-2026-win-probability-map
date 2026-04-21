@@ -1,10 +1,12 @@
 import { formatAmericanOdds, formatPercent } from "../lib/probability";
+import type { AppCopy } from "../lib/i18n";
 import { FlagIcon } from "./FlagIcon";
 import type { SnapshotRecord, TeamSnapshot } from "../types/worldCup";
 
 interface SelectedTeamPanelProps {
   team: TeamSnapshot;
   snapshot: SnapshotRecord;
+  labels: AppCopy["selectedTeam"];
 }
 
 const stageLabels: Array<keyof TeamSnapshot["stages"]> = [
@@ -16,19 +18,10 @@ const stageLabels: Array<keyof TeamSnapshot["stages"]> = [
   "champion",
 ];
 
-const readableLabel: Record<(typeof stageLabels)[number], string> = {
-  roundOf32: "Reach Round of 32",
-  roundOf16: "Reach Round of 16",
-  quarterfinal: "Reach Quarterfinal",
-  semifinal: "Reach Semifinal",
-  final: "Reach Final",
-  champion: "Win Tournament",
-};
-
-export function SelectedTeamSummaryCard({ team, snapshot }: SelectedTeamPanelProps) {
+export function SelectedTeamSummaryCard({ team, snapshot, labels }: SelectedTeamPanelProps) {
   return (
     <article className="card p-6">
-      <p className="chip inline-flex">Selected Team</p>
+      <p className="chip inline-flex">{labels.summaryEyebrow}</p>
       <div className="mt-4 flex items-center gap-3">
         <h2 className="text-3xl font-semibold text-ink">{team.team}</h2>
         <FlagIcon
@@ -38,30 +31,36 @@ export function SelectedTeamSummaryCard({ team, snapshot }: SelectedTeamPanelPro
         />
       </div>
       <div className="mt-4 grid gap-3 text-sm text-slate-600">
-        <p>Group: {team.group}</p>
-        <p>Confederation: {team.confederation}</p>
-        <p>Bookmaker title odds: {formatAmericanOdds(team.oddsAmerican)}</p>
-        <p>Advance-from-group odds: {formatAmericanOdds(team.groupAdvanceOddsAmerican)}</p>
-        <p>Normalized title probability: {formatPercent(team.normalizedProbability)}</p>
-        <p>FIFA ranking: {team.fifaRank ?? "N/A"}</p>
-        <p>Snapshot date: {snapshot.metadata.snapshotDate}</p>
+        <p>{labels.group}: {team.group}</p>
+        <p>{labels.confederation}: {team.confederation}</p>
+        <p>{labels.bookmakerOdds}: {formatAmericanOdds(team.oddsAmerican)}</p>
+        <p>{labels.advanceOdds}: {formatAmericanOdds(team.groupAdvanceOddsAmerican)}</p>
+        <p>{labels.normalizedProbability}: {formatPercent(team.normalizedProbability)}</p>
+        <p>{labels.fifaRanking}: {team.fifaRank ?? labels.notAvailable}</p>
+        <p>{labels.snapshotDate}: {snapshot.metadata.snapshotDate}</p>
       </div>
     </article>
   );
 }
 
-export function StageTableCard({ team }: { team: TeamSnapshot }) {
+export function StageTableCard({
+  team,
+  labels,
+}: {
+  team: TeamSnapshot;
+  labels: AppCopy["selectedTeam"];
+}) {
   return (
     <article className="card p-6">
       <div className="flex items-center justify-between gap-4">
         <div>
-          <p className="chip inline-flex">Stage Table</p>
+          <p className="chip inline-flex">{labels.stageEyebrow}</p>
           <h2 className="mt-4 text-2xl font-semibold text-ink">
-            Estimated Path Through The Tournament
+            {labels.stageTitle}
           </h2>
         </div>
         <p className="max-w-xs text-right text-sm text-slate-500">
-          Group advancement uses market odds directly. Later rounds are modeled from title odds so the stage path stays internally consistent.
+          {labels.stageDescription}
         </p>
       </div>
 
@@ -69,14 +68,14 @@ export function StageTableCard({ team }: { team: TeamSnapshot }) {
         <table className="min-w-full text-left text-sm">
           <thead className="bg-slate-50 text-slate-500">
             <tr>
-              <th className="px-5 py-4 font-semibold">Stage</th>
-              <th className="px-5 py-4 font-semibold">Probability</th>
+              <th className="px-5 py-4 font-semibold">{labels.stage}</th>
+              <th className="px-5 py-4 font-semibold">{labels.probability}</th>
             </tr>
           </thead>
           <tbody>
             {stageLabels.map((stage, index) => (
               <tr key={stage} className={index % 2 === 0 ? "bg-white" : "bg-slate-50/70"}>
-                <td className="px-5 py-4 font-medium text-ink">{readableLabel[stage]}</td>
+                <td className="px-5 py-4 font-medium text-ink">{labels.stageLabels[stage]}</td>
                 <td className="px-5 py-4">{formatPercent(team.stages[stage])}</td>
               </tr>
             ))}
@@ -87,11 +86,11 @@ export function StageTableCard({ team }: { team: TeamSnapshot }) {
   );
 }
 
-export function SelectedTeamPanel({ team, snapshot }: SelectedTeamPanelProps) {
+export function SelectedTeamPanel({ team, snapshot, labels }: SelectedTeamPanelProps) {
   return (
     <section className="grid gap-6 xl:grid-cols-[0.9fr,1.1fr]">
-      <SelectedTeamSummaryCard team={team} snapshot={snapshot} />
-      <StageTableCard team={team} />
+      <SelectedTeamSummaryCard team={team} snapshot={snapshot} labels={labels} />
+      <StageTableCard team={team} labels={labels} />
     </section>
   );
 }

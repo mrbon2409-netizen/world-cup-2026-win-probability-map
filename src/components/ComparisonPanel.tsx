@@ -4,6 +4,7 @@ import {
   formatPercent,
   getTeamByIso,
 } from "../lib/probability";
+import type { AppCopy } from "../lib/i18n";
 import { FlagIcon } from "./FlagIcon";
 import type { SnapshotRecord, TeamSnapshot } from "../types/worldCup";
 
@@ -13,6 +14,7 @@ interface ComparisonPanelProps {
   onCompareTeamChange: (iso3: string | null) => void;
   snapshot: SnapshotRecord;
   previousSnapshot: SnapshotRecord | null;
+  labels: AppCopy["comparison"];
 }
 
 function getDeltaTone(delta: number) {
@@ -33,26 +35,22 @@ export function ComparisonPanel({
   onCompareTeamChange,
   snapshot,
   previousSnapshot,
+  labels,
 }: ComparisonPanelProps) {
-  const compareTeam = getTeamByIso(snapshot.teams, compareTeamIso);
-  const previousTeam = previousSnapshot
-    ? getTeamByIso(previousSnapshot.teams, selectedTeam.iso3)
-    : null;
-  const titleDelta = previousTeam
-    ? selectedTeam.normalizedProbability - previousTeam.normalizedProbability
-    : null;
-  const groupDelta = previousTeam
-    ? selectedTeam.groupAdvanceProbability - previousTeam.groupAdvanceProbability
-    : null;
-
   return (
     <section className="grid gap-6 xl:grid-cols-[1.08fr,0.92fr]">
-      <SnapshotComparisonCard selectedTeam={selectedTeam} snapshot={snapshot} previousSnapshot={previousSnapshot} />
+      <SnapshotComparisonCard
+        selectedTeam={selectedTeam}
+        snapshot={snapshot}
+        previousSnapshot={previousSnapshot}
+        labels={labels}
+      />
       <TeamComparisonCard
         selectedTeam={selectedTeam}
         compareTeamIso={compareTeamIso}
         onCompareTeamChange={onCompareTeamChange}
         snapshot={snapshot}
+        labels={labels}
       />
     </section>
   );
@@ -62,7 +60,8 @@ export function SnapshotComparisonCard({
   selectedTeam,
   snapshot,
   previousSnapshot,
-}: Pick<ComparisonPanelProps, "selectedTeam" | "snapshot" | "previousSnapshot">) {
+  labels,
+}: Pick<ComparisonPanelProps, "selectedTeam" | "snapshot" | "previousSnapshot" | "labels">) {
   const previousTeam = previousSnapshot
     ? getTeamByIso(previousSnapshot.teams, selectedTeam.iso3)
     : null;
@@ -77,19 +76,23 @@ export function SnapshotComparisonCard({
     <article className="card p-6">
       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
         <div>
-          <p className="chip inline-flex">Snapshot Comparison</p>
+          <p className="chip inline-flex">{labels.snapshotEyebrow}</p>
           <h2 className="mt-4 text-2xl font-semibold text-ink">
-            Compare Against The Previous Snapshot
+            {labels.snapshotTitle}
           </h2>
           <p className="mt-2 max-w-2xl text-sm text-slate-500">
-            This compares the selected team on {snapshot.metadata.snapshotDate}
-            {previousSnapshot ? ` against ${previousSnapshot.metadata.snapshotDate}` : " against the closest earlier snapshot available"}.
+            {labels.snapshotDescription} {snapshot.metadata.snapshotDate}
+            {previousSnapshot
+              ? ` against ${previousSnapshot.metadata.snapshotDate}`
+              : " against the closest earlier snapshot available"}.
           </p>
         </div>
         <div className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-600">
           <p className="font-semibold text-ink">{selectedTeam.team}</p>
           <p className="mt-1">
-            {previousSnapshot ? `Previous snapshot: ${previousSnapshot.metadata.snapshotDate}` : "No previous snapshot available"}
+            {previousSnapshot
+              ? `${labels.previousSnapshot}: ${previousSnapshot.metadata.snapshotDate}`
+              : labels.noPreviousSnapshot}
           </p>
         </div>
       </div>
@@ -97,7 +100,7 @@ export function SnapshotComparisonCard({
       {previousTeam ? (
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           <article className="rounded-3xl border border-slate-100 bg-slate-50 p-5">
-            <p className="text-sm font-semibold text-slate-500">Title probability</p>
+            <p className="text-sm font-semibold text-slate-500">{labels.titleProbability}</p>
             <p className="mt-3 text-2xl font-semibold text-ink">
               {formatPercent(selectedTeam.normalizedProbability)}
             </p>
@@ -106,7 +109,7 @@ export function SnapshotComparisonCard({
             </p>
           </article>
           <article className="rounded-3xl border border-slate-100 bg-slate-50 p-5">
-            <p className="text-sm font-semibold text-slate-500">Advance-from-group</p>
+            <p className="text-sm font-semibold text-slate-500">{labels.advanceProbability}</p>
             <p className="mt-3 text-2xl font-semibold text-ink">
               {formatPercent(selectedTeam.groupAdvanceProbability)}
             </p>
@@ -115,27 +118,27 @@ export function SnapshotComparisonCard({
             </p>
           </article>
           <article className="rounded-3xl border border-slate-100 bg-slate-50 p-5">
-            <p className="text-sm font-semibold text-slate-500">Bookmaker title odds</p>
+            <p className="text-sm font-semibold text-slate-500">{labels.bookmakerOdds}</p>
             <p className="mt-3 text-2xl font-semibold text-ink">
               {formatAmericanOdds(selectedTeam.oddsAmerican)}
             </p>
             <p className="mt-2 text-sm text-slate-500">
-              Previous: {formatAmericanOdds(previousTeam.oddsAmerican)}
+              {labels.previousSnapshot}: {formatAmericanOdds(previousTeam.oddsAmerican)}
             </p>
           </article>
           <article className="rounded-3xl border border-slate-100 bg-slate-50 p-5">
-            <p className="text-sm font-semibold text-slate-500">FIFA ranking</p>
+            <p className="text-sm font-semibold text-slate-500">{labels.fifaRanking}</p>
             <p className="mt-3 text-2xl font-semibold text-ink">
               {selectedTeam.fifaRank ?? "N/A"}
             </p>
             <p className="mt-2 text-sm text-slate-500">
-              Previous: {previousTeam.fifaRank ?? "N/A"}
+              {labels.previousSnapshot}: {previousTeam.fifaRank ?? "N/A"}
             </p>
           </article>
         </div>
       ) : (
         <div className="mt-5 rounded-3xl border border-slate-200 bg-slate-50 px-5 py-4 text-sm text-slate-500">
-          There is no earlier snapshot for this selected date yet, so snapshot-to-snapshot comparison is unavailable.
+          {labels.unavailable}
         </div>
       )}
     </article>
@@ -147,25 +150,26 @@ export function TeamComparisonCard({
   compareTeamIso,
   onCompareTeamChange,
   snapshot,
-}: Pick<ComparisonPanelProps, "selectedTeam" | "compareTeamIso" | "onCompareTeamChange" | "snapshot">) {
+  labels,
+}: Pick<ComparisonPanelProps, "selectedTeam" | "compareTeamIso" | "onCompareTeamChange" | "snapshot" | "labels">) {
   const compareTeam = getTeamByIso(snapshot.teams, compareTeamIso);
 
   return (
     <article className="card p-6">
       <div className="flex flex-col gap-4">
         <div>
-          <p className="chip inline-flex">Team Comparison</p>
-          <h2 className="mt-4 text-2xl font-semibold text-ink">Compare Two Teams</h2>
+          <p className="chip inline-flex">{labels.comparisonEyebrow}</p>
+          <h2 className="mt-4 text-2xl font-semibold text-ink">{labels.comparisonTitle}</h2>
         </div>
 
         <label className="flex flex-col gap-2">
-          <span className="text-sm font-semibold text-slate-600">Comparison team</span>
+          <span className="text-sm font-semibold text-slate-600">{labels.comparisonTeam}</span>
           <select
             className="control"
             value={compareTeamIso ?? ""}
             onChange={(event) => onCompareTeamChange(event.target.value || null)}
           >
-            <option value="">Choose a second team</option>
+            <option value="">{labels.chooseSecondTeam}</option>
             {snapshot.teams
               .filter((team) => team.iso3 !== selectedTeam.iso3)
               .sort((a, b) => a.team.localeCompare(b.team))
@@ -188,32 +192,32 @@ export function TeamComparisonCard({
                   </div>
                   <div className="mt-4 grid gap-2 text-sm text-slate-600">
                     <p>Group: {team.group}</p>
-                    <p>Title odds: {formatAmericanOdds(team.oddsAmerican)}</p>
-                    <p>Win probability: {formatPercent(team.normalizedProbability)}</p>
-                    <p>Advance probability: {formatPercent(team.groupAdvanceProbability)}</p>
-                    <p>FIFA ranking: {team.fifaRank ?? "N/A"}</p>
+                    <p>{labels.titleOdds}: {formatAmericanOdds(team.oddsAmerican)}</p>
+                    <p>{labels.winProbability}: {formatPercent(team.normalizedProbability)}</p>
+                    <p>{labels.advanceProbability}: {formatPercent(team.groupAdvanceProbability)}</p>
+                    <p>{labels.fifaRanking}: {team.fifaRank ?? "N/A"}</p>
                   </div>
                 </div>
               ))}
             </div>
 
             <div className="rounded-3xl border border-slate-100 bg-slate-50 p-5">
-              <h3 className="text-lg font-semibold text-ink">Head-to-head snapshot difference</h3>
+              <h3 className="text-lg font-semibold text-ink">{labels.headToHeadTitle}</h3>
               <div className="mt-4 grid gap-4 md:grid-cols-3">
                 <div>
-                  <p className="text-sm font-semibold text-slate-500">Win probability gap</p>
+                  <p className="text-sm font-semibold text-slate-500">{labels.winProbabilityGap}</p>
                   <p className={`mt-2 text-xl font-semibold ${getDeltaTone(selectedTeam.normalizedProbability - compareTeam.normalizedProbability)}`}>
                     {formatDeltaPercent(selectedTeam.normalizedProbability, compareTeam.normalizedProbability)}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-500">Advance gap</p>
+                  <p className="text-sm font-semibold text-slate-500">{labels.advanceGap}</p>
                   <p className={`mt-2 text-xl font-semibold ${getDeltaTone(selectedTeam.groupAdvanceProbability - compareTeam.groupAdvanceProbability)}`}>
                     {formatDeltaPercent(selectedTeam.groupAdvanceProbability, compareTeam.groupAdvanceProbability)}
                   </p>
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-slate-500">Bookmaker title odds</p>
+                  <p className="text-sm font-semibold text-slate-500">{labels.bookmakerOdds}</p>
                   <p className="mt-2 text-xl font-semibold text-ink">
                     {formatAmericanOdds(selectedTeam.oddsAmerican)} vs {formatAmericanOdds(compareTeam.oddsAmerican)}
                   </p>
@@ -223,7 +227,7 @@ export function TeamComparisonCard({
           </div>
         ) : (
           <div className="rounded-3xl border border-dashed border-slate-200 bg-slate-50 px-5 py-6 text-sm text-slate-500">
-            Select a second team to compare title odds, group advancement, and current normalized win probability side by side.
+            {labels.chooseSecondTeam}
           </div>
         )}
       </div>

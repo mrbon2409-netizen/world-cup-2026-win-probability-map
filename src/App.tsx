@@ -4,11 +4,13 @@ import { SnapshotComparisonCard, TeamComparisonCard } from "./components/Compari
 import { FilterBar } from "./components/FilterBar";
 import { GroupStandingsSection } from "./components/GroupStandingsSection";
 import { HistoryTrendChart } from "./components/HistoryTrendChart";
+import { LanguageSwitcher } from "./components/LanguageSwitcher";
 import { ProbabilityBarChart } from "./components/ProbabilityBarChart";
 import { CompletedMatchesSection, RecentResultsSection } from "./components/ResultsSection";
 import { ScheduleSection } from "./components/ScheduleSection";
 import { SelectedTeamSummaryCard, StageTableCard } from "./components/SelectedTeamPanel";
 import { SelectedTeamScheduleSection } from "./components/SelectedTeamScheduleSection";
+import { SideBanner } from "./components/SideBanner";
 import { SummaryCards } from "./components/SummaryCards";
 import { TeamsTable } from "./components/TeamsTable";
 import { VisitCounter } from "./components/VisitCounter";
@@ -16,6 +18,7 @@ import { WorldMap } from "./components/WorldMap";
 import { useAutomationStatus } from "./hooks/useAutomationStatus";
 import { useLatestSnapshot, useWorldCupHistory } from "./hooks/useWorldCupHistory";
 import { downloadNodeAsPng, downloadTeamsCsv } from "./lib/export";
+import { copy, detectPreferredLanguage } from "./lib/i18n";
 import {
   applyScopeFilter,
   getFilteredTeams,
@@ -68,6 +71,7 @@ export default function App() {
   const { status: automationStatus } = useAutomationStatus();
   const latestSnapshot = useLatestSnapshot(snapshots);
   const todayIso = getTodayIsoDate();
+  const [language, setLanguage] = useState(detectPreferredLanguage());
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTeamIso, setSelectedTeamIso] = useState<string | null>(null);
   const [compareTeamIso, setCompareTeamIso] = useState<string | null>(null);
@@ -76,6 +80,32 @@ export default function App() {
   const [scope, setScope] = useState<ScopeFilter>("all");
   const [mode, setMode] = useState<MetricMode>("normalizedProbability");
   const exportRef = useRef<HTMLDivElement | null>(null);
+  const t = copy[language];
+
+  const quickLinks = [
+    { label: t.nav.matchCentre, href: "#match-centre" },
+    { label: t.nav.groupStandings, href: "#group-standings" },
+    { label: t.nav.teamFocus, href: "#team-focus" },
+    { label: t.nav.analytics, href: "#analytics" },
+  ];
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+    document.title = t.seo.title;
+
+    const setMeta = (name: string, content: string) => {
+      let element = document.head.querySelector(`meta[name="${name}"]`) as HTMLMetaElement | null;
+      if (!element) {
+        element = document.createElement("meta");
+        element.name = name;
+        document.head.appendChild(element);
+      }
+      element.content = content;
+    };
+
+    setMeta("description", t.seo.description);
+    setMeta("keywords", t.seo.keywords);
+  }, [language, t.seo.description, t.seo.keywords, t.seo.title]);
 
   useEffect(() => {
     if (latestSnapshot && !selectedDate) {
@@ -186,6 +216,24 @@ export default function App() {
 
   return (
     <main className="min-h-screen bg-mesh text-slate-900">
+      <SideBanner language={language} onLanguageChange={setLanguage} />
+      <nav
+        aria-label="Quick section navigation"
+        className="fixed inset-x-4 top-4 z-50 flex justify-center lg:inset-x-auto lg:right-6 lg:justify-end"
+      >
+        <div className="flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200/90 bg-white/92 px-3 py-2 shadow-lg shadow-slate-200/60 backdrop-blur">
+          {quickLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-full px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500 transition hover:bg-slate-100 hover:text-ink"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <header className="mb-8 card relative overflow-hidden p-8">
           <div className="pointer-events-none absolute right-6 top-5 rounded-full border border-red-100/80 bg-red-50/90 p-2 shadow-sm">
@@ -197,25 +245,25 @@ export default function App() {
           </div>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
-              <p className="chip inline-flex">Daily Snapshot App</p>
+              <p className="chip inline-flex">{t.header.eyebrow}</p>
               <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-                World Cup 2026 Win Probability Map
+                {t.header.title}
               </h1>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
-                A bookmaker-led World Cup dashboard with daily snapshot history, map selection, stage-probability estimates, and automation-ready data files for all 48 qualified teams.
+                {t.header.description}
               </p>
             </div>
 
             {activeSnapshot ? (
               <div className="rounded-3xl border border-teal-100 bg-teal-50 px-5 py-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal-700">
-                  Last Snapshot
+                  {t.header.lastSnapshot}
                 </p>
                 <p className="mt-2 text-lg font-semibold text-teal-950">
                   {activeSnapshot.metadata.snapshotDate}
                 </p>
                 <p className="mt-1 text-sm text-teal-800">
-                  {activeSnapshot.metadata.totalTeams} teams
+                  {activeSnapshot.metadata.totalTeams} {t.header.teamsSuffix}
                 </p>
               </div>
             ) : null}
@@ -223,50 +271,58 @@ export default function App() {
         </header>
 
         {loading ? (
-          <section className="card p-8 text-lg text-slate-600">Loading history...</section>
+          <section className="card p-8 text-lg text-slate-600">{t.header.loading}</section>
         ) : error ? (
           <section className="card p-8 text-lg text-rose-600">{error}</section>
         ) : !activeSnapshot || !selectedTeam ? (
           <section className="card p-8 text-lg text-slate-600">
-            No snapshot data is available yet.
+            {t.header.noData}
           </section>
         ) : (
           <div className="space-y-6">
-            <SummaryCards snapshot={activeSnapshot} />
+            <SummaryCards snapshot={activeSnapshot} labels={t.summary} />
             <AutomationStatusCard
               latestSnapshot={latestSnapshot ?? activeSnapshot}
               currentDate={todayIso}
               automationStatus={automationStatus}
+              labels={t.automation}
+              language={language}
             />
 
-            <section className="space-y-6">
+            <section id="match-centre" className="scroll-mt-24 space-y-6">
               <SectionHeader
-                eyebrow="Match Centre"
-                title="Fixtures, Results, and Group Context"
-                description="The tournament flow is grouped together here, so upcoming matches, completed games, table position, and the selected team's schedule all sit in one reading sequence."
+                eyebrow={t.sections.matchCentreEyebrow}
+                title={t.sections.matchCentreTitle}
+                description={t.sections.matchCentreDescription}
               />
 
               <div className="space-y-6">
-                <ScheduleSection matches={scheduleMatches} />
-                <CompletedMatchesSection matches={scheduleMatches} />
+                <ScheduleSection matches={scheduleMatches} labels={t.schedule} />
+                <CompletedMatchesSection matches={scheduleMatches} labels={t.schedule} />
               </div>
 
-              <GroupStandingsSection standings={groupStandings} selectedTeamIso={selectedTeam.iso3} />
+              <div id="group-standings" className="scroll-mt-24">
+                <GroupStandingsSection
+                  standings={groupStandings}
+                  selectedTeamIso={selectedTeam.iso3}
+                  labels={t.groupStandings}
+                />
+              </div>
             </section>
 
             <div ref={exportRef} className="space-y-6">
-              <section className="space-y-6">
+              <section id="team-focus" className="scroll-mt-24 space-y-6">
                 <SectionHeader
-                  eyebrow="Team Focus"
-                  title="Selected Team and Comparison View"
-                  description="The selected team now anchors the center of the dashboard, while recent form and comparison tools are grouped into cleaner rows so the page feels more deliberate."
+                  eyebrow={t.sections.teamFocusEyebrow}
+                  title={t.sections.teamFocusTitle}
+                  description={t.sections.teamFocusDescription}
                 />
 
                 <section className="card p-6">
                   <SectionHeader
-                    eyebrow="Controls"
-                    title="Snapshot Controls"
-                    description="Choose the date, filter the field, switch the color mode, and export the current dashboard view right before diving into the selected team's details."
+                    eyebrow={t.controls.eyebrow}
+                    title={t.controls.title}
+                    description={t.controls.description}
                   />
 
                   <div className="mt-6">
@@ -282,6 +338,7 @@ export default function App() {
                       scope={scope}
                       selectedTeamIso={selectedTeam.iso3}
                       mode={mode}
+                      labels={t.controls}
                       onDateChange={handleDateChange}
                       onConfederationChange={setConfederation}
                       onGroupChange={setGroup}
@@ -297,7 +354,7 @@ export default function App() {
                       className="rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
                       onClick={() => downloadTeamsCsv(activeSnapshot.teams)}
                     >
-                      Download CSV
+                      {t.controls.downloadCsv}
                     </button>
                     <button
                       type="button"
@@ -306,7 +363,7 @@ export default function App() {
                         downloadNodeAsPng(exportRef.current, "world-cup-2026-dashboard.png")
                       }
                     >
-                      Download PNG Screenshot
+                      {t.controls.downloadPng}
                     </button>
                   </div>
                 </section>
@@ -320,20 +377,33 @@ export default function App() {
                 />
 
                 <div className="grid gap-6 xl:grid-cols-2">
-                  <SelectedTeamSummaryCard team={selectedTeam} snapshot={activeSnapshot} />
-                  <SelectedTeamScheduleSection matches={scheduleMatches} selectedTeam={selectedTeam} />
+                  <SelectedTeamSummaryCard
+                    team={selectedTeam}
+                    snapshot={activeSnapshot}
+                    labels={t.selectedTeam}
+                  />
+                  <SelectedTeamScheduleSection
+                    matches={scheduleMatches}
+                    selectedTeam={selectedTeam}
+                    labels={t.schedule}
+                  />
                 </div>
 
                 <div className="mx-auto w-full max-w-5xl">
-                  <RecentResultsSection matches={scheduleMatches} selectedTeam={selectedTeam} />
+                  <RecentResultsSection
+                    matches={scheduleMatches}
+                    selectedTeam={selectedTeam}
+                    labels={t.schedule}
+                  />
                 </div>
 
                 <div className="grid gap-6 xl:grid-cols-2">
-                  <StageTableCard team={selectedTeam} />
+                  <StageTableCard team={selectedTeam} labels={t.selectedTeam} />
                   <SnapshotComparisonCard
                     selectedTeam={selectedTeam}
                     snapshot={activeSnapshot}
                     previousSnapshot={previousSnapshot}
+                    labels={t.comparison}
                   />
                 </div>
 
@@ -342,14 +412,15 @@ export default function App() {
                   compareTeamIso={compareTeamIso}
                   onCompareTeamChange={setCompareTeamIso}
                   snapshot={activeSnapshot}
+                  labels={t.comparison}
                 />
               </section>
 
-              <section className="space-y-6">
+              <section id="analytics" className="scroll-mt-24 space-y-6">
                 <SectionHeader
-                  eyebrow="Analytics"
-                  title="Trend and Probability Breakdown"
-                  description="Historical movement, favorite ordering, and the full filtered field are grouped below the map so the page moves naturally from overview into deeper analytical detail."
+                  eyebrow={t.sections.analyticsEyebrow}
+                  title={t.sections.analyticsTitle}
+                  description={t.sections.analyticsDescription}
                 />
 
                 <HistoryTrendChart
@@ -363,6 +434,15 @@ export default function App() {
                   onSelectTeam={setSelectedTeamIso}
                 />
               </section>
+
+              <div className="flex justify-end">
+                <div className="flex flex-col items-end gap-2">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    {t.language.label}
+                  </span>
+                  <LanguageSwitcher language={language} onChange={setLanguage} />
+                </div>
+              </div>
             </div>
 
             <TeamsTable
@@ -372,42 +452,42 @@ export default function App() {
             />
 
             <section className="card p-8">
-              <p className="chip inline-flex">Methodology</p>
-              <h2 className="mt-4 text-2xl font-semibold text-ink">How the upgraded model works</h2>
+              <p className="chip inline-flex">{t.sections.methodologyEyebrow}</p>
+              <h2 className="mt-4 text-2xl font-semibold text-ink">{t.sections.methodologyTitle}</h2>
               <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                 <article className="rounded-3xl bg-slate-50 p-5">
-                  <h3 className="font-semibold text-ink">1. Bookmaker odds drive title chances</h3>
+                  <h3 className="font-semibold text-ink">{t.methodology.card1Title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Title markets are converted from American odds to implied probability using the standard positive and negative odds formulas.
+                    {t.methodology.card1Body}
                   </p>
                 </article>
                 <article className="rounded-3xl bg-slate-50 p-5">
-                  <h3 className="font-semibold text-ink">2. Normalize to 100%</h3>
+                  <h3 className="font-semibold text-ink">{t.methodology.card2Title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    All implied title probabilities are normalized so the entire 48-team field sums to exactly 100%, making side-by-side comparisons cleaner.
+                    {t.methodology.card2Body}
                   </p>
                 </article>
                 <article className="rounded-3xl bg-slate-50 p-5">
-                  <h3 className="font-semibold text-ink">3. Save a daily snapshot</h3>
+                  <h3 className="font-semibold text-ink">{t.methodology.card3Title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Each daily refresh appends or replaces the selected date in the history file, which powers the date switcher and the trend chart.
+                    {t.methodology.card3Body}
                   </p>
                 </article>
                 <article className="rounded-3xl bg-slate-50 p-5">
-                  <h3 className="font-semibold text-ink">4. Model stage progression</h3>
+                  <h3 className="font-semibold text-ink">{t.methodology.card4Title}</h3>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Group-advancement odds come directly from market prices. Later knockout-stage probabilities are estimated from the relationship between group advancement and tournament-winning probability.
+                    {t.methodology.card4Body}
                   </p>
                 </article>
               </div>
 
               <div className="mt-5 rounded-3xl bg-slate-50 p-5 text-sm leading-6 text-slate-600">
-                FIFA ranking remains contextual only. The map can also switch to a ranking color mode, but the main ordering and historical trend logic are all based on bookmaker-derived title probability snapshots.
+                {t.methodology.footer}
               </div>
             </section>
 
             <footer className="pb-2 pt-1">
-              <VisitCounter />
+              <VisitCounter labels={t.counter} />
             </footer>
           </div>
         )}
