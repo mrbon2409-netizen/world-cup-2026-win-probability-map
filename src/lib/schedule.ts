@@ -1,115 +1,32 @@
+import canonicalSchedule from "../data/fifa2026Schedule.json";
 import type { GroupStanding, MatchStatus, ScheduleMatch, TeamSnapshot } from "../types/worldCup";
 
-type FixtureTimeZone =
-  | "America/Toronto"
-  | "America/Vancouver"
-  | "America/Los_Angeles"
-  | "America/Chicago"
-  | "America/New_York"
-  | "America/Mexico_City"
-  | "America/Monterrey";
-
-interface OfficialFixture {
-  id: string;
+interface RawScheduleMatch {
+  id: number;
+  stage: string;
   group: string;
-  matchday: number;
-  kickoffDate: string;
-  kickoffLocalTime: string;
-  hostTimeZone: FixtureTimeZone;
-  stadium: string;
+  team1: string;
+  team2: string;
+  datetime_utc: string;
+  time_et: string;
+  time_vn: string;
+  venue: string;
   city: string;
-  teamAIso3: string;
-  teamBIso3: string;
+  country: string;
+  date_et: string;
+  date_vn: string;
 }
 
-const UTC_OFFSETS: Record<FixtureTimeZone, string> = {
-  "America/Toronto": "-04:00",
-  "America/Vancouver": "-07:00",
-  "America/Los_Angeles": "-07:00",
-  "America/Chicago": "-05:00",
-  "America/New_York": "-04:00",
-  "America/Mexico_City": "-06:00",
-  "America/Monterrey": "-06:00",
+interface RawSchedulePayload {
+  matches: RawScheduleMatch[];
+}
+
+const rawSchedule = canonicalSchedule as RawSchedulePayload;
+
+const TEAM_NAME_ALIASES: Record<string, string> = {
+  "Bosnia & Herzegovina": "Bosnia and Herzegovina",
+  USA: "United States",
 };
-
-// Official FIFA 2026 group-stage pairings and host venues.
-// We store host-local kickoff slots and convert them to the viewer's timezone in the UI.
-const OFFICIAL_FIXTURES: OfficialFixture[] = [
-  { id: "A-1-1", group: "A", matchday: 1, kickoffDate: "2026-06-11", kickoffLocalTime: "18:00", hostTimeZone: "America/Toronto", stadium: "Toronto Stadium", city: "Toronto", teamAIso3: "CZE", teamBIso3: "KOR" },
-  { id: "A-1-2", group: "A", matchday: 1, kickoffDate: "2026-06-11", kickoffLocalTime: "21:00", hostTimeZone: "America/Mexico_City", stadium: "Mexico City Stadium", city: "Mexico City", teamAIso3: "MEX", teamBIso3: "ZAF" },
-  { id: "B-1-1", group: "B", matchday: 1, kickoffDate: "2026-06-12", kickoffLocalTime: "18:00", hostTimeZone: "America/Toronto", stadium: "Toronto Stadium", city: "Toronto", teamAIso3: "CAN", teamBIso3: "BIH" },
-  { id: "B-1-2", group: "B", matchday: 1, kickoffDate: "2026-06-12", kickoffLocalTime: "21:00", hostTimeZone: "America/Vancouver", stadium: "BC Place Vancouver", city: "Vancouver", teamAIso3: "QAT", teamBIso3: "CHE" },
-  { id: "C-1-1", group: "C", matchday: 1, kickoffDate: "2026-06-13", kickoffLocalTime: "12:00", hostTimeZone: "America/Monterrey", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "SCT", teamBIso3: "HTI" },
-  { id: "C-1-2", group: "C", matchday: 1, kickoffDate: "2026-06-13", kickoffLocalTime: "18:00", hostTimeZone: "America/Los_Angeles", stadium: "Los Angeles Stadium", city: "Los Angeles", teamAIso3: "BRA", teamBIso3: "MAR" },
-  { id: "D-1-1", group: "D", matchday: 1, kickoffDate: "2026-06-13", kickoffLocalTime: "15:00", hostTimeZone: "America/Los_Angeles", stadium: "Los Angeles Stadium", city: "Los Angeles", teamAIso3: "AUS", teamBIso3: "USA" },
-  { id: "D-1-2", group: "D", matchday: 1, kickoffDate: "2026-06-13", kickoffLocalTime: "21:00", hostTimeZone: "America/Mexico_City", stadium: "Guadalajara Stadium", city: "Guadalajara", teamAIso3: "PRY", teamBIso3: "TUR" },
-  { id: "E-1-1", group: "E", matchday: 1, kickoffDate: "2026-06-14", kickoffLocalTime: "12:00", hostTimeZone: "America/New_York", stadium: "New York New Jersey Stadium", city: "New York / New Jersey", teamAIso3: "CUW", teamBIso3: "CIV" },
-  { id: "E-1-2", group: "E", matchday: 1, kickoffDate: "2026-06-14", kickoffLocalTime: "15:00", hostTimeZone: "America/New_York", stadium: "Boston Stadium", city: "Boston", teamAIso3: "ECU", teamBIso3: "DEU" },
-  { id: "F-1-1", group: "F", matchday: 1, kickoffDate: "2026-06-14", kickoffLocalTime: "18:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "NLD", teamBIso3: "JPN" },
-  { id: "F-1-2", group: "F", matchday: 1, kickoffDate: "2026-06-14", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "SWE", teamBIso3: "TUN" },
-  { id: "G-1-1", group: "G", matchday: 1, kickoffDate: "2026-06-15", kickoffLocalTime: "12:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "BEL", teamBIso3: "EGY" },
-  { id: "G-1-2", group: "G", matchday: 1, kickoffDate: "2026-06-15", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "IRN", teamBIso3: "NZL" },
-  { id: "H-1-1", group: "H", matchday: 1, kickoffDate: "2026-06-15", kickoffLocalTime: "18:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "SAU", teamBIso3: "URY" },
-  { id: "H-1-2", group: "H", matchday: 1, kickoffDate: "2026-06-15", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "ESP", teamBIso3: "CPV" },
-  { id: "I-1-1", group: "I", matchday: 1, kickoffDate: "2026-06-16", kickoffLocalTime: "12:00", hostTimeZone: "America/Monterrey", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "FRA", teamBIso3: "SEN" },
-  { id: "I-1-2", group: "I", matchday: 1, kickoffDate: "2026-06-16", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "IRQ", teamBIso3: "NOR" },
-  { id: "J-1-1", group: "J", matchday: 1, kickoffDate: "2026-06-16", kickoffLocalTime: "18:00", hostTimeZone: "America/New_York", stadium: "Atlanta Stadium", city: "Atlanta", teamAIso3: "ARG", teamBIso3: "DZA" },
-  { id: "J-1-2", group: "J", matchday: 1, kickoffDate: "2026-06-16", kickoffLocalTime: "21:00", hostTimeZone: "America/Mexico_City", stadium: "Mexico City Stadium", city: "Mexico City", teamAIso3: "AUT", teamBIso3: "JOR" },
-  { id: "K-1-1", group: "K", matchday: 1, kickoffDate: "2026-06-17", kickoffLocalTime: "12:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "COL", teamBIso3: "UZB" },
-  { id: "K-1-2", group: "K", matchday: 1, kickoffDate: "2026-06-17", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "PRT", teamBIso3: "COD" },
-  { id: "L-1-1", group: "L", matchday: 1, kickoffDate: "2026-06-17", kickoffLocalTime: "18:00", hostTimeZone: "America/Los_Angeles", stadium: "San Francisco Bay Area Stadium", city: "San Francisco Bay Area", teamAIso3: "PAN", teamBIso3: "GHA" },
-  { id: "L-1-2", group: "L", matchday: 1, kickoffDate: "2026-06-17", kickoffLocalTime: "21:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "ENG", teamBIso3: "HRV" },
-
-  { id: "A-2-1", group: "A", matchday: 2, kickoffDate: "2026-06-18", kickoffLocalTime: "12:00", hostTimeZone: "America/Mexico_City", stadium: "Guadalajara Stadium", city: "Guadalajara", teamAIso3: "MEX", teamBIso3: "KOR" },
-  { id: "A-2-2", group: "A", matchday: 2, kickoffDate: "2026-06-18", kickoffLocalTime: "15:00", hostTimeZone: "America/Mexico_City", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "CZE", teamBIso3: "ZAF" },
-  { id: "B-2-1", group: "B", matchday: 2, kickoffDate: "2026-06-18", kickoffLocalTime: "18:00", hostTimeZone: "America/Toronto", stadium: "Toronto Stadium", city: "Toronto", teamAIso3: "CAN", teamBIso3: "QAT" },
-  { id: "B-2-2", group: "B", matchday: 2, kickoffDate: "2026-06-18", kickoffLocalTime: "21:00", hostTimeZone: "America/Vancouver", stadium: "BC Place Vancouver", city: "Vancouver", teamAIso3: "CHE", teamBIso3: "BIH" },
-  { id: "C-2-1", group: "C", matchday: 2, kickoffDate: "2026-06-19", kickoffLocalTime: "12:00", hostTimeZone: "America/Mexico_City", stadium: "Guadalajara Stadium", city: "Guadalajara", teamAIso3: "SCT", teamBIso3: "MAR" },
-  { id: "C-2-2", group: "C", matchday: 2, kickoffDate: "2026-06-19", kickoffLocalTime: "15:00", hostTimeZone: "America/Los_Angeles", stadium: "Los Angeles Stadium", city: "Los Angeles", teamAIso3: "BRA", teamBIso3: "HTI" },
-  { id: "D-2-1", group: "D", matchday: 2, kickoffDate: "2026-06-19", kickoffLocalTime: "18:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "TUR", teamBIso3: "PRY" },
-  { id: "D-2-2", group: "D", matchday: 2, kickoffDate: "2026-06-19", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "USA", teamBIso3: "AUS" },
-  { id: "E-2-1", group: "E", matchday: 2, kickoffDate: "2026-06-20", kickoffLocalTime: "12:00", hostTimeZone: "America/New_York", stadium: "New York New Jersey Stadium", city: "New York / New Jersey", teamAIso3: "CUW", teamBIso3: "ECU" },
-  { id: "E-2-2", group: "E", matchday: 2, kickoffDate: "2026-06-20", kickoffLocalTime: "15:00", hostTimeZone: "America/New_York", stadium: "Boston Stadium", city: "Boston", teamAIso3: "DEU", teamBIso3: "CIV" },
-  { id: "F-2-1", group: "F", matchday: 2, kickoffDate: "2026-06-20", kickoffLocalTime: "18:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "NLD", teamBIso3: "SWE" },
-  { id: "F-2-2", group: "F", matchday: 2, kickoffDate: "2026-06-20", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "TUN", teamBIso3: "JPN" },
-  { id: "G-2-1", group: "G", matchday: 2, kickoffDate: "2026-06-21", kickoffLocalTime: "12:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "BEL", teamBIso3: "IRN" },
-  { id: "G-2-2", group: "G", matchday: 2, kickoffDate: "2026-06-21", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "NZL", teamBIso3: "EGY" },
-  { id: "H-2-1", group: "H", matchday: 2, kickoffDate: "2026-06-21", kickoffLocalTime: "18:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "ESP", teamBIso3: "SAU" },
-  { id: "H-2-2", group: "H", matchday: 2, kickoffDate: "2026-06-21", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "URY", teamBIso3: "CPV" },
-  { id: "I-2-1", group: "I", matchday: 2, kickoffDate: "2026-06-22", kickoffLocalTime: "12:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "NOR", teamBIso3: "SEN" },
-  { id: "I-2-2", group: "I", matchday: 2, kickoffDate: "2026-06-22", kickoffLocalTime: "15:00", hostTimeZone: "America/Mexico_City", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "FRA", teamBIso3: "IRQ" },
-  { id: "J-2-1", group: "J", matchday: 2, kickoffDate: "2026-06-22", kickoffLocalTime: "18:00", hostTimeZone: "America/New_York", stadium: "Atlanta Stadium", city: "Atlanta", teamAIso3: "JOR", teamBIso3: "DZA" },
-  { id: "J-2-2", group: "J", matchday: 2, kickoffDate: "2026-06-22", kickoffLocalTime: "21:00", hostTimeZone: "America/Mexico_City", stadium: "Mexico City Stadium", city: "Mexico City", teamAIso3: "ARG", teamBIso3: "AUT" },
-  { id: "K-2-1", group: "K", matchday: 2, kickoffDate: "2026-06-23", kickoffLocalTime: "12:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "PRT", teamBIso3: "UZB" },
-  { id: "K-2-2", group: "K", matchday: 2, kickoffDate: "2026-06-23", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "COL", teamBIso3: "COD" },
-  { id: "L-2-1", group: "L", matchday: 2, kickoffDate: "2026-06-23", kickoffLocalTime: "18:00", hostTimeZone: "America/Los_Angeles", stadium: "San Francisco Bay Area Stadium", city: "San Francisco Bay Area", teamAIso3: "ENG", teamBIso3: "GHA" },
-  { id: "L-2-2", group: "L", matchday: 2, kickoffDate: "2026-06-23", kickoffLocalTime: "21:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "PAN", teamBIso3: "HRV" },
-
-  { id: "A-3-1", group: "A", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "11:00", hostTimeZone: "America/Mexico_City", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "CZE", teamBIso3: "MEX" },
-  { id: "A-3-2", group: "A", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "13:00", hostTimeZone: "America/Mexico_City", stadium: "Guadalajara Stadium", city: "Guadalajara", teamAIso3: "ZAF", teamBIso3: "KOR" },
-  { id: "B-3-1", group: "B", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "15:00", hostTimeZone: "America/Toronto", stadium: "Toronto Stadium", city: "Toronto", teamAIso3: "CHE", teamBIso3: "CAN" },
-  { id: "B-3-2", group: "B", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "17:00", hostTimeZone: "America/Vancouver", stadium: "BC Place Vancouver", city: "Vancouver", teamAIso3: "BIH", teamBIso3: "QAT" },
-  { id: "C-3-1", group: "C", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "19:00", hostTimeZone: "America/Monterrey", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "SCT", teamBIso3: "BRA" },
-  { id: "C-3-2", group: "C", matchday: 3, kickoffDate: "2026-06-24", kickoffLocalTime: "21:00", hostTimeZone: "America/Los_Angeles", stadium: "Los Angeles Stadium", city: "Los Angeles", teamAIso3: "MAR", teamBIso3: "HTI" },
-  { id: "D-3-1", group: "D", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "11:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "TUR", teamBIso3: "USA" },
-  { id: "D-3-2", group: "D", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "13:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "PRY", teamBIso3: "AUS" },
-  { id: "E-3-1", group: "E", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "15:00", hostTimeZone: "America/New_York", stadium: "Boston Stadium", city: "Boston", teamAIso3: "ECU", teamBIso3: "DEU" },
-  { id: "E-3-2", group: "E", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "17:00", hostTimeZone: "America/New_York", stadium: "New York New Jersey Stadium", city: "New York / New Jersey", teamAIso3: "CUW", teamBIso3: "CIV" },
-  { id: "F-3-1", group: "F", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "19:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "TUN", teamBIso3: "NLD" },
-  { id: "F-3-2", group: "F", matchday: 3, kickoffDate: "2026-06-25", kickoffLocalTime: "21:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "JPN", teamBIso3: "SWE" },
-  { id: "G-3-1", group: "G", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "11:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "EGY", teamBIso3: "IRN" },
-  { id: "G-3-2", group: "G", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "13:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "NZL", teamBIso3: "BEL" },
-  { id: "H-3-1", group: "H", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Dallas Stadium", city: "Dallas", teamAIso3: "CPV", teamBIso3: "SAU" },
-  { id: "H-3-2", group: "H", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "17:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "URY", teamBIso3: "ESP" },
-  { id: "I-3-1", group: "I", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "19:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "NOR", teamBIso3: "FRA" },
-  { id: "I-3-2", group: "I", matchday: 3, kickoffDate: "2026-06-26", kickoffLocalTime: "21:00", hostTimeZone: "America/Mexico_City", stadium: "Monterrey Stadium", city: "Monterrey", teamAIso3: "SEN", teamBIso3: "IRQ" },
-  { id: "J-3-1", group: "J", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "11:00", hostTimeZone: "America/New_York", stadium: "Atlanta Stadium", city: "Atlanta", teamAIso3: "DZA", teamBIso3: "AUT" },
-  { id: "J-3-2", group: "J", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "13:00", hostTimeZone: "America/Mexico_City", stadium: "Mexico City Stadium", city: "Mexico City", teamAIso3: "JOR", teamBIso3: "ARG" },
-  { id: "K-3-1", group: "K", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "15:00", hostTimeZone: "America/Chicago", stadium: "Houston Stadium", city: "Houston", teamAIso3: "COL", teamBIso3: "PRT" },
-  { id: "K-3-2", group: "K", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "17:00", hostTimeZone: "America/Chicago", stadium: "Kansas City Stadium", city: "Kansas City", teamAIso3: "COD", teamBIso3: "UZB" },
-  { id: "L-3-1", group: "L", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "19:00", hostTimeZone: "America/Los_Angeles", stadium: "San Francisco Bay Area Stadium", city: "San Francisco Bay Area", teamAIso3: "PAN", teamBIso3: "ENG" },
-  { id: "L-3-2", group: "L", matchday: 3, kickoffDate: "2026-06-27", kickoffLocalTime: "21:00", hostTimeZone: "America/Los_Angeles", stadium: "Seattle Stadium", city: "Seattle", teamAIso3: "HRV", teamBIso3: "GHA" },
-];
 
 function getViewerTimeZone() {
   if (typeof Intl !== "undefined") {
@@ -119,12 +36,37 @@ function getViewerTimeZone() {
   return "UTC";
 }
 
-function toUtcIso(kickoffDate: string, kickoffLocalTime: string, hostTimeZone: FixtureTimeZone) {
-  const offset = UTC_OFFSETS[hostTimeZone];
-  return `${kickoffDate}T${kickoffLocalTime}:00${offset}`;
+function getViewerLocale() {
+  if (typeof document !== "undefined") {
+    return document.documentElement.lang || "en";
+  }
+
+  return "en";
 }
 
-function getMatchStatus(snapshotDate: string, kickoffDate: string): MatchStatus {
+function normalizeTeamName(teamName: string) {
+  return TEAM_NAME_ALIASES[teamName] ?? teamName;
+}
+
+function getLocalDateKey(utcIso: string) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone: getViewerTimeZone(),
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+
+  const parts = formatter.formatToParts(new Date(utcIso));
+  const year = parts.find((part) => part.type === "year")?.value ?? "0000";
+  const month = parts.find((part) => part.type === "month")?.value ?? "01";
+  const day = parts.find((part) => part.type === "day")?.value ?? "01";
+
+  return `${year}-${month}-${day}`;
+}
+
+function getMatchStatus(snapshotDate: string, utcIso: string): MatchStatus {
+  const kickoffDate = utcIso.slice(0, 10);
+
   if (snapshotDate > kickoffDate) {
     return "completed";
   }
@@ -137,7 +79,7 @@ function getMatchStatus(snapshotDate: string, kickoffDate: string): MatchStatus 
 }
 
 function formatKickoffLabel(utcIso: string) {
-  return new Intl.DateTimeFormat("en-CA", {
+  return new Intl.DateTimeFormat(getViewerLocale(), {
     month: "short",
     day: "numeric",
     hour: "numeric",
@@ -195,31 +137,43 @@ function generateScore(matchId: string, teamA: TeamSnapshot, teamB: TeamSnapshot
 }
 
 export function buildGroupStageSchedule(teams: TeamSnapshot[], snapshotDate: string): ScheduleMatch[] {
-  const teamsByIso = new Map(teams.map((team) => [team.iso3, team]));
+  const teamMap = new Map(teams.map((team) => [team.team, team]));
+  const groupMatchCounters = new Map<string, number>();
 
-  return OFFICIAL_FIXTURES.flatMap((fixture) => {
-    const teamA = teamsByIso.get(fixture.teamAIso3);
-    const teamB = teamsByIso.get(fixture.teamBIso3);
+  const groupStageMatches = rawSchedule.matches
+    .filter((match) => match.stage === "Group Stage")
+    .sort((a, b) => a.datetime_utc.localeCompare(b.datetime_utc));
+
+  const scheduleMatches = groupStageMatches.flatMap((rawMatch) => {
+    const teamA = teamMap.get(normalizeTeamName(rawMatch.team1));
+    const teamB = teamMap.get(normalizeTeamName(rawMatch.team2));
 
     if (!teamA || !teamB) {
+      if (import.meta.env.DEV) {
+        console.warn("Skipping schedule match with unmapped team name", rawMatch);
+      }
+
       return [];
     }
 
-    const kickoffUtc = toUtcIso(fixture.kickoffDate, fixture.kickoffLocalTime, fixture.hostTimeZone);
-    const status = getMatchStatus(snapshotDate, fixture.kickoffDate);
-    const score = generateScore(fixture.id, teamA, teamB, status);
+    const nextGroupCount = (groupMatchCounters.get(rawMatch.group) ?? 0) + 1;
+    groupMatchCounters.set(rawMatch.group, nextGroupCount);
+
+    const kickoffUtc = rawMatch.datetime_utc;
+    const status = getMatchStatus(snapshotDate, kickoffUtc);
+    const score = generateScore(`group-${rawMatch.id}`, teamA, teamB, status);
 
     return [
       {
-        id: fixture.id,
+        id: `group-${rawMatch.id}`,
         stage: "group",
-        group: fixture.group,
-        matchday: fixture.matchday,
-        kickoffDate: fixture.kickoffDate,
+        group: rawMatch.group,
+        matchday: Math.ceil(nextGroupCount / 2),
+        kickoffDate: getLocalDateKey(kickoffUtc),
         kickoffUtc,
         kickoffLabel: formatKickoffLabel(kickoffUtc),
-        venue: `${fixture.stadium} • ${fixture.city}`,
-        hostTimeZone: fixture.hostTimeZone,
+        venue: `${rawMatch.venue} • ${rawMatch.city}`,
+        hostTimeZone: rawMatch.country,
         teamA,
         teamB,
         status,
@@ -227,7 +181,15 @@ export function buildGroupStageSchedule(teams: TeamSnapshot[], snapshotDate: str
         scoreB: score.scoreB,
       } satisfies ScheduleMatch,
     ];
-  }).sort((a, b) => a.kickoffUtc.localeCompare(b.kickoffUtc));
+  });
+
+  if (import.meta.env.DEV && scheduleMatches.length !== groupStageMatches.length) {
+    console.warn(
+      `Expected ${groupStageMatches.length} mapped group-stage matches but built ${scheduleMatches.length}.`,
+    );
+  }
+
+  return scheduleMatches.sort((a, b) => a.kickoffUtc.localeCompare(b.kickoffUtc));
 }
 
 export function getUpcomingMatches(matches: ScheduleMatch[], limit = 10) {
@@ -249,6 +211,23 @@ export function getCompletedMatches(matches: ScheduleMatch[], limit = 8) {
 
 export function getRecentSelectedTeamResults(matches: ScheduleMatch[], iso3: string, limit = 3) {
   return getCompletedMatches(getSelectedTeamMatches(matches, iso3), limit);
+}
+
+export function groupMatchesByDate(matches: ScheduleMatch[]) {
+  const grouped = new Map<string, ScheduleMatch[]>();
+
+  matches.forEach((match) => {
+    const dateMatches = grouped.get(match.kickoffDate) ?? [];
+    dateMatches.push(match);
+    grouped.set(match.kickoffDate, dateMatches);
+  });
+
+  return [...grouped.entries()]
+    .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
+    .map(([kickoffDate, dateMatches]) => ({
+      kickoffDate,
+      matches: dateMatches.sort((a, b) => a.kickoffUtc.localeCompare(b.kickoffUtc)),
+    }));
 }
 
 export function buildGroupStandings(teams: TeamSnapshot[], matches: ScheduleMatch[]) {

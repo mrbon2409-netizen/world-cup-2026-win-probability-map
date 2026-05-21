@@ -1,12 +1,14 @@
 {
   "metadata": {
     "snapshotDate": "2026-05-20",
-    "lastUpdated": "2026-05-20T10:43:18-04:00",
-    "titleOddsLabel": "FOX Sports World Cup title odds snapshot",
-    "groupAdvanceLabel": "FOX Sports advance-from-group odds snapshot",
-    "rankingLabel": "FOX Sports/AP FIFA ranking snapshot",
+    "lastUpdated": "2026-05-20T23:29:02-04:00",
+    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated May. 13, 2026)",
+    "groupAdvanceLabel": "FOX Sports advance-from-group odds snapshot (updated May. 13, 2026)",
+    "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01)",
     "titleOddsSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-tiers-48-teams-favorites-sleeper-picks-usmnt-mexico-canada-argentina-england",
-    "groupBreakdownSourceUrl": "https://www.foxsports.com/articles/soccer/world-cup-2026-whos-in-where-to-watch-betting-odds-schedules-and-more",
+    "groupAdvanceSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-tiers-48-teams-favorites-sleeper-picks-usmnt-mexico-canada-argentina-england",
+    "groupBreakdownSourceUrl": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-team-by-team-guide",
+    "rankingSourceUrl": "https://inside.fifa.com/fifa-world-ranking/men",
     "totalTeams": 48
   },
   "teams": [
@@ -43,10 +45,10 @@
       "groupAdvanceProbability": 0.7674418604651163,
       "stages": {
         "roundOf32": 0.7674418604651163,
-        "roundOf16": 0.24229296113258392,
-        "quarterfinal": 0.07649553932178849,
-        "semifinal": 0.024150794595016244,
-        "final": 0.007624769819807436,
+        "roundOf16": 0.24229296113258386,
+        "quarterfinal": 0.07649553932178846,
+        "semifinal": 0.02415079459501623,
+        "final": 0.00762476981980743,
         "champion": 0.0024072547417153503
       }
     },
@@ -143,10 +145,10 @@
       "groupAdvanceProbability": 0.25,
       "stages": {
         "roundOf32": 0.25,
-        "roundOf16": 0.0800997249711752,
-        "quarterfinal": 0.025663863761831635,
-        "semifinal": 0.008222673716081695,
-        "final": 0.00263453561274342,
+        "roundOf16": 0.08009972497117519,
+        "quarterfinal": 0.025663863761831628,
+        "semifinal": 0.008222673716081692,
+        "final": 0.0026345356127434184,
         "champion": 0.0008441023120300578
       }
     },
@@ -323,10 +325,10 @@
       "groupAdvanceProbability": 0.8518518518518519,
       "stages": {
         "roundOf32": 0.8518518518518519,
-        "roundOf16": 0.2944542855143418,
-        "quarterfinal": 0.10178216560693742,
-        "semifinal": 0.035182402652222416,
-        "final": 0.012161280407053346,
+        "roundOf16": 0.2944542855143417,
+        "quarterfinal": 0.10178216560693738,
+        "semifinal": 0.035182402652222396,
+        "final": 0.012161280407053335,
         "champion": 0.004203713504189492
       }
     },
@@ -483,10 +485,10 @@
       "groupAdvanceProbability": 0.45454545454545453,
       "stages": {
         "roundOf32": 0.45454545454545453,
-        "roundOf16": 0.14840896749190793,
-        "quarterfinal": 0.04845548759043121,
-        "semifinal": 0.015820703541748277,
-        "final": 0.005165455410778151,
+        "roundOf16": 0.1484089674919079,
+        "quarterfinal": 0.04845548759043119,
+        "semifinal": 0.015820703541748266,
+        "final": 0.005165455410778148,
         "champion": 0.0016865197891059638
       }
     },
@@ -523,10 +525,10 @@
       "groupAdvanceProbability": 0.696969696969697,
       "stages": {
         "roundOf32": 0.696969696969697,
-        "roundOf16": 0.2313255754781643,
-        "quarterfinal": 0.07677740094434904,
-        "semifinal": 0.025482566221155942,
-        "final": 0.00845771246784295,
+        "roundOf16": 0.23132557547816424,
+        "quarterfinal": 0.07677740094434901,
+        "semifinal": 0.02548256622115593,
+        "final": 0.008457712467842942,
         "champion": 0.0028071309446580993
       }
     },
@@ -603,10 +605,10 @@
       "groupAdvanceProbability": 0.8888888888888888,
       "stages": {
         "roundOf32": 0.8888888888888888,
-        "roundOf16": 0.3806580586652144,
-        "quarterfinal": 0.16301312733011603,
-        "semifinal": 0.06980879315973079,
-        "final": 0.0298949396421877,
+        "roundOf16": 0.38065805866521435,
+        "quarterfinal": 0.163013127330116,
+        "semifinal": 0.06980879315973078,
+        "final": 0.02989493964218769,
         "champion": 0.012802218399122545
       }
     },
@@ -643,10 +645,10 @@
       "groupAdvanceProbability": 0.3076923076923077,
       "stages": {
         "roundOf32": 0.3076923076923077,
-        "roundOf16": 0.09457412441012603,
-        "quarterfinal": 0.029068861275811483,
-        "semifinal": 0.008934776833967692,
-        "final": 0.0027462457615852103,
+        "roundOf16": 0.09457412441012601,
+        "quarterfinal": 0.029068861275811472,
+        "semifinal": 0.008934776833967687,
+        "final": 0.002746245761585208,
         "champion": 0.0008441023120300578
       }
     },
@@ -663,10 +665,10 @@
       "groupAdvanceProbability": 0.9803921568627451,
       "stages": {
         "roundOf32": 0.9803921568627451,
-        "roundOf16": 0.6448609638333025,
-        "quarterfinal": 0.4241625759295362,
-        "semifinal": 0.2789964052866558,
-        "final": 0.18351216863556316,
+        "roundOf16": 0.6448609638333026,
+        "quarterfinal": 0.4241625759295364,
+        "semifinal": 0.278996405286656,
+        "final": 0.1835121686355633,
         "champion": 0.12070663062029827
       }
     },

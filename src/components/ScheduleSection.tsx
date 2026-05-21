@@ -1,7 +1,7 @@
 import type { AppCopy } from "../lib/i18n";
-import { FlagIcon } from "./FlagIcon";
-import { getUpcomingMatches } from "../lib/schedule";
+import { groupMatchesByDate } from "../lib/schedule";
 import type { ScheduleMatch } from "../types/worldCup";
+import { FlagIcon } from "./FlagIcon";
 
 interface ScheduleSectionProps {
   matches: ScheduleMatch[];
@@ -33,7 +33,9 @@ export function MatchRow({
         <FlagIcon iso3={match.teamA.iso3} team={match.teamA.team} className="min-w-10" />
         <div>
           <p className="font-semibold text-ink">{match.teamA.team}</p>
-          <p className="text-xs text-slate-500">{labels.group} {match.group}</p>
+          <p className="text-xs text-slate-500">
+            {labels.group} {match.group}
+          </p>
         </div>
       </div>
 
@@ -45,7 +47,9 @@ export function MatchRow({
         <FlagIcon iso3={match.teamB.iso3} team={match.teamB.team} className="min-w-10" />
         <div>
           <p className="font-semibold text-ink">{match.teamB.team}</p>
-          <p className="text-xs text-slate-500">{labels.matchday} {match.matchday}</p>
+          <p className="text-xs text-slate-500">
+            {labels.matchday} {match.matchday}
+          </p>
         </div>
       </div>
 
@@ -53,7 +57,9 @@ export function MatchRow({
         <p className="font-semibold text-ink">{match.kickoffLabel}</p>
         <p className="text-xs uppercase tracking-[0.16em] text-slate-400">{labels.yourLocalTime}</p>
         <p className="mt-1">{match.venue}</p>
-        <span className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusClassName(match.status)}`}>
+        <span
+          className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${statusClassName(match.status)}`}
+        >
           {labels.status[match.status]}
         </span>
       </div>
@@ -62,10 +68,17 @@ export function MatchRow({
 }
 
 export function ScheduleSection({ matches, labels }: ScheduleSectionProps) {
-  const upcomingMatches = getUpcomingMatches(matches, 20);
-  const midpoint = Math.ceil(upcomingMatches.length / 2);
-  const leftColumnMatches = upcomingMatches.slice(0, midpoint);
-  const rightColumnMatches = upcomingMatches.slice(midpoint);
+  const groupedMatches = groupMatchesByDate(matches);
+  const locale =
+    typeof document !== "undefined" ? document.documentElement.lang || "en" : "en";
+
+  function formatSectionDate(kickoffDate: string) {
+    return new Intl.DateTimeFormat(locale, {
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC",
+    }).format(new Date(`${kickoffDate}T12:00:00Z`));
+  }
 
   return (
     <section className="card p-6">
@@ -74,20 +87,26 @@ export function ScheduleSection({ matches, labels }: ScheduleSectionProps) {
           <p className="chip inline-flex">{labels.upcomingEyebrow}</p>
           <h2 className="mt-4 text-2xl font-semibold text-ink">{labels.upcomingTitle}</h2>
         </div>
-        <p className="max-w-sm text-sm text-slate-500">
-          {labels.upcomingDescription}
-        </p>
+        <p className="max-w-sm text-sm text-slate-500">{labels.upcomingDescription}</p>
       </div>
 
-      <div className="mt-5 grid gap-4 xl:grid-cols-2 xl:items-start">
-        <div className="space-y-3">
-          {leftColumnMatches.map((match) => (
-            <MatchRow key={match.id} match={match} labels={labels} />
-          ))}
-        </div>
-        <div className="space-y-3">
-          {rightColumnMatches.map((match) => (
-            <MatchRow key={match.id} match={match} labels={labels} />
+      <div className="mt-5 max-h-[1080px] overflow-y-auto pr-2">
+        <div className="space-y-5">
+          {groupedMatches.map((day) => (
+            <section
+              key={day.kickoffDate}
+              className="overflow-hidden rounded-3xl border border-slate-200 bg-white"
+            >
+              <div className="border-b border-slate-200 px-5 py-4">
+                <h3 className="text-lg font-semibold text-ink">{`${labels.groupStage} • ${formatSectionDate(day.kickoffDate)}`}</h3>
+              </div>
+
+              <div className="grid gap-4 p-4 xl:grid-cols-2 xl:items-start">
+                {day.matches.map((match) => (
+                  <MatchRow key={match.id} match={match} labels={labels} />
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </div>

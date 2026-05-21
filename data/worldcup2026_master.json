@@ -1,12 +1,14 @@
 {
   "metadata": {
-    "snapshotDate": "2026-04-19",
-    "lastUpdated": "2026-04-19",
-    "titleOddsLabel": "FOX Sports World Cup title odds snapshot",
-    "groupAdvanceLabel": "FOX Sports advance-from-group odds snapshot",
-    "rankingLabel": "FOX Sports/AP FIFA ranking snapshot",
+    "snapshotDate": "2026-05-18",
+    "lastUpdated": "2026-05-18",
+    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated May. 13, 2026)",
+    "groupAdvanceLabel": "FOX Sports advance-from-group odds snapshot (updated May. 13, 2026)",
+    "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01)",
     "titleOddsSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-tiers-48-teams-favorites-sleeper-picks-usmnt-mexico-canada-argentina-england",
-    "groupBreakdownSourceUrl": "https://www.foxsports.com/articles/soccer/world-cup-2026-whos-in-where-to-watch-betting-odds-schedules-and-more"
+    "groupAdvanceSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-tiers-48-teams-favorites-sleeper-picks-usmnt-mexico-canada-argentina-england",
+    "groupBreakdownSourceUrl": "https://www.foxsports.com/stories/soccer/2026-fifa-world-cup-team-by-team-guide",
+    "rankingSourceUrl": "https://inside.fifa.com/fifa-world-ranking/men"
   },
   "teams": [
     { "team": "Mexico", "group": "A", "confederation": "CONCACAF", "oddsAmerican": 7000, "groupAdvanceOddsAmerican": -750, "fifaRank": 15, "iso3": "MEX" },

@@ -78,6 +78,7 @@ export interface AppCopy {
     upcomingEyebrow: string;
     upcomingTitle: string;
     upcomingDescription: string;
+    groupStage: string;
     completedEyebrow: string;
     completedTitle: string;
     completedDescription: string;
@@ -291,7 +292,8 @@ export const copy: Record<LanguageCode, AppCopy> = {
       upcomingEyebrow: "Upcoming Matches",
       upcomingTitle: "Tournament Schedule Pulse",
       upcomingDescription:
-        "Official group-stage fixtures now anchor this panel, while kickoff times automatically shift to the viewer's local timezone.",
+        "Official-style group-stage fixtures are now grouped by calendar day, while kickoff times automatically shift to the viewer's local timezone.",
+      groupStage: "Group Stage",
       completedEyebrow: "Completed Matches",
       completedTitle: "Recently Completed Fixtures",
       completedDescription:
@@ -491,7 +493,8 @@ export const copy: Record<LanguageCode, AppCopy> = {
       upcomingEyebrow: "Trận sắp diễn ra",
       upcomingTitle: "Nhịp Lịch Thi Đấu Giải Đấu",
       upcomingDescription:
-        "Lịch vòng bảng chính thức là trục chính của khu vực này, còn giờ bóng lăn sẽ tự đổi theo múi giờ của người xem.",
+        "Lịch vòng bảng nay được chia theo từng ngày thi đấu, và giờ bóng lăn sẽ tự đổi theo múi giờ của người xem.",
+      groupStage: "Vòng bảng",
       completedEyebrow: "Trận đã hoàn tất",
       completedTitle: "Các Trận Vừa Kết Thúc",
       completedDescription:
@@ -691,7 +694,8 @@ export const copy: Record<LanguageCode, AppCopy> = {
       upcomingEyebrow: "Matchs à venir",
       upcomingTitle: "Pouls du calendrier du tournoi",
       upcomingDescription:
-        "Les affiches officielles de la phase de groupes structurent désormais ce panneau, tandis que les heures de coup d'envoi s'adaptent automatiquement au fuseau horaire du visiteur.",
+        "Les matches de groupes sont maintenant regroupés par jour, avec des horaires de coup d'envoi automatiquement convertis dans le fuseau horaire du visiteur.",
+      groupStage: "Phase de groupes",
       completedEyebrow: "Matchs terminés",
       completedTitle: "Matchs récemment terminés",
       completedDescription:
@@ -891,7 +895,8 @@ export const copy: Record<LanguageCode, AppCopy> = {
       upcomingEyebrow: "Próximos partidos",
       upcomingTitle: "Pulso del calendario del torneo",
       upcomingDescription:
-        "Los partidos oficiales de la fase de grupos ahora sostienen este panel, mientras que el horario de inicio se adapta automáticamente a la zona horaria del visitante.",
+        "Los partidos de la fase de grupos ahora se agrupan por día, mientras que el horario de inicio se ajusta automáticamente a la zona horaria del visitante.",
+      groupStage: "Fase de grupos",
       completedEyebrow: "Partidos completados",
       completedTitle: "Partidos completados recientemente",
       completedDescription:
