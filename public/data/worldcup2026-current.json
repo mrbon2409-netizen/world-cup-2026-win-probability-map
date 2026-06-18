@@ -1,7 +1,7 @@
 {
   "metadata": {
     "snapshotDate": "2026-06-18",
-    "lastUpdated": "2026-06-18T00:57:35-04:00",
+    "lastUpdated": "2026-06-18T10:51:30-04:00",
     "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jun. 18, 2026; refreshed automatically)",
     "groupAdvanceLabel": "Dimers/Polymarket World Cup 2026 group-stage To Advance probabilities, converted to fair American odds (article updated Jun. 1, 2026; accessed Jun. 2, 2026)",
     "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01; next update listed for 2026-06-11)",
@@ -165,10 +165,10 @@
       "groupAdvanceProbability": 0.4098360655737705,
       "stages": {
         "roundOf32": 0.4098360655737705,
-        "roundOf16": 0.15160687638586576,
-        "quarterfinal": 0.0560825337206492,
-        "semifinal": 0.02074609452754997,
-        "final": 0.00767441143600772,
+        "roundOf16": 0.15160687638586579,
+        "quarterfinal": 0.05608253372064922,
+        "semifinal": 0.02074609452754998,
+        "final": 0.007674411436007725,
         "champion": 0.0028389242520279584
       }
     },
@@ -625,10 +625,10 @@
       "groupAdvanceProbability": 0.38022813688212925,
       "stages": {
         "roundOf32": 0.38022813688212925,
-        "roundOf16": 0.10827148439818407,
-        "quarterfinal": 0.03083073869785775,
-        "semifinal": 0.008779176289482236,
-        "final": 0.0024999055999641844,
+        "roundOf16": 0.10827148439818408,
+        "quarterfinal": 0.03083073869785776,
+        "semifinal": 0.00877917628948224,
+        "final": 0.002499905599964186,
         "champion": 0.0007118581291298877
       }
     },
@@ -745,10 +745,10 @@
       "groupAdvanceProbability": 0.95,
       "stages": {
         "roundOf32": 0.95,
-        "roundOf16": 0.5659061185090897,
-        "quarterfinal": 0.3371049841747619,
-        "semifinal": 0.20081028749937643,
-        "final": 0.11962081090049104,
+        "roundOf16": 0.5659061185090896,
+        "quarterfinal": 0.3371049841747618,
+        "semifinal": 0.20081028749937635,
+        "final": 0.11962081090049097,
         "champion": 0.07125699872590176
       }
     },
