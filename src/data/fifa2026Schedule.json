@@ -28,7 +28,13 @@
       "city": "Mexico City",
       "country": "Mexico",
       "date_et": "2026-06-11",
-      "date_vn": "2026-06-12"
+      "date_vn": "2026-06-12",
+      "espn_event_id": "760415",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.316Z",
+      "status": "completed",
+      "score1": 2,
+      "score2": 0
     },
     {
       "id": 2,
@@ -43,7 +49,13 @@
       "city": "Zapopan",
       "country": "Mexico",
       "date_et": "2026-06-11",
-      "date_vn": "2026-06-12"
+      "date_vn": "2026-06-12",
+      "espn_event_id": "760414",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.316Z",
+      "status": "completed",
+      "score1": 2,
+      "score2": 1
     },
     {
       "id": 3,
@@ -73,7 +85,13 @@
       "city": "Inglewood",
       "country": "USA",
       "date_et": "2026-06-12",
-      "date_vn": "2026-06-13"
+      "date_vn": "2026-06-13",
+      "espn_event_id": "760417",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.442Z",
+      "status": "completed",
+      "score1": 4,
+      "score2": 1
     },
     {
       "id": 5,
@@ -88,7 +106,13 @@
       "city": "Santa Clara",
       "country": "USA",
       "date_et": "2026-06-13",
-      "date_vn": "2026-06-14"
+      "date_vn": "2026-06-14",
+      "espn_event_id": "760420",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.562Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 6,
@@ -103,7 +127,13 @@
       "city": "East Rutherford",
       "country": "USA",
       "date_et": "2026-06-13",
-      "date_vn": "2026-06-14"
+      "date_vn": "2026-06-14",
+      "espn_event_id": "760419",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.562Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 7,
@@ -118,7 +148,13 @@
       "city": "Foxborough",
       "country": "USA",
       "date_et": "2026-06-13",
-      "date_vn": "2026-06-14"
+      "date_vn": "2026-06-14",
+      "espn_event_id": "760418",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.562Z",
+      "status": "completed",
+      "score1": 0,
+      "score2": 1
     },
     {
       "id": 8,
@@ -133,7 +169,13 @@
       "city": "Vancouver",
       "country": "Canada",
       "date_et": "2026-06-14",
-      "date_vn": "2026-06-14"
+      "date_vn": "2026-06-14",
+      "espn_event_id": "760421",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.688Z",
+      "status": "completed",
+      "score1": 2,
+      "score2": 0
     },
     {
       "id": 9,
@@ -148,7 +190,13 @@
       "city": "Houston",
       "country": "USA",
       "date_et": "2026-06-14",
-      "date_vn": "2026-06-15"
+      "date_vn": "2026-06-15",
+      "espn_event_id": "760422",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.688Z",
+      "status": "completed",
+      "score1": 7,
+      "score2": 1
     },
     {
       "id": 10,
@@ -163,7 +211,13 @@
       "city": "Arlington",
       "country": "USA",
       "date_et": "2026-06-14",
-      "date_vn": "2026-06-15"
+      "date_vn": "2026-06-15",
+      "espn_event_id": "760425",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.688Z",
+      "status": "completed",
+      "score1": 2,
+      "score2": 2
     },
     {
       "id": 11,
@@ -178,7 +232,13 @@
       "city": "Philadelphia",
       "country": "USA",
       "date_et": "2026-06-14",
-      "date_vn": "2026-06-15"
+      "date_vn": "2026-06-15",
+      "espn_event_id": "760423",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.688Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 0
     },
     {
       "id": 12,
@@ -193,7 +253,13 @@
       "city": "Monterrey",
       "country": "Mexico",
       "date_et": "2026-06-14",
-      "date_vn": "2026-06-15"
+      "date_vn": "2026-06-15",
+      "espn_event_id": "760424",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.688Z",
+      "status": "completed",
+      "score1": 5,
+      "score2": 1
     },
     {
       "id": 13,
@@ -208,7 +274,13 @@
       "city": "Atlanta",
       "country": "USA",
       "date_et": "2026-06-15",
-      "date_vn": "2026-06-15"
+      "date_vn": "2026-06-15",
+      "espn_event_id": "760428",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.819Z",
+      "status": "completed",
+      "score1": 0,
+      "score2": 0
     },
     {
       "id": 14,
@@ -223,7 +295,13 @@
       "city": "Seattle",
       "country": "USA",
       "date_et": "2026-06-15",
-      "date_vn": "2026-06-16"
+      "date_vn": "2026-06-16",
+      "espn_event_id": "760426",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.819Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 15,
@@ -238,7 +316,13 @@
       "city": "Miami Gardens",
       "country": "USA",
       "date_et": "2026-06-15",
-      "date_vn": "2026-06-16"
+      "date_vn": "2026-06-16",
+      "espn_event_id": "760429",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.819Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 16,
@@ -253,7 +337,13 @@
       "city": "Inglewood",
       "country": "USA",
       "date_et": "2026-06-15",
-      "date_vn": "2026-06-16"
+      "date_vn": "2026-06-16",
+      "espn_event_id": "760427",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.819Z",
+      "status": "completed",
+      "score1": 2,
+      "score2": 2
     },
     {
       "id": 17,
@@ -268,7 +358,13 @@
       "city": "East Rutherford",
       "country": "USA",
       "date_et": "2026-06-16",
-      "date_vn": "2026-06-17"
+      "date_vn": "2026-06-17",
+      "espn_event_id": "760432",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.926Z",
+      "status": "completed",
+      "score1": 3,
+      "score2": 1
     },
     {
       "id": 18,
@@ -283,7 +379,13 @@
       "city": "Foxborough",
       "country": "USA",
       "date_et": "2026-06-16",
-      "date_vn": "2026-06-17"
+      "date_vn": "2026-06-17",
+      "espn_event_id": "760430",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.926Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 4
     },
     {
       "id": 19,
@@ -298,7 +400,13 @@
       "city": "Kansas City",
       "country": "USA",
       "date_et": "2026-06-16",
-      "date_vn": "2026-06-17"
+      "date_vn": "2026-06-17",
+      "espn_event_id": "760433",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.926Z",
+      "status": "completed",
+      "score1": 3,
+      "score2": 0
     },
     {
       "id": 20,
@@ -313,7 +421,13 @@
       "city": "Santa Clara",
       "country": "USA",
       "date_et": "2026-06-17",
-      "date_vn": "2026-06-17"
+      "date_vn": "2026-06-17",
+      "espn_event_id": "760431",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.985Z",
+      "status": "completed",
+      "score1": 3,
+      "score2": 1
     },
     {
       "id": 21,
@@ -328,7 +442,13 @@
       "city": "Houston",
       "country": "USA",
       "date_et": "2026-06-17",
-      "date_vn": "2026-06-18"
+      "date_vn": "2026-06-18",
+      "espn_event_id": "760435",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.985Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 22,
@@ -343,7 +463,13 @@
       "city": "Arlington",
       "country": "USA",
       "date_et": "2026-06-17",
-      "date_vn": "2026-06-18"
+      "date_vn": "2026-06-18",
+      "espn_event_id": "760437",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.985Z",
+      "status": "completed",
+      "score1": 4,
+      "score2": 2
     },
     {
       "id": 23,
@@ -358,7 +484,13 @@
       "city": "Toronto",
       "country": "Canada",
       "date_et": "2026-06-17",
-      "date_vn": "2026-06-18"
+      "date_vn": "2026-06-18",
+      "espn_event_id": "760434",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.985Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 0
     },
     {
       "id": 24,
@@ -373,7 +505,13 @@
       "city": "Mexico City",
       "country": "Mexico",
       "date_et": "2026-06-17",
-      "date_vn": "2026-06-18"
+      "date_vn": "2026-06-18",
+      "espn_event_id": "760436",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:39:59.985Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 3
     },
     {
       "id": 25,
@@ -388,7 +526,11 @@
       "city": "Atlanta",
       "country": "USA",
       "date_et": "2026-06-18",
-      "date_vn": "2026-06-18"
+      "date_vn": "2026-06-18",
+      "espn_event_id": "760438",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:40:00.090Z",
+      "status": "scheduled"
     },
     {
       "id": 26,
@@ -418,7 +560,11 @@
       "city": "Vancouver",
       "country": "Canada",
       "date_et": "2026-06-18",
-      "date_vn": "2026-06-19"
+      "date_vn": "2026-06-19",
+      "espn_event_id": "760440",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:40:00.090Z",
+      "status": "scheduled"
     },
     {
       "id": 28,
@@ -433,7 +579,11 @@
       "city": "Zapopan",
       "country": "Mexico",
       "date_et": "2026-06-18",
-      "date_vn": "2026-06-19"
+      "date_vn": "2026-06-19",
+      "espn_event_id": "760441",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-18T04:40:00.090Z",
+      "status": "scheduled"
     },
     {
       "id": 29,

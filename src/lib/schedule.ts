@@ -15,6 +15,11 @@ interface RawScheduleMatch {
   country: string;
   date_et: string;
   date_vn: string;
+  status?: "completed" | "scheduled" | string;
+  score1?: number | null;
+  score2?: number | null;
+  score_source?: string;
+  score_last_checked?: string;
 }
 
 interface RawSchedulePayload {
@@ -89,51 +94,29 @@ function formatKickoffLabel(utcIso: string) {
   }).format(new Date(utcIso));
 }
 
-function seededNumber(seed: string) {
-  let hash = 0;
-  for (let index = 0; index < seed.length; index += 1) {
-    hash = (hash * 31 + seed.charCodeAt(index)) >>> 0;
-  }
-
-  return hash / 4294967295;
-}
-
-function generateScore(matchId: string, teamA: TeamSnapshot, teamB: TeamSnapshot, status: MatchStatus) {
-  if (status !== "completed") {
-    return {
-      scoreA: null,
-      scoreB: null,
-    };
-  }
-
-  const strengthA = Math.max(teamA.normalizedProbability, 0.002);
-  const strengthB = Math.max(teamB.normalizedProbability, 0.002);
-  const ratioA = strengthA / (strengthA + strengthB);
-  const ratioB = 1 - ratioA;
-  const totalGoals = 1 + Math.floor(seededNumber(`${matchId}:goals`) * 5);
-  const bias = ratioA - ratioB;
-  const adjustment = bias > 0.12 ? 1 : bias < -0.12 ? -1 : 0;
-  let scoreA = Math.max(
-    0,
-    Math.round(totalGoals * ratioA + adjustment + seededNumber(`${matchId}:a`) * 0.9 - 0.45),
-  );
-  let scoreB = Math.max(
-    0,
-    Math.round(totalGoals * ratioB - adjustment + seededNumber(`${matchId}:b`) * 0.9 - 0.45),
-  );
-
-  if (scoreA === 0 && scoreB === 0) {
-    if (ratioA >= ratioB) {
-      scoreA = 1;
-    } else {
-      scoreB = 1;
-    }
+function getRecordedScore(rawMatch: RawScheduleMatch) {
+  if (
+    rawMatch.status !== "completed" ||
+    typeof rawMatch.score1 !== "number" ||
+    typeof rawMatch.score2 !== "number"
+  ) {
+    return null;
   }
 
   return {
-    scoreA,
-    scoreB,
+    scoreA: rawMatch.score1,
+    scoreB: rawMatch.score2,
   };
+}
+
+function getUnscoredMatchStatus(snapshotDate: string, utcIso: string): MatchStatus {
+  const kickoffDate = utcIso.slice(0, 10);
+
+  if (snapshotDate === kickoffDate) {
+    return "today";
+  }
+
+  return "upcoming";
 }
 
 export function buildGroupStageSchedule(teams: TeamSnapshot[], snapshotDate: string): ScheduleMatch[] {
@@ -160,8 +143,10 @@ export function buildGroupStageSchedule(teams: TeamSnapshot[], snapshotDate: str
     groupMatchCounters.set(rawMatch.group, nextGroupCount);
 
     const kickoffUtc = rawMatch.datetime_utc;
-    const status = getMatchStatus(snapshotDate, kickoffUtc);
-    const score = generateScore(`group-${rawMatch.id}`, teamA, teamB, status);
+    const recordedScore = getRecordedScore(rawMatch);
+    const status = recordedScore
+      ? getMatchStatus(snapshotDate, kickoffUtc)
+      : getUnscoredMatchStatus(snapshotDate, kickoffUtc);
 
     return [
       {
@@ -177,8 +162,8 @@ export function buildGroupStageSchedule(teams: TeamSnapshot[], snapshotDate: str
         teamA,
         teamB,
         status,
-        scoreA: score.scoreA,
-        scoreB: score.scoreB,
+        scoreA: recordedScore?.scoreA ?? null,
+        scoreB: recordedScore?.scoreB ?? null,
       } satisfies ScheduleMatch,
     ];
   });
@@ -203,7 +188,7 @@ export function getSelectedTeamMatches(matches: ScheduleMatch[], iso3: string) {
 
 export function getCompletedMatches(matches: ScheduleMatch[], limit = 8) {
   return matches
-    .filter((match) => match.status === "completed")
+    .filter((match) => match.status === "completed" && match.scoreA !== null && match.scoreB !== null)
     .slice()
     .sort((a, b) => b.kickoffUtc.localeCompare(a.kickoffUtc))
     .slice(0, limit);

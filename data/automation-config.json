@@ -4,8 +4,14 @@
   "scheduleHour": 8,
   "scheduleMinute": 0,
   "scheduleLabel": "Daily at 08:00 America/Toronto",
-  "dataSourceLabel": "Local master odds file and generated daily snapshot history",
+  "refreshTitleOddsFromSource": true,
+  "refreshScoresFromSource": true,
+  "titleOddsSourceUrls": [
+    "https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds"
+  ],
+  "minimumTitleOddsTeamCount": 12,
+  "dataSourceLabel": "FOX Sports title odds, ESPN FIFA World Cup scoreboard, and generated daily snapshot history",
   "runMode": "Local scheduled build",
   "buildTarget": "dist",
-  "note": "The daily update script refreshes current data, appends or replaces the selected snapshot date, updates automation status, and syncs embedded static JSON for file-based viewing."
+  "note": "The daily update script refreshes remote title odds when FOX Sports is reachable, checks completed scores from ESPN, appends or replaces the selected snapshot date, updates automation status, and syncs embedded static JSON for file-based viewing."
 }

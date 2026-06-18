@@ -12,6 +12,7 @@ export const automationStatusOutputPath = path.join(projectRoot, "public", "data
 export const csvOutputPath = path.join(projectRoot, "public", "worldcup2026_odds.csv");
 export const staticHistoryOutputPath = path.join(projectRoot, "src", "data", "worldcup2026-history.static.json");
 export const staticAutomationStatusOutputPath = path.join(projectRoot, "src", "data", "automation-status.static.json");
+export const scheduleDataPath = path.join(projectRoot, "src", "data", "fifa2026Schedule.json");
 
 export function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));

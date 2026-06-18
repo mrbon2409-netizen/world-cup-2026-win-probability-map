@@ -1,0 +1,81 @@
+
+> world-cup-2026-win-probability-map@0.1.0 dev
+> vite --host 127.0.0.1 --port 4173
+
+Re-optimizing dependencies because lockfile has changed
+Port 4173 is in use, trying another one...
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m8362[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m4174[22m/[39m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m7:46:25 p.m.[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mfifa-schedule.html[22m
+[2m7:54:53 p.m.[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mfifa-tickets-schedule.html[22m
+[2m11:09:11 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/SelectedTeamScheduleSection.tsx, /src/components/ResultsSection.tsx, /src/components/ScheduleSection.tsx[22m
+[2m11:12:33 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ScheduleSection.tsx, /src/index.css[22m
+[2m11:29:02 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:29:02 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:29:02 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:29:02 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/LanguageSwitcher.tsx[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ScheduleSection.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/SelectedTeamScheduleSection.tsx, /src/components/ResultsSection.tsx, /src/components/ScheduleSection.tsx[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/SelectedTeamScheduleSection.tsx, /src/components/ResultsSection.tsx, /src/components/ScheduleSection.tsx[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/ScheduleSection.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/LanguageSwitcher.tsx[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/SelectedTeamScheduleSection.tsx, /src/components/ResultsSection.tsx, /src/components/ScheduleSection.tsx[22m
+[2m11:37:10 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css, /src/components/SelectedTeamScheduleSection.tsx, /src/components/ResultsSection.tsx, /src/components/ScheduleSection.tsx[22m
+[2m11:37:10 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse JSON file, invalid JSON syntax found at position 120
+[2m11:37:10 p.m.[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to parse JSON file, invalid JSON syntax found at position 932081
+[2m11:37:10 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to parse JSON file, invalid JSON syntax found at position 120[39m
+  Plugin: [35mvite:json[39m
+  File: [36mC:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/src/data/automation-status.static.json[39m:5:4
+[33m  3  |    "timezone": "America/Toronto",
+  4  |    "scheduleLabel": "Daily at 08:00 America/Toronto",
+  5  |  <<<<<<< HEAD
+     |     ^
+  6  |    "lastAutoUpdateAt": "2026-05-20T10:43:18-04:00",
+  7  |  =======[39m
+      at TransformPluginContext._formatError (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49365:41)
+      at TransformPluginContext.error (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49360:16)
+      at TransformPluginContext.transform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:47248:14)
+      at PluginContainer.transform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49207:19)
+      at async loadAndTransform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:52085:27)
+      at async viteTransformMiddleware (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62213:24)
+[2m11:37:10 p.m.[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to parse JSON file, invalid JSON syntax found at position 932081[39m
+  Plugin: [35mvite:json[39m
+  File: [36mC:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/src/data/worldcup2026-history.static.json[39m:26026:12
+[33m  26024|              "quarterfinal": 0.029068861275811483,
+  26025|              "semifinal": 0.008934776833967692,
+  26026|              "final": 0.0027462457615852103,
+     |             ^
+  26027|  =======
+  26028|              "roundOf16": 0.09457412441012601,[39m
+      at TransformPluginContext._formatError (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49365:41)
+      at TransformPluginContext.error (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49360:16)
+      at TransformPluginContext.transform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:47248:14)
+      at PluginContainer.transform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:49207:19)
+      at async loadAndTransform (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:52085:27)
+      at async viteTransformMiddleware (file:///C:/Users/Admin/Documents/Codex/2026-04-18-build-a-complete-single-page-web/world-cup-2026-win-probability-map/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:62213:24)
+[2m11:39:40 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m11:39:40 p.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:01:56 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:01:56 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:01:56 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:01:56 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:05:22 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:05:22 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:05:23 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:05:23 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:15:29 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:15:29 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:15:29 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m8:15:29 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:07:01 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:07:01 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:08:32 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m
+[2m9:08:32 a.m.[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/index.css[22m

@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import { argv } from "node:process";
+import { refreshRemoteData } from "./refresh-remote-data.mjs";
 import {
   automationConfigPath,
   automationStatusOutputPath,
@@ -30,6 +31,10 @@ const args = new Map(
 );
 
 const config = readJson(automationConfigPath);
+const remoteRefresh = await refreshRemoteData({
+  refreshOdds: config.refreshTitleOddsFromSource ?? true,
+  refreshScores: config.refreshScoresFromSource ?? true,
+});
 const masterData = readJson(masterPath);
 const snapshot = toCurrentSnapshot(masterData);
 const now = new Date();
@@ -84,12 +89,23 @@ const automationStatus = {
     minute: config.scheduleMinute ?? 0,
     now,
   }),
-  dataSourceStatus: "fresh",
-  dataSourceLabel: config.dataSourceLabel ?? "Local master odds file and generated daily snapshot history",
+  dataSourceStatus:
+    remoteRefresh.titleOdds.ok || remoteRefresh.scores.ok ? "fresh" : "warning",
+  dataSourceLabel:
+    config.dataSourceLabel ??
+    "FOX Sports title odds, ESPN FIFA World Cup scoreboard, and generated daily snapshot history",
   runMode: config.runMode ?? "Local scheduled build",
   buildTarget: config.buildTarget ?? "dist",
   lastBuildStatus: "success",
-  note: config.note,
+  note: [
+    config.note,
+    remoteRefresh.titleOdds.ok
+      ? `Title odds refreshed from ${remoteRefresh.titleOdds.sourceUrl} (${remoteRefresh.titleOdds.updatedTeams} teams parsed).`
+      : `Title odds refresh kept existing data: ${(remoteRefresh.titleOdds.errors ?? ["skipped"]).join("; ")}`,
+    remoteRefresh.scores.ok
+      ? `Scores checked from ESPN scoreboard (${remoteRefresh.scores.updatedMatches} completed matches updated).`
+      : `Scores refresh completed with warnings: ${(remoteRefresh.scores.errors ?? ["skipped"]).join("; ")}`,
+  ].filter(Boolean).join(" "),
 };
 
 writeJson(automationStatusOutputPath, automationStatus);
