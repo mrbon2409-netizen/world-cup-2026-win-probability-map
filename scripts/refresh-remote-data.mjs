@@ -109,6 +109,12 @@ function parseAmericanOdds(rawValue) {
 
 function parseFoxTitleOdds(html, teams) {
   const text = htmlToSearchableText(html);
+  const boardStart =
+    text.search(/France:\s*[+\-]\d{3,6}/i) >= 0
+      ? text.search(/France:\s*[+\-]\d{3,6}/i)
+      : 0;
+  const boardEnd = text.search(/Here's what to know|The Favorites|The Longshots/i);
+  const oddsText = text.slice(boardStart, boardEnd > boardStart ? boardEnd : undefined);
   const oddsByTeam = new Map();
 
   teams.forEach((team) => {
@@ -128,7 +134,7 @@ function parseFoxTitleOdds(html, teams) {
         `(?:^|[^A-Za-z])${escapeRegExp(alias)}(?:[^A-Za-z]|$)[^+\\-]{0,80}([+\\-]\\d{3,6})`,
         "i",
       );
-      const match = text.match(pattern);
+      const match = oddsText.match(pattern);
       const parsed = match ? parseAmericanOdds(match[1]) : null;
       if (parsed !== null) {
         oddsByTeam.set(team.team, parsed);

@@ -15,7 +15,7 @@
       "team": "Mexico",
       "group": "A",
       "confederation": "CONCACAF",
-      "oddsAmerican": 6500,
+      "oddsAmerican": 5000,
       "groupAdvanceOddsAmerican": -1011,
       "fifaRank": 15,
       "iso3": "MEX"
@@ -24,7 +24,7 @@
       "team": "South Korea",
       "group": "A",
       "confederation": "AFC",
-      "oddsAmerican": 40000,
+      "oddsAmerican": 35000,
       "groupAdvanceOddsAmerican": -108,
       "fifaRank": 25,
       "iso3": "KOR"
@@ -33,7 +33,7 @@
       "team": "Czechia",
       "group": "A",
       "confederation": "UEFA",
-      "oddsAmerican": 30000,
+      "oddsAmerican": 15000,
       "groupAdvanceOddsAmerican": -186,
       "fifaRank": 41,
       "iso3": "CZE"
@@ -42,7 +42,7 @@
       "team": "South Africa",
       "group": "A",
       "confederation": "CAF",
-      "oddsAmerican": 100000,
+      "oddsAmerican": 80000,
       "groupAdvanceOddsAmerican": 456,
       "fifaRank": 60,
       "iso3": "ZAF"
@@ -60,7 +60,7 @@
       "team": "Canada",
       "group": "B",
       "confederation": "CONCACAF",
-      "oddsAmerican": 15000,
+      "oddsAmerican": 20000,
       "groupAdvanceOddsAmerican": -285,
       "fifaRank": 30,
       "iso3": "CAN"
@@ -69,7 +69,7 @@
       "team": "Qatar",
       "group": "B",
       "confederation": "AFC",
-      "oddsAmerican": 200000,
+      "oddsAmerican": 100000,
       "groupAdvanceOddsAmerican": 567,
       "fifaRank": 55,
       "iso3": "QAT"
@@ -105,7 +105,7 @@
       "team": "Scotland",
       "group": "C",
       "confederation": "UEFA",
-      "oddsAmerican": 25000,
+      "oddsAmerican": 20000,
       "groupAdvanceOddsAmerican": 122,
       "fifaRank": 43,
       "iso3": "SCT"
@@ -114,7 +114,7 @@
       "team": "Haiti",
       "group": "C",
       "confederation": "CONCACAF",
-      "oddsAmerican": 300000,
+      "oddsAmerican": 150000,
       "groupAdvanceOddsAmerican": 1150,
       "fifaRank": 83,
       "iso3": "HTI"
@@ -141,7 +141,7 @@
       "team": "Australia",
       "group": "D",
       "confederation": "AFC",
-      "oddsAmerican": 50000,
+      "oddsAmerican": 45000,
       "groupAdvanceOddsAmerican": 186,
       "fifaRank": 27,
       "iso3": "AUS"
@@ -150,7 +150,7 @@
       "team": "Paraguay",
       "group": "D",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 15000,
+      "oddsAmerican": 20000,
       "groupAdvanceOddsAmerican": 108,
       "fifaRank": 40,
       "iso3": "PRY"
@@ -168,7 +168,7 @@
       "team": "Ecuador",
       "group": "E",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 10000,
+      "oddsAmerican": 8000,
       "groupAdvanceOddsAmerican": -213,
       "fifaRank": 23,
       "iso3": "ECU"
@@ -177,7 +177,7 @@
       "team": "Ivory Coast",
       "group": "E",
       "confederation": "CAF",
-      "oddsAmerican": 30000,
+      "oddsAmerican": 25000,
       "groupAdvanceOddsAmerican": -122,
       "fifaRank": 34,
       "iso3": "CIV"
@@ -213,7 +213,7 @@
       "team": "Sweden",
       "group": "F",
       "confederation": "UEFA",
-      "oddsAmerican": 12500,
+      "oddsAmerican": 8000,
       "groupAdvanceOddsAmerican": -178,
       "fifaRank": 38,
       "iso3": "SWE"
@@ -240,7 +240,7 @@
       "team": "Iran",
       "group": "G",
       "confederation": "AFC",
-      "oddsAmerican": 50000,
+      "oddsAmerican": 30000,
       "groupAdvanceOddsAmerican": 104,
       "fifaRank": 21,
       "iso3": "IRN"
@@ -258,7 +258,7 @@
       "team": "New Zealand",
       "group": "G",
       "confederation": "OFC",
-      "oddsAmerican": 150000,
+      "oddsAmerican": 100000,
       "groupAdvanceOddsAmerican": 355,
       "fifaRank": 85,
       "iso3": "NZL"
@@ -294,7 +294,7 @@
       "team": "Cape Verde",
       "group": "H",
       "confederation": "CAF",
-      "oddsAmerican": 420,
+      "oddsAmerican": 100000,
       "groupAdvanceOddsAmerican": 733,
       "fifaRank": 69,
       "iso3": "CPV"
@@ -303,7 +303,7 @@
       "team": "France",
       "group": "I",
       "confederation": "UEFA",
-      "oddsAmerican": 420,
+      "oddsAmerican": 400,
       "groupAdvanceOddsAmerican": -3233,
       "fifaRank": 1,
       "iso3": "FRA"
@@ -312,7 +312,7 @@
       "team": "Senegal",
       "group": "I",
       "confederation": "CAF",
-      "oddsAmerican": 12500,
+      "oddsAmerican": 10000,
       "groupAdvanceOddsAmerican": -170,
       "fifaRank": 14,
       "iso3": "SEN"
@@ -330,7 +330,7 @@
       "team": "Iraq",
       "group": "I",
       "confederation": "AFC",
-      "oddsAmerican": 150000,
+      "oddsAmerican": 100000,
       "groupAdvanceOddsAmerican": 809,
       "fifaRank": 57,
       "iso3": "IRQ"
@@ -348,7 +348,7 @@
       "team": "Algeria",
       "group": "J",
       "confederation": "CAF",
-      "oddsAmerican": 40000,
+      "oddsAmerican": 35000,
       "groupAdvanceOddsAmerican": -108,
       "fifaRank": 28,
       "iso3": "DZA"
@@ -357,7 +357,7 @@
       "team": "Austria",
       "group": "J",
       "confederation": "UEFA",
-      "oddsAmerican": 15000,
+      "oddsAmerican": 10000,
       "groupAdvanceOddsAmerican": -194,
       "fifaRank": 24,
       "iso3": "AUT"
@@ -366,7 +366,7 @@
       "team": "Jordan",
       "group": "J",
       "confederation": "AFC",
-      "oddsAmerican": 250000,
+      "oddsAmerican": 150000,
       "groupAdvanceOddsAmerican": 614,
       "fifaRank": 63,
       "iso3": "JOR"
@@ -393,7 +393,7 @@
       "team": "DR Congo",
       "group": "K",
       "confederation": "CAF",
-      "oddsAmerican": 75000,
+      "oddsAmerican": 70000,
       "groupAdvanceOddsAmerican": 138,
       "fifaRank": 46,
       "iso3": "COD"
@@ -420,7 +420,7 @@
       "team": "Croatia",
       "group": "L",
       "confederation": "UEFA",
-      "oddsAmerican": 8000,
+      "oddsAmerican": 9000,
       "groupAdvanceOddsAmerican": -213,
       "fifaRank": 11,
       "iso3": "HRV"
@@ -429,7 +429,7 @@
       "team": "Panama",
       "group": "L",
       "confederation": "CONCACAF",
-      "oddsAmerican": 150000,
+      "oddsAmerican": 100000,
       "groupAdvanceOddsAmerican": 426,
       "fifaRank": 33,
       "iso3": "PAN"
@@ -438,7 +438,7 @@
       "team": "Ghana",
       "group": "L",
       "confederation": "CAF",
-      "oddsAmerican": 40000,
+      "oddsAmerican": 35000,
       "groupAdvanceOddsAmerican": 108,
       "fifaRank": 74,
       "iso3": "GHA"
