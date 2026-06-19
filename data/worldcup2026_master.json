@@ -15,7 +15,7 @@
       "team": "Mexico",
       "group": "A",
       "confederation": "CONCACAF",
-      "oddsAmerican": 5500,
+      "oddsAmerican": 6500,
       "groupAdvanceOddsAmerican": -1011,
       "fifaRank": 15,
       "iso3": "MEX"
@@ -51,7 +51,7 @@
       "team": "Switzerland",
       "group": "B",
       "confederation": "UEFA",
-      "oddsAmerican": 8000,
+      "oddsAmerican": 6500,
       "groupAdvanceOddsAmerican": -456,
       "fifaRank": 19,
       "iso3": "CHE"
@@ -87,7 +87,7 @@
       "team": "Brazil",
       "group": "C",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 1000,
+      "oddsAmerican": 1100,
       "groupAdvanceOddsAmerican": -2400,
       "fifaRank": 6,
       "iso3": "BRA"
@@ -96,7 +96,7 @@
       "team": "Morocco",
       "group": "C",
       "confederation": "CAF",
-      "oddsAmerican": 4500,
+      "oddsAmerican": 4000,
       "groupAdvanceOddsAmerican": -245,
       "fifaRank": 8,
       "iso3": "MAR"
@@ -123,7 +123,7 @@
       "team": "United States",
       "group": "D",
       "confederation": "CONCACAF",
-      "oddsAmerican": 3500,
+      "oddsAmerican": 4000,
       "groupAdvanceOddsAmerican": -733,
       "fifaRank": 16,
       "iso3": "USA"
@@ -204,7 +204,7 @@
       "team": "Japan",
       "group": "F",
       "confederation": "AFC",
-      "oddsAmerican": 4500,
+      "oddsAmerican": 5000,
       "groupAdvanceOddsAmerican": -104,
       "fifaRank": 18,
       "iso3": "JPN"
@@ -267,7 +267,7 @@
       "team": "Spain",
       "group": "H",
       "confederation": "UEFA",
-      "oddsAmerican": 480,
+      "oddsAmerican": 500,
       "groupAdvanceOddsAmerican": -900,
       "fifaRank": 2,
       "iso3": "ESP"
@@ -294,7 +294,7 @@
       "team": "Cape Verde",
       "group": "H",
       "confederation": "CAF",
-      "oddsAmerican": 410,
+      "oddsAmerican": 420,
       "groupAdvanceOddsAmerican": 733,
       "fifaRank": 69,
       "iso3": "CPV"
@@ -303,7 +303,7 @@
       "team": "France",
       "group": "I",
       "confederation": "UEFA",
-      "oddsAmerican": 410,
+      "oddsAmerican": 420,
       "groupAdvanceOddsAmerican": -3233,
       "fifaRank": 1,
       "iso3": "FRA"
@@ -321,7 +321,7 @@
       "team": "Norway",
       "group": "I",
       "confederation": "UEFA",
-      "oddsAmerican": 3300,
+      "oddsAmerican": 3000,
       "groupAdvanceOddsAmerican": 108,
       "fifaRank": 31,
       "iso3": "NOR"
@@ -339,7 +339,7 @@
       "team": "Argentina",
       "group": "J",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 900,
+      "oddsAmerican": 800,
       "groupAdvanceOddsAmerican": -1900,
       "fifaRank": 3,
       "iso3": "ARG"
@@ -375,7 +375,7 @@
       "team": "Portugal",
       "group": "K",
       "confederation": "UEFA",
-      "oddsAmerican": 900,
+      "oddsAmerican": 950,
       "groupAdvanceOddsAmerican": -733,
       "fifaRank": 5,
       "iso3": "PRT"
@@ -411,7 +411,7 @@
       "team": "England",
       "group": "L",
       "confederation": "UEFA",
-      "oddsAmerican": 750,
+      "oddsAmerican": 600,
       "groupAdvanceOddsAmerican": -1011,
       "fifaRank": 4,
       "iso3": "ENG"
