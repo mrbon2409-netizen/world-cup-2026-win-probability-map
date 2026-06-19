@@ -69,7 +69,7 @@ function ResultScore({
 }
 
 export function CompletedMatchesSection({ matches, labels }: CompletedMatchesSectionProps) {
-  const completedMatches = getCompletedMatches(matches, 8);
+  const completedMatches = getCompletedMatches(matches);
 
   return (
     <article className="card p-6">

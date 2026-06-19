@@ -31,11 +31,7 @@
       "date_vn": "2026-06-12",
       "espn_event_id": "760415",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.786Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:29.937Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.281Z",
       "status": "completed",
       "score1": 2,
       "score2": 0
@@ -56,11 +52,7 @@
       "date_vn": "2026-06-12",
       "espn_event_id": "760414",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.787Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:29.937Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.281Z",
       "status": "completed",
       "score1": 2,
       "score2": 1
@@ -78,7 +70,13 @@
       "city": "Toronto",
       "country": "Canada",
       "date_et": "2026-06-12",
-      "date_vn": "2026-06-13"
+      "date_vn": "2026-06-13",
+      "espn_event_id": "760416",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-19T14:57:27.418Z",
+      "status": "completed",
+      "score1": 1,
+      "score2": 1
     },
     {
       "id": 4,
@@ -96,11 +94,7 @@
       "date_vn": "2026-06-13",
       "espn_event_id": "760417",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.874Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:29.989Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.418Z",
       "status": "completed",
       "score1": 4,
       "score2": 1
@@ -121,11 +115,7 @@
       "date_vn": "2026-06-14",
       "espn_event_id": "760420",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.959Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.011Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.509Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
@@ -146,11 +136,7 @@
       "date_vn": "2026-06-14",
       "espn_event_id": "760419",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.959Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.011Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.509Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
@@ -171,11 +157,7 @@
       "date_vn": "2026-06-14",
       "espn_event_id": "760418",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:33:59.959Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.011Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.509Z",
       "status": "completed",
       "score1": 0,
       "score2": 1
@@ -185,7 +167,7 @@
       "stage": "Group Stage",
       "group": "D",
       "team1": "Australia",
-      "team2": "Türkiye",
+      "team2": "TÃ¼rkiye",
       "datetime_utc": "2026-06-14T04:00:00Z",
       "time_et": "2026-06-14 00:00 EDT",
       "time_vn": "2026-06-14 11:00 ICT",
@@ -196,11 +178,7 @@
       "date_vn": "2026-06-14",
       "espn_event_id": "760421",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
       "score_last_checked": "2026-06-19T03:34:00.055Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.045Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
       "status": "completed",
       "score1": 2,
       "score2": 0
@@ -210,7 +188,7 @@
       "stage": "Group Stage",
       "group": "E",
       "team1": "Germany",
-      "team2": "Curaçao",
+      "team2": "CuraÃ§ao",
       "datetime_utc": "2026-06-14T17:00:00Z",
       "time_et": "2026-06-14 13:00 EDT",
       "time_vn": "2026-06-15 00:00 ICT",
@@ -221,11 +199,7 @@
       "date_vn": "2026-06-15",
       "espn_event_id": "760422",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
       "score_last_checked": "2026-06-19T03:34:00.055Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.045Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
       "status": "completed",
       "score1": 7,
       "score2": 1
@@ -246,11 +220,7 @@
       "date_vn": "2026-06-15",
       "espn_event_id": "760425",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.055Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.045Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.584Z",
       "status": "completed",
       "score1": 2,
       "score2": 2
@@ -271,11 +241,7 @@
       "date_vn": "2026-06-15",
       "espn_event_id": "760423",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.055Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.045Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.584Z",
       "status": "completed",
       "score1": 1,
       "score2": 0
@@ -296,11 +262,7 @@
       "date_vn": "2026-06-15",
       "espn_event_id": "760424",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.055Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.045Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.584Z",
       "status": "completed",
       "score1": 5,
       "score2": 1
@@ -321,11 +283,7 @@
       "date_vn": "2026-06-15",
       "espn_event_id": "760428",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.149Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.073Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.696Z",
       "status": "completed",
       "score1": 0,
       "score2": 0
@@ -346,11 +304,7 @@
       "date_vn": "2026-06-16",
       "espn_event_id": "760426",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.149Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.073Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.696Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
@@ -371,11 +325,7 @@
       "date_vn": "2026-06-16",
       "espn_event_id": "760429",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.149Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.073Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.696Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
@@ -396,11 +346,7 @@
       "date_vn": "2026-06-16",
       "espn_event_id": "760427",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.149Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.073Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.696Z",
       "status": "completed",
       "score1": 2,
       "score2": 2
@@ -421,11 +367,7 @@
       "date_vn": "2026-06-17",
       "espn_event_id": "760432",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.236Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.095Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.788Z",
       "status": "completed",
       "score1": 3,
       "score2": 1
@@ -446,11 +388,7 @@
       "date_vn": "2026-06-17",
       "espn_event_id": "760430",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.236Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.095Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.788Z",
       "status": "completed",
       "score1": 1,
       "score2": 4
@@ -471,11 +409,7 @@
       "date_vn": "2026-06-17",
       "espn_event_id": "760433",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.236Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.095Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.788Z",
       "status": "completed",
       "score1": 3,
       "score2": 0
@@ -496,11 +430,7 @@
       "date_vn": "2026-06-17",
       "espn_event_id": "760431",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.320Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.117Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.834Z",
       "status": "completed",
       "score1": 3,
       "score2": 1
@@ -521,11 +451,7 @@
       "date_vn": "2026-06-18",
       "espn_event_id": "760435",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.320Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.117Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.834Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
@@ -546,11 +472,7 @@
       "date_vn": "2026-06-18",
       "espn_event_id": "760437",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.320Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.117Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.834Z",
       "status": "completed",
       "score1": 4,
       "score2": 2
@@ -571,11 +493,7 @@
       "date_vn": "2026-06-18",
       "espn_event_id": "760434",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.320Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.117Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.834Z",
       "status": "completed",
       "score1": 1,
       "score2": 0
@@ -596,11 +514,7 @@
       "date_vn": "2026-06-18",
       "espn_event_id": "760436",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.320Z",
-=======
-      "score_last_checked": "2026-06-18T14:51:30.117Z",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
+      "score_last_checked": "2026-06-19T14:57:27.834Z",
       "status": "completed",
       "score1": 1,
       "score2": 3
@@ -621,15 +535,10 @@
       "date_vn": "2026-06-18",
       "espn_event_id": "760438",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.349Z",
+      "score_last_checked": "2026-06-19T14:57:27.889Z",
       "status": "completed",
       "score1": 1,
       "score2": 1
-=======
-      "score_last_checked": "2026-06-18T14:51:30.162Z",
-      "status": "scheduled"
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
     },
     {
       "id": 26,
@@ -644,7 +553,13 @@
       "city": "Inglewood",
       "country": "USA",
       "date_et": "2026-06-18",
-      "date_vn": "2026-06-19"
+      "date_vn": "2026-06-19",
+      "espn_event_id": "760439",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-19T14:57:27.889Z",
+      "status": "completed",
+      "score1": 4,
+      "score2": 1
     },
     {
       "id": 27,
@@ -662,15 +577,10 @@
       "date_vn": "2026-06-19",
       "espn_event_id": "760440",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.349Z",
+      "score_last_checked": "2026-06-19T14:57:27.889Z",
       "status": "completed",
       "score1": 6,
       "score2": 0
-=======
-      "score_last_checked": "2026-06-18T14:51:30.162Z",
-      "status": "scheduled"
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
     },
     {
       "id": 28,
@@ -688,15 +598,10 @@
       "date_vn": "2026-06-19",
       "espn_event_id": "760441",
       "score_source": "ESPN FIFA World Cup scoreboard",
-<<<<<<< HEAD
-      "score_last_checked": "2026-06-19T03:34:00.349Z",
+      "score_last_checked": "2026-06-19T14:57:27.889Z",
       "status": "completed",
       "score1": 1,
       "score2": 0
-=======
-      "score_last_checked": "2026-06-18T14:51:30.162Z",
-      "status": "scheduled"
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
     },
     {
       "id": 29,
@@ -711,7 +616,11 @@
       "city": "Seattle",
       "country": "USA",
       "date_et": "2026-06-19",
-      "date_vn": "2026-06-20"
+      "date_vn": "2026-06-20",
+      "espn_event_id": "760442",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-19T14:57:27.953Z",
+      "status": "scheduled"
     },
     {
       "id": 30,
@@ -726,7 +635,11 @@
       "city": "Foxborough",
       "country": "USA",
       "date_et": "2026-06-19",
-      "date_vn": "2026-06-20"
+      "date_vn": "2026-06-20",
+      "espn_event_id": "760445",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-19T14:57:27.953Z",
+      "status": "scheduled"
     },
     {
       "id": 31,
@@ -741,13 +654,17 @@
       "city": "Philadelphia",
       "country": "USA",
       "date_et": "2026-06-19",
-      "date_vn": "2026-06-20"
+      "date_vn": "2026-06-20",
+      "espn_event_id": "760444",
+      "score_source": "ESPN FIFA World Cup scoreboard",
+      "score_last_checked": "2026-06-19T14:57:27.953Z",
+      "status": "scheduled"
     },
     {
       "id": 32,
       "stage": "Group Stage",
       "group": "D",
-      "team1": "Türkiye",
+      "team1": "TÃ¼rkiye",
       "team2": "Paraguay",
       "datetime_utc": "2026-06-20T03:00:00Z",
       "time_et": "2026-06-19 23:00 EDT",
@@ -793,7 +710,7 @@
       "stage": "Group Stage",
       "group": "E",
       "team1": "Ecuador",
-      "team2": "Curaçao",
+      "team2": "CuraÃ§ao",
       "datetime_utc": "2026-06-21T00:00:00Z",
       "time_et": "2026-06-20 20:00 EDT",
       "time_vn": "2026-06-21 07:00 ICT",
@@ -1092,7 +1009,7 @@
       "id": 55,
       "stage": "Group Stage",
       "group": "E",
-      "team1": "Curaçao",
+      "team1": "CuraÃ§ao",
       "team2": "Ivory Coast",
       "datetime_utc": "2026-06-25T20:00:00Z",
       "time_et": "2026-06-25 16:00 EDT",
@@ -1152,7 +1069,7 @@
       "id": 59,
       "stage": "Group Stage",
       "group": "D",
-      "team1": "Türkiye",
+      "team1": "TÃ¼rkiye",
       "team2": "USA",
       "datetime_utc": "2026-06-26T02:00:00Z",
       "time_et": "2026-06-25 22:00 EDT",

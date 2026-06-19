@@ -186,12 +186,13 @@ export function getSelectedTeamMatches(matches: ScheduleMatch[], iso3: string) {
   return matches.filter((match) => match.teamA.iso3 === iso3 || match.teamB.iso3 === iso3);
 }
 
-export function getCompletedMatches(matches: ScheduleMatch[], limit = 8) {
-  return matches
+export function getCompletedMatches(matches: ScheduleMatch[], limit?: number) {
+  const completedMatches = matches
     .filter((match) => match.status === "completed" && match.scoreA !== null && match.scoreB !== null)
     .slice()
-    .sort((a, b) => b.kickoffUtc.localeCompare(a.kickoffUtc))
-    .slice(0, limit);
+    .sort((a, b) => b.kickoffUtc.localeCompare(a.kickoffUtc));
+
+  return typeof limit === "number" ? completedMatches.slice(0, limit) : completedMatches;
 }
 
 export function getRecentSelectedTeamResults(matches: ScheduleMatch[], iso3: string, limit = 3) {

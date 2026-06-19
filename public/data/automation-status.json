@@ -2,13 +2,9 @@
   "automationEnabled": true,
   "timezone": "America/Toronto",
   "scheduleLabel": "Daily at 08:00 America/Toronto",
-<<<<<<< HEAD
-  "lastAutoUpdateAt": "2026-06-18T23:34:00-04:00",
-=======
-  "lastAutoUpdateAt": "2026-06-18T10:51:30-04:00",
->>>>>>> efe149504af870672b8e04304127dc5cff223d65
-  "lastSuccessfulSnapshotDate": "2026-06-18",
-  "nextScheduledUpdateAt": "2026-06-19T08:00:00-04:00",
+  "lastAutoUpdateAt": "2026-06-19T10:57:27-04:00",
+  "lastSuccessfulSnapshotDate": "2026-06-19",
+  "nextScheduledUpdateAt": "2026-06-20T08:00:00-04:00",
   "dataSourceStatus": "fresh",
   "dataSourceLabel": "FOX Sports title odds, ESPN FIFA World Cup scoreboard, and generated daily snapshot history",
   "runMode": "Local scheduled build",

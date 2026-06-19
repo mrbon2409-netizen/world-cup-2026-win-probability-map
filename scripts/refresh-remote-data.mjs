@@ -18,6 +18,7 @@ const DEFAULT_FOX_TITLE_ODDS_URLS = [
 
 const TEAM_NAME_ALIASES = {
   "Bosnia & Herzegovina": "Bosnia and Herzegovina",
+  "Bosnia-Herzegovina": "Bosnia and Herzegovina",
   "Congo DR": "DR Congo",
   "Cote d'Ivoire": "Ivory Coast",
   Czechia: "Czechia",
@@ -38,6 +39,7 @@ function normalizeName(value) {
     .replace(/[\u0300-\u036f]/g, "")
     .replace(/&/g, "and")
     .replace(/\bthe\b/gi, "")
+    .replace(/\band\b/gi, "")
     .replace(/[^a-z0-9]+/gi, " ")
     .trim()
     .toLowerCase();

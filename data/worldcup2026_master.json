@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "snapshotDate": "2026-06-18",
-    "lastUpdated": "2026-06-18",
-    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jun. 18, 2026; refreshed automatically)",
+    "snapshotDate": "2026-06-19",
+    "lastUpdated": "2026-06-19",
+    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jun. 19, 2026; refreshed automatically)",
     "groupAdvanceLabel": "Dimers/Polymarket World Cup 2026 group-stage To Advance probabilities, converted to fair American odds (article updated Jun. 1, 2026; accessed Jun. 2, 2026)",
     "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01; next update listed for 2026-06-11)",
     "titleOddsSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds",
@@ -51,7 +51,7 @@
       "team": "Switzerland",
       "group": "B",
       "confederation": "UEFA",
-      "oddsAmerican": 6500,
+      "oddsAmerican": 7000,
       "groupAdvanceOddsAmerican": -456,
       "fifaRank": 19,
       "iso3": "CHE"
@@ -159,7 +159,7 @@
       "team": "Germany",
       "group": "E",
       "confederation": "UEFA",
-      "oddsAmerican": 1400,
+      "oddsAmerican": 1300,
       "groupAdvanceOddsAmerican": -1567,
       "fifaRank": 10,
       "iso3": "DEU"
@@ -231,7 +231,7 @@
       "team": "Belgium",
       "group": "G",
       "confederation": "UEFA",
-      "oddsAmerican": 3500,
+      "oddsAmerican": 4000,
       "groupAdvanceOddsAmerican": -1150,
       "fifaRank": 9,
       "iso3": "BEL"
@@ -267,7 +267,7 @@
       "team": "Spain",
       "group": "H",
       "confederation": "UEFA",
-      "oddsAmerican": 500,
+      "oddsAmerican": 550,
       "groupAdvanceOddsAmerican": -900,
       "fifaRank": 2,
       "iso3": "ESP"
@@ -339,7 +339,7 @@
       "team": "Argentina",
       "group": "J",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 800,
+      "oddsAmerican": 750,
       "groupAdvanceOddsAmerican": -1900,
       "fifaRank": 3,
       "iso3": "ARG"
@@ -384,7 +384,7 @@
       "team": "Colombia",
       "group": "K",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 3500,
+      "oddsAmerican": 4500,
       "groupAdvanceOddsAmerican": -300,
       "fifaRank": 13,
       "iso3": "COL"
