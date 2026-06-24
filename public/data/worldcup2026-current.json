@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "snapshotDate": "2026-06-23",
-    "lastUpdated": "2026-06-23T10:32:28-04:00",
-    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jun. 22, 2026; refreshed automatically)",
+    "snapshotDate": "2026-06-24",
+    "lastUpdated": "2026-06-24T10:11:22-04:00",
+    "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jun. 24, 2026; refreshed automatically)",
     "groupAdvanceLabel": "Dimers/Polymarket World Cup 2026 group-stage To Advance probabilities, converted to fair American odds (article updated Jun. 1, 2026; accessed Jun. 2, 2026)",
     "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01; next update listed for 2026-06-11)",
     "titleOddsSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds",
@@ -16,20 +16,20 @@
       "team": "Mexico",
       "group": "A",
       "confederation": "CONCACAF",
-      "oddsAmerican": 5000,
+      "oddsAmerican": 4500,
       "groupAdvanceOddsAmerican": -1011,
       "fifaRank": 15,
       "iso3": "MEX",
-      "impliedProbability": 0.0196078431372549,
-      "normalizedProbability": 0.015626827378433596,
+      "impliedProbability": 0.021739130434782608,
+      "normalizedProbability": 0.017186990660456276,
       "groupAdvanceProbability": 0.90999099909991,
       "stages": {
         "roundOf32": 0.90999099909991,
-        "roundOf16": 0.4036489622374173,
-        "quarterfinal": 0.17904845748639675,
-        "semifinal": 0.07942136144871845,
-        "final": 0.035229304641438836,
-        "champion": 0.015626827378433596
+        "roundOf16": 0.4114050757236199,
+        "quarterfinal": 0.18599539610674173,
+        "semifinal": 0.08408813943789076,
+        "final": 0.03801607643055991,
+        "champion": 0.017186990660456276
       }
     },
     {
@@ -41,15 +41,15 @@
       "fifaRank": 25,
       "iso3": "KOR",
       "impliedProbability": 0.002849002849002849,
-      "normalizedProbability": 0.002270564661823685,
+      "normalizedProbability": 0.0022524261264415635,
       "groupAdvanceProbability": 0.5192307692307693,
       "stages": {
         "roundOf32": 0.5192307692307693,
-        "roundOf16": 0.17519233914001542,
-        "quarterfinal": 0.0591112035575633,
-        "semifinal": 0.019944561521215484,
-        "final": 0.006729444002712282,
-        "champion": 0.002270564661823685
+        "roundOf16": 0.17491153360835002,
+        "quarterfinal": 0.05892186365332214,
+        "semifinal": 0.019848811251946777,
+        "final": 0.006686402698214652,
+        "champion": 0.0022524261264415635
       }
     },
     {
@@ -61,15 +61,15 @@
       "fifaRank": 41,
       "iso3": "CZE",
       "impliedProbability": 0.006622516556291391,
-      "normalizedProbability": 0.005277935074835188,
+      "normalizedProbability": 0.005235771989278071,
       "groupAdvanceProbability": 0.6503496503496503,
       "stages": {
         "roundOf32": 0.6503496503496503,
-        "roundOf16": 0.2483192212419346,
-        "quarterfinal": 0.09481428275551315,
-        "semifinal": 0.036202385661010875,
-        "final": 0.013822946179196379,
-        "champion": 0.005277935074835188
+        "roundOf16": 0.24792120491721475,
+        "quarterfinal": 0.09451058183018617,
+        "semifinal": 0.03602858448861988,
+        "final": 0.013734535065988011,
+        "champion": 0.005235771989278071
       }
     },
     {
@@ -81,15 +81,15 @@
       "fifaRank": 60,
       "iso3": "ZAF",
       "impliedProbability": 0.0012484394506866417,
-      "normalizedProbability": 0.0009949665372036372,
+      "normalizedProbability": 0.000987018190238438,
       "groupAdvanceProbability": 0.17985611510791366,
       "stages": {
         "roundOf32": 0.17985611510791366,
-        "roundOf16": 0.0636065531449024,
-        "quarterfinal": 0.022494612432542638,
-        "semifinal": 0.007955274472074652,
-        "final": 0.002813402192006078,
-        "champion": 0.0009949665372036372
+        "roundOf16": 0.06350460192910762,
+        "quarterfinal": 0.02242255963192977,
+        "semifinal": 0.007917082623535023,
+        "final": 0.0027954077632878034,
+        "champion": 0.000987018190238438
       }
     },
     {
@@ -101,15 +101,15 @@
       "fifaRank": 19,
       "iso3": "CHE",
       "impliedProbability": 0.012345679012345678,
-      "normalizedProbability": 0.0098391135345693,
+      "normalizedProbability": 0.009760513214580107,
       "groupAdvanceProbability": 0.8201438848920863,
       "stages": {
         "roundOf32": 0.8201438848920863,
-        "roundOf16": 0.33861269418564877,
-        "quarterfinal": 0.13980297698464256,
-        "semifinal": 0.05772043608930021,
-        "final": 0.02383102859608615,
-        "champion": 0.0098391135345693
+        "roundOf16": 0.33806995174561855,
+        "quarterfinal": 0.13935517215777715,
+        "semifinal": 0.05744333060909307,
+        "final": 0.02367860611394908,
+        "champion": 0.009760513214580107
       }
     },
     {
@@ -121,15 +121,15 @@
       "fifaRank": 30,
       "iso3": "CAN",
       "impliedProbability": 0.004975124378109453,
-      "normalizedProbability": 0.003965015901990614,
+      "normalizedProbability": 0.003933341146174073,
       "groupAdvanceProbability": 0.7402597402597403,
       "stages": {
         "roundOf32": 0.7402597402597403,
-        "roundOf16": 0.2601095460141361,
-        "quarterfinal": 0.09139626572686593,
-        "semifinal": 0.032114459145462945,
-        "final": 0.011284251911207426,
-        "champion": 0.003965015901990614
+        "roundOf16": 0.2596926316689182,
+        "quarterfinal": 0.09110351309861206,
+        "semifinal": 0.031960283376428054,
+        "final": 0.011212078203789323,
+        "champion": 0.003933341146174073
       }
     },
     {
@@ -141,15 +141,15 @@
       "fifaRank": 55,
       "iso3": "QAT",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.14992503748125938,
       "stages": {
         "roundOf32": 0.14992503748125938,
-        "roundOf16": 0.05258970268459121,
-        "quarterfinal": 0.018447064445786178,
-        "semifinal": 0.006470737982831281,
-        "final": 0.0022697622250688132,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.052505409732656425,
+        "quarterfinal": 0.01838797640146486,
+        "semifinal": 0.006439673128205909,
+        "final": 0.002255244899859327,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -161,55 +161,55 @@
       "fifaRank": 65,
       "iso3": "BIH",
       "impliedProbability": 0.00398406374501992,
-      "normalizedProbability": 0.0031751720968132007,
+      "normalizedProbability": 0.003149807053310712,
       "groupAdvanceProbability": 0.4098360655737705,
       "stages": {
         "roundOf32": 0.4098360655737705,
-        "roundOf16": 0.15503922643270895,
-        "quarterfinal": 0.05865067462816083,
-        "semifinal": 0.022187298746820017,
-        "final": 0.008393359987785667,
-        "champion": 0.0031751720968132007
+        "roundOf16": 0.15479072314414544,
+        "quarterfinal": 0.058462809850429454,
+        "semifinal": 0.022080781497639413,
+        "final": 0.00833967633088223,
+        "champion": 0.003149807053310712
       }
     },
     {
       "team": "Brazil",
       "group": "C",
       "confederation": "CONMEBOL",
-      "oddsAmerican": 1300,
+      "oddsAmerican": 1200,
       "groupAdvanceOddsAmerican": -2400,
       "fifaRank": 6,
       "iso3": "BRA",
-      "impliedProbability": 0.07142857142857142,
-      "normalizedProbability": 0.05692629973572238,
+      "impliedProbability": 0.07692307692307693,
+      "normalizedProbability": 0.060815505413922215,
       "groupAdvanceProbability": 0.96,
       "stages": {
         "roundOf32": 0.96,
-        "roundOf16": 0.5456065526205102,
-        "quarterfinal": 0.3100901148567058,
-        "semifinal": 0.17623666517569303,
-        "final": 0.10016237430400521,
-        "champion": 0.05692629973572238
+        "roundOf16": 0.5528659590881331,
+        "quarterfinal": 0.3183966340817096,
+        "semifinal": 0.18336527132501848,
+        "final": 0.10560043395266884,
+        "champion": 0.060815505413922215
       }
     },
     {
       "team": "Morocco",
       "group": "C",
       "confederation": "CAF",
-      "oddsAmerican": 3300,
+      "oddsAmerican": 3500,
       "groupAdvanceOddsAmerican": -245,
       "fifaRank": 8,
       "iso3": "MAR",
-      "impliedProbability": 0.029411764705882353,
-      "normalizedProbability": 0.023440241067650393,
+      "impliedProbability": 0.027777777777777776,
+      "normalizedProbability": 0.02196115473280524,
       "groupAdvanceProbability": 0.7101449275362319,
       "stages": {
         "roundOf32": 0.7101449275362319,
-        "roundOf16": 0.3589797958082165,
-        "quarterfinal": 0.18146506269585932,
-        "semifinal": 0.09173098141936836,
-        "final": 0.04637020937889059,
-        "champion": 0.023440241067650393
+        "roundOf16": 0.35433057240233884,
+        "quarterfinal": 0.176795115575283,
+        "semifinal": 0.08821285919349407,
+        "final": 0.044014273255064476,
+        "champion": 0.02196115473280524
       }
     },
     {
@@ -221,15 +221,15 @@
       "fifaRank": 43,
       "iso3": "SCT",
       "impliedProbability": 0.004975124378109453,
-      "normalizedProbability": 0.003965015901990614,
+      "normalizedProbability": 0.003933341146174073,
       "groupAdvanceProbability": 0.45045045045045046,
       "stages": {
         "roundOf32": 0.45045045045045046,
-        "roundOf16": 0.17481013456688158,
-        "quarterfinal": 0.06784005458698657,
-        "semifinal": 0.026327266538454085,
-        "final": 0.010217046074131004,
-        "champion": 0.003965015901990614
+        "roundOf16": 0.1745299416485239,
+        "quarterfinal": 0.06762275518067848,
+        "semifinal": 0.026200874045067633,
+        "final": 0.01015169818046167,
+        "champion": 0.003933341146174073
       }
     },
     {
@@ -241,35 +241,35 @@
       "fifaRank": 83,
       "iso3": "HTI",
       "impliedProbability": 0.0006662225183211193,
-      "normalizedProbability": 0.0005309581587609017,
+      "normalizedProbability": 0.0005267165692078539,
       "groupAdvanceProbability": 0.08,
       "stages": {
         "roundOf32": 0.08,
-        "roundOf16": 0.02934161736640077,
-        "quarterfinal": 0.01076163137095339,
-        "semifinal": 0.003947045874059616,
-        "final": 0.0014476588720536017,
-        "champion": 0.0005309581587609017
+        "roundOf16": 0.029294587407756804,
+        "quarterfinal": 0.010727160642383793,
+        "semifinal": 0.003928096813442008,
+        "final": 0.0014383996930938483,
+        "champion": 0.0005267165692078539
       }
     },
     {
       "team": "United States",
       "group": "D",
       "confederation": "CONCACAF",
-      "oddsAmerican": 3000,
+      "oddsAmerican": 3300,
       "groupAdvanceOddsAmerican": -733,
       "fifaRank": 16,
       "iso3": "USA",
-      "impliedProbability": 0.03225806451612903,
-      "normalizedProbability": 0.025708651493552045,
+      "impliedProbability": 0.029411764705882353,
+      "normalizedProbability": 0.023252987364146726,
       "groupAdvanceProbability": 0.879951980792317,
       "stages": {
         "roundOf32": 0.879951980792317,
-        "roundOf16": 0.4340932552256508,
-        "quarterfinal": 0.214144587824817,
-        "semifinal": 0.10564067499925299,
-        "final": 0.05211409883226795,
-        "champion": 0.025708651493552045
+        "roundOf16": 0.42546410865709544,
+        "quarterfinal": 0.20571543869062592,
+        "semifinal": 0.09946512726831142,
+        "final": 0.048092217120271036,
+        "champion": 0.023252987364146726
       }
     },
     {
@@ -281,15 +281,15 @@
       "fifaRank": 22,
       "iso3": "TUR",
       "impliedProbability": 0.012345679012345678,
-      "normalizedProbability": 0.0098391135345693,
+      "normalizedProbability": 0.009760513214580107,
       "groupAdvanceProbability": 0.6197718631178707,
       "stages": {
         "roundOf32": 0.6197718631178707,
-        "roundOf16": 0.2706304621182763,
-        "quarterfinal": 0.11817388201184369,
-        "semifinal": 0.05160197518210593,
-        "final": 0.022532591782233297,
-        "champion": 0.0098391135345693
+        "roundOf16": 0.2701966844133092,
+        "quarterfinal": 0.11779535763478308,
+        "semifinal": 0.05135424333735075,
+        "final": 0.02238847405963556,
+        "champion": 0.009760513214580107
       }
     },
     {
@@ -301,15 +301,15 @@
       "fifaRank": 27,
       "iso3": "AUS",
       "impliedProbability": 0.0022172949002217295,
-      "normalizedProbability": 0.0017671135172951517,
+      "normalizedProbability": 0.001752996830113057,
       "groupAdvanceProbability": 0.34965034965034963,
       "stages": {
         "roundOf32": 0.34965034965034963,
-        "roundOf16": 0.12143952596208056,
-        "quarterfinal": 0.042178017212459236,
-        "semifinal": 0.014649144270622359,
-        "final": 0.005087897488887092,
-        "champion": 0.0017671135172951517
+        "roundOf16": 0.12124487766398505,
+        "quarterfinal": 0.04204291622889845,
+        "semifinal": 0.014578816351556497,
+        "final": 0.005055355462386293,
+        "champion": 0.001752996830113057
       }
     },
     {
@@ -321,15 +321,15 @@
       "fifaRank": 40,
       "iso3": "PRY",
       "impliedProbability": 0.004975124378109453,
-      "normalizedProbability": 0.003965015901990614,
+      "normalizedProbability": 0.003933341146174073,
       "groupAdvanceProbability": 0.4807692307692308,
       "stages": {
         "roundOf32": 0.4807692307692308,
-        "roundOf16": 0.18416127740731905,
-        "quarterfinal": 0.07054398228029468,
-        "semifinal": 0.02702225737148776,
-        "final": 0.010351023146802061,
-        "champion": 0.003965015901990614
+        "roundOf16": 0.18386609609021126,
+        "quarterfinal": 0.07031802188622599,
+        "semifinal": 0.026892528351533326,
+        "final": 0.010284818340142854,
+        "champion": 0.003933341146174073
       }
     },
     {
@@ -341,15 +341,15 @@
       "fifaRank": 10,
       "iso3": "DEU",
       "impliedProbability": 0.07142857142857142,
-      "normalizedProbability": 0.05692629973572238,
+      "normalizedProbability": 0.05647154074149919,
       "groupAdvanceProbability": 0.9400119976004799,
       "stages": {
         "roundOf32": 0.9400119976004799,
-        "roundOf16": 0.5364994836843006,
-        "quarterfinal": 0.3062000237531587,
-        "semifinal": 0.17475963611850642,
-        "final": 0.09974176370702428,
-        "champion": 0.05692629973572238
+        "roundOf16": 0.53563956010834,
+        "quarterfinal": 0.3052192302709281,
+        "semifinal": 0.17392064639201643,
+        "final": 0.09910381863739978,
+        "champion": 0.05647154074149919
       }
     },
     {
@@ -361,15 +361,15 @@
       "fifaRank": 23,
       "iso3": "ECU",
       "impliedProbability": 0.012345679012345678,
-      "normalizedProbability": 0.0098391135345693,
+      "normalizedProbability": 0.009760513214580107,
       "groupAdvanceProbability": 0.6805111821086262,
       "stages": {
         "roundOf32": 0.6805111821086262,
-        "roundOf16": 0.2916482716675713,
-        "quarterfinal": 0.12499238308343333,
-        "semifinal": 0.05356827845934703,
-        "final": 0.02295788260299582,
-        "champion": 0.0098391135345693
+        "roundOf16": 0.29118080574761773,
+        "quarterfinal": 0.12459201827237269,
+        "semifinal": 0.053311106744577216,
+        "final": 0.022811044734170696,
+        "champion": 0.009760513214580107
       }
     },
     {
@@ -381,15 +381,15 @@
       "fifaRank": 34,
       "iso3": "CIV",
       "impliedProbability": 0.00398406374501992,
-      "normalizedProbability": 0.0031751720968132007,
+      "normalizedProbability": 0.003149807053310712,
       "groupAdvanceProbability": 0.5495495495495496,
       "stages": {
         "roundOf32": 0.5495495495495496,
-        "roundOf16": 0.19604643028654578,
-        "quarterfinal": 0.06993764776916093,
-        "semifinal": 0.024949572243340653,
-        "final": 0.008900516030797336,
-        "champion": 0.0031751720968132007
+        "roundOf16": 0.19573219895452548,
+        "quarterfinal": 0.06971362953345422,
+        "semifinal": 0.024829793813621968,
+        "final": 0.008843588620373356,
+        "champion": 0.003149807053310712
       }
     },
     {
@@ -401,55 +401,55 @@
       "fifaRank": 82,
       "iso3": "CUW",
       "impliedProbability": 0.00028563267637817766,
-      "normalizedProbability": 0.00022764015889749025,
+      "normalizedProbability": 0.000225821642496712,
       "groupAdvanceProbability": 0.059988002399520096,
       "stages": {
         "roundOf32": 0.059988002399520096,
-        "roundOf16": 0.019674390911305024,
-        "quarterfinal": 0.006452651234373132,
-        "semifinal": 0.0021162895532655297,
-        "final": 0.00069408392156746,
-        "champion": 0.00022764015889749025
+        "roundOf16": 0.019642855983310104,
+        "quarterfinal": 0.006431982658988296,
+        "semifinal": 0.0021061296259911105,
+        "final": 0.000689644583428521,
+        "champion": 0.000225821642496712
       }
     },
     {
       "team": "Netherlands",
       "group": "F",
       "confederation": "UEFA",
-      "oddsAmerican": 1600,
+      "oddsAmerican": 1700,
       "groupAdvanceOddsAmerican": -809,
       "fifaRank": 7,
       "iso3": "NLD",
-      "impliedProbability": 0.058823529411764705,
-      "normalizedProbability": 0.046880482135300786,
+      "impliedProbability": 0.05555555555555555,
+      "normalizedProbability": 0.04392230946561048,
       "groupAdvanceProbability": 0.88998899889989,
       "stages": {
         "roundOf32": 0.88998899889989,
-        "roundOf16": 0.49397631338495984,
-        "quarterfinal": 0.27417484765207045,
-        "semifinal": 0.1521770276188405,
-        "final": 0.08446379357267955,
-        "champion": 0.046880482135300786
+        "roundOf16": 0.487578721473226,
+        "quarterfinal": 0.26711904296269506,
+        "semifinal": 0.14634064197410684,
+        "final": 0.08017243269467894,
+        "champion": 0.04392230946561048
       }
     },
     {
       "team": "Japan",
       "group": "F",
       "confederation": "AFC",
-      "oddsAmerican": 4500,
+      "oddsAmerican": 4000,
       "groupAdvanceOddsAmerican": -104,
       "fifaRank": 18,
       "iso3": "JPN",
-      "impliedProbability": 0.021739130434782608,
-      "normalizedProbability": 0.017325395571741595,
+      "impliedProbability": 0.024390243902439025,
+      "normalizedProbability": 0.019282965131243626,
       "groupAdvanceProbability": 0.5098039215686274,
       "stages": {
         "roundOf32": 0.5098039215686274,
-        "roundOf16": 0.2592144270569886,
-        "quarterfinal": 0.13179992611225486,
-        "semifinal": 0.06701486765386232,
-        "final": 0.034074317180114916,
-        "champion": 0.017325395571741595
+        "roundOf16": 0.2648239754033853,
+        "quarterfinal": 0.1375661013604267,
+        "semifinal": 0.07146041899975678,
+        "final": 0.037121001708417964,
+        "champion": 0.019282965131243626
       }
     },
     {
@@ -461,15 +461,15 @@
       "fifaRank": 38,
       "iso3": "SWE",
       "impliedProbability": 0.012345679012345678,
-      "normalizedProbability": 0.0098391135345693,
+      "normalizedProbability": 0.009760513214580107,
       "groupAdvanceProbability": 0.6402877697841727,
       "stages": {
         "roundOf32": 0.6402877697841727,
-        "roundOf16": 0.27777385079385297,
-        "quarterfinal": 0.1205056785808264,
-        "semifinal": 0.05227856592232836,
-        "final": 0.022679831250127378,
-        "champion": 0.0098391135345693
+        "roundOf16": 0.2773286233698811,
+        "quarterfinal": 0.12011968519429705,
+        "semifinal": 0.052027585886556704,
+        "final": 0.022534771788692207,
+        "champion": 0.009760513214580107
       }
     },
     {
@@ -481,15 +481,15 @@
       "fifaRank": 44,
       "iso3": "TUN",
       "impliedProbability": 0.001996007984031936,
-      "normalizedProbability": 0.0015907548828345576,
+      "normalizedProbability": 0.00157804704666864,
       "groupAdvanceProbability": 0.19011406844106463,
       "stages": {
         "roundOf32": 0.19011406844106463,
-        "roundOf16": 0.07303517221760221,
-        "quarterfinal": 0.02805755736329632,
-        "semifinal": 0.010778731689016734,
-        "final": 0.00414081152252393,
-        "champion": 0.0015907548828345576
+        "roundOf16": 0.07291810842094584,
+        "quarterfinal": 0.027967685817723163,
+        "semifinal": 0.010726984927850755,
+        "final": 0.004114327026994074,
+        "champion": 0.00157804704666864
       }
     },
     {
@@ -501,15 +501,15 @@
       "fifaRank": 9,
       "iso3": "BEL",
       "impliedProbability": 0.0196078431372549,
-      "normalizedProbability": 0.015626827378433596,
+      "normalizedProbability": 0.015501991576097818,
       "groupAdvanceProbability": 0.92,
       "stages": {
         "roundOf32": 0.92,
-        "roundOf16": 0.4071968641644361,
-        "quarterfinal": 0.18022748498407634,
-        "semifinal": 0.07976963774104226,
-        "final": 0.03530646341704941,
-        "champion": 0.015626827378433596
+        "roundOf16": 0.40654419217834664,
+        "quarterfinal": 0.1796501958629831,
+        "semifinal": 0.07938667799108501,
+        "final": 0.03508064442783498,
+        "champion": 0.015501991576097818
       }
     },
     {
@@ -521,15 +521,15 @@
       "fifaRank": 21,
       "iso3": "IRN",
       "impliedProbability": 0.0033222591362126247,
-      "normalizedProbability": 0.002647734871428948,
+      "normalizedProbability": 0.0026265832903022883,
       "groupAdvanceProbability": 0.49019607843137253,
       "stages": {
         "roundOf32": 0.49019607843137253,
-        "roundOf16": 0.17253244033383677,
-        "quarterfinal": 0.060725583653799854,
-        "semifinal": 0.021373351602512743,
-        "final": 0.007522696880593076,
-        "champion": 0.002647734871428948
+        "roundOf16": 0.1722558981980602,
+        "quarterfinal": 0.06053107270660178,
+        "semifinal": 0.021270741967854265,
+        "final": 0.007474581956544299,
+        "champion": 0.0026265832903022883
       }
     },
     {
@@ -541,15 +541,15 @@
       "fifaRank": 29,
       "iso3": "EGY",
       "impliedProbability": 0.0033222591362126247,
-      "normalizedProbability": 0.002647734871428948,
+      "normalizedProbability": 0.0026265832903022883,
       "groupAdvanceProbability": 0.609375,
       "stages": {
         "roundOf32": 0.609375,
-        "roundOf16": 0.20534427795987226,
-        "quarterfinal": 0.06919593434397749,
-        "semifinal": 0.023317315570252774,
-        "final": 0.007857357669310429,
-        "champion": 0.002647734871428948
+        "roundOf16": 0.20501514365280143,
+        "quarterfinal": 0.06897429190068317,
+        "semifinal": 0.02320537331260524,
+        "final": 0.007807102265765167,
+        "champion": 0.0026265832903022883
       }
     },
     {
@@ -561,15 +561,15 @@
       "fifaRank": 85,
       "iso3": "NZL",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.21978021978021978,
       "stages": {
         "roundOf32": 0.21978021978021978,
-        "roundOf16": 0.07141546451205255,
-        "quarterfinal": 0.02320576700019868,
-        "semifinal": 0.0075404903650333035,
-        "final": 0.0024502096804071708,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.07130099684993971,
+        "quarterfinal": 0.023131436290667762,
+        "semifinal": 0.007504289820734449,
+        "final": 0.0024345382191549585,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -581,15 +581,15 @@
       "fifaRank": 2,
       "iso3": "ESP",
       "impliedProbability": 0.16666666666666666,
-      "normalizedProbability": 0.13282803271668556,
+      "normalizedProbability": 0.13176692839683143,
       "groupAdvanceProbability": 0.9,
       "stages": {
         "roundOf32": 0.9,
-        "roundOf16": 0.613835435312479,
-        "quarterfinal": 0.4186599351614006,
-        "semifinal": 0.2855425594974362,
-        "final": 0.19475126812149796,
-        "champion": 0.13282803271668556
+        "roundOf16": 0.6128515544726312,
+        "quarterfinal": 0.4173189197994671,
+        "semifinal": 0.28417172078882524,
+        "final": 0.19350564535843784,
+        "champion": 0.13176692839683143
       }
     },
     {
@@ -601,15 +601,15 @@
       "fifaRank": 17,
       "iso3": "URY",
       "impliedProbability": 0.012345679012345678,
-      "normalizedProbability": 0.0098391135345693,
+      "normalizedProbability": 0.009760513214580107,
       "groupAdvanceProbability": 0.7802197802197802,
       "stages": {
         "roundOf32": 0.7802197802197802,
-        "roundOf16": 0.3253604495884387,
-        "quarterfinal": 0.13567897769340248,
-        "semifinal": 0.05657966421921536,
-        "final": 0.02359435822396253,
-        "champion": 0.0098391135345693
+        "roundOf16": 0.32483894839450483,
+        "quarterfinal": 0.13524438250504717,
+        "semifinal": 0.05630803538052868,
+        "final": 0.02344344947781137,
+        "champion": 0.009760513214580107
       }
     },
     {
@@ -621,15 +621,15 @@
       "fifaRank": 61,
       "iso3": "SAU",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.38022813688212925,
       "stages": {
         "roundOf32": 0.38022813688212925,
-        "roundOf16": 0.1107227296411771,
-        "quarterfinal": 0.03224254511967812,
-        "semifinal": 0.009389054254383782,
-        "final": 0.0027340999125394804,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.11054525866774896,
+        "quarterfinal": 0.032139268582608356,
+        "semifinal": 0.009343979085793116,
+        "final": 0.002716612698615846,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -641,15 +641,15 @@
       "fifaRank": 69,
       "iso3": "CPV",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.12004801920768307,
       "stages": {
         "roundOf32": 0.12004801920768307,
-        "roundOf16": 0.04402358253858108,
-        "quarterfinal": 0.016144171576695406,
-        "semifinal": 0.005920333168464129,
-        "final": 0.002171083518228506,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.043953019718532875,
+        "quarterfinal": 0.01609245996000657,
+        "semifinal": 0.005891910708815773,
+        "final": 0.002157197338811574,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -661,15 +661,15 @@
       "fifaRank": 1,
       "iso3": "FRA",
       "impliedProbability": 0.2,
-      "normalizedProbability": 0.15939363926002267,
+      "normalizedProbability": 0.15812031407619775,
       "groupAdvanceProbability": 0.96999699969997,
       "stages": {
         "roundOf32": 0.96999699969997,
-        "roundOf16": 0.6759436773070078,
-        "quarterfinal": 0.4710322351848965,
-        "semifinal": 0.3282394288636975,
-        "final": 0.2287340751073527,
-        "champion": 0.15939363926002267
+        "roundOf16": 0.674860246806486,
+        "quarterfinal": 0.4695234653927614,
+        "semifinal": 0.3266636101291081,
+        "final": 0.22727109941846807,
+        "champion": 0.15812031407619775
       }
     },
     {
@@ -681,15 +681,15 @@
       "fifaRank": 14,
       "iso3": "SEN",
       "impliedProbability": 0.009900990099009901,
-      "normalizedProbability": 0.007890774220793201,
+      "normalizedProbability": 0.007827738320603848,
       "groupAdvanceProbability": 0.6296296296296297,
       "stages": {
         "roundOf32": 0.6296296296296297,
-        "roundOf16": 0.2622358414334346,
-        "quarterfinal": 0.10921918743365525,
-        "semifinal": 0.04548894170401152,
-        "final": 0.01894579025876669,
-        "champion": 0.007890774220793201
+        "roundOf16": 0.2618155189739201,
+        "quarterfinal": 0.10886934596122022,
+        "semifinal": 0.045270557438592894,
+        "final": 0.018824613601802594,
+        "champion": 0.007827738320603848
       }
     },
     {
@@ -701,15 +701,15 @@
       "fifaRank": 31,
       "iso3": "NOR",
       "impliedProbability": 0.03225806451612903,
-      "normalizedProbability": 0.025708651493552045,
+      "normalizedProbability": 0.025503276463902862,
       "groupAdvanceProbability": 0.4807692307692308,
       "stages": {
         "roundOf32": 0.4807692307692308,
-        "roundOf16": 0.2676487327402951,
-        "quarterfinal": 0.1490025558059707,
-        "semifinal": 0.08295111809198895,
-        "final": 0.046179664204359726,
-        "champion": 0.025708651493552045
+        "roundOf16": 0.26721973427457657,
+        "quarterfinal": 0.14852528368241263,
+        "semifinal": 0.08255288462443444,
+        "final": 0.04588430057731759,
+        "champion": 0.025503276463902862
       }
     },
     {
@@ -721,15 +721,15 @@
       "fifaRank": 57,
       "iso3": "IRQ",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.11001100110011001,
       "stages": {
         "roundOf32": 0.11001100110011001,
-        "roundOf16": 0.04105350826723876,
-        "quarterfinal": 0.015320200018128513,
-        "semifinal": 0.005717136939128912,
-        "final": 0.002133500524932776,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.04098770600515184,
+        "quarterfinal": 0.015271127676003672,
+        "semifinal": 0.005689689988200191,
+        "final": 0.00211985472511596,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -741,15 +741,15 @@
       "fifaRank": 3,
       "iso3": "ARG",
       "impliedProbability": 0.13333333333333333,
-      "normalizedProbability": 0.10626242617334845,
+      "normalizedProbability": 0.10541354271746516,
       "groupAdvanceProbability": 0.95,
       "stages": {
         "roundOf32": 0.95,
-        "roundOf16": 0.6129920325086582,
-        "quarterfinal": 0.39553603359904826,
-        "semifinal": 0.25522151280662475,
-        "final": 0.16468289881607098,
-        "champion": 0.10626242617334845
+        "roundOf16": 0.6120095035097292,
+        "quarterfinal": 0.39426908672234234,
+        "semifinal": 0.25399624001492116,
+        "final": 0.16362959236302096,
+        "champion": 0.10541354271746516
       }
     },
     {
@@ -761,15 +761,15 @@
       "fifaRank": 28,
       "iso3": "DZA",
       "impliedProbability": 0.002849002849002849,
-      "normalizedProbability": 0.002270564661823685,
+      "normalizedProbability": 0.0022524261264415635,
       "groupAdvanceProbability": 0.5192307692307693,
       "stages": {
         "roundOf32": 0.5192307692307693,
-        "roundOf16": 0.17519233914001542,
-        "quarterfinal": 0.0591112035575633,
-        "semifinal": 0.019944561521215484,
-        "final": 0.006729444002712282,
-        "champion": 0.002270564661823685
+        "roundOf16": 0.17491153360835002,
+        "quarterfinal": 0.05892186365332214,
+        "semifinal": 0.019848811251946777,
+        "final": 0.006686402698214652,
+        "champion": 0.0022524261264415635
       }
     },
     {
@@ -781,15 +781,15 @@
       "fifaRank": 24,
       "iso3": "AUT",
       "impliedProbability": 0.009900990099009901,
-      "normalizedProbability": 0.007890774220793201,
+      "normalizedProbability": 0.007827738320603848,
       "groupAdvanceProbability": 0.6598639455782312,
       "stages": {
         "roundOf32": 0.6598639455782312,
-        "roundOf16": 0.2722622586397986,
-        "quarterfinal": 0.11233639597430672,
-        "semifinal": 0.04635040465594505,
-        "final": 0.01912434517003038,
-        "champion": 0.007890774220793201
+        "roundOf16": 0.2718258654238334,
+        "quarterfinal": 0.11197656972857888,
+        "semifinal": 0.046127884661118425,
+        "final": 0.019002026481673765,
+        "champion": 0.007827738320603848
       }
     },
     {
@@ -801,35 +801,35 @@
       "fifaRank": 63,
       "iso3": "JOR",
       "impliedProbability": 0.0006662225183211193,
-      "normalizedProbability": 0.0005309581587609017,
+      "normalizedProbability": 0.0005267165692078539,
       "groupAdvanceProbability": 0.1400560224089636,
       "stages": {
         "roundOf32": 0.1400560224089636,
-        "roundOf16": 0.04592545738874523,
-        "quarterfinal": 0.015059314123649341,
-        "semifinal": 0.004938066048098224,
-        "final": 0.001619230204985676,
-        "champion": 0.0005309581587609017
+        "roundOf16": 0.04585184616497639,
+        "quarterfinal": 0.015011077428699752,
+        "semifinal": 0.0049143592770434135,
+        "final": 0.001608873661372793,
+        "champion": 0.0005267165692078539
       }
     },
     {
       "team": "Portugal",
       "group": "K",
       "confederation": "UEFA",
-      "oddsAmerican": 1100,
+      "oddsAmerican": 1000,
       "groupAdvanceOddsAmerican": -733,
       "fifaRank": 5,
       "iso3": "PRT",
-      "impliedProbability": 0.08333333333333333,
-      "normalizedProbability": 0.06641401635834278,
+      "impliedProbability": 0.09090909090909091,
+      "normalizedProbability": 0.07187287003463534,
       "groupAdvanceProbability": 0.879951980792317,
       "stages": {
         "roundOf32": 0.879951980792317,
-        "roundOf16": 0.5248305747518289,
-        "quarterfinal": 0.3130251856997014,
-        "semifinal": 0.18669790137258213,
-        "final": 0.11135240220052253,
-        "champion": 0.06641401635834278
+        "roundOf16": 0.5331877661503004,
+        "quarterfinal": 0.3230735314856281,
+        "semifinal": 0.19575938041528965,
+        "final": 0.11861613931775411,
+        "champion": 0.07187287003463534
       }
     },
     {
@@ -841,15 +841,15 @@
       "fifaRank": 13,
       "iso3": "COL",
       "impliedProbability": 0.0196078431372549,
-      "normalizedProbability": 0.015626827378433596,
+      "normalizedProbability": 0.015501991576097818,
       "groupAdvanceProbability": 0.75,
       "stages": {
         "roundOf32": 0.75,
-        "roundOf16": 0.3457985546198339,
-        "quarterfinal": 0.15943552050288834,
-        "semifinal": 0.0735100967266129,
-        "final": 0.033892913597369234,
-        "champion": 0.015626827378433596
+        "roundOf16": 0.34524429438530646,
+        "quarterfinal": 0.15892483040747754,
+        "semifinal": 0.07315718791244545,
+        "final": 0.03367613562672734,
+        "champion": 0.015501991576097818
       }
     },
     {
@@ -861,15 +861,15 @@
       "fifaRank": 46,
       "iso3": "COD",
       "impliedProbability": 0.0014265335235378032,
-      "normalizedProbability": 0.0011369018492155684,
+      "normalizedProbability": 0.0011278196439101123,
       "groupAdvanceProbability": 0.42016806722689076,
       "stages": {
         "roundOf32": 0.42016806722689076,
-        "roundOf16": 0.1287902626640134,
-        "quarterfinal": 0.03947689758181603,
-        "semifinal": 0.01210049122075941,
-        "final": 0.003709052553590758,
-        "champion": 0.0011369018492155684
+        "roundOf16": 0.1285838323009152,
+        "quarterfinal": 0.039350448591471916,
+        "semifinal": 0.01204239892871083,
+        "final": 0.003685329574353176,
+        "champion": 0.0011278196439101123
       }
     },
     {
@@ -881,15 +881,15 @@
       "fifaRank": 50,
       "iso3": "UZB",
       "impliedProbability": 0.0006662225183211193,
-      "normalizedProbability": 0.0005309581587609017,
+      "normalizedProbability": 0.0005267165692078539,
       "groupAdvanceProbability": 0.2801120448179272,
       "stages": {
         "roundOf32": 0.2801120448179272,
-        "roundOf16": 0.07996086559880862,
-        "quarterfinal": 0.022825651897499327,
-        "semifinal": 0.006515817214384651,
-        "final": 0.0018600070728285582,
-        "champion": 0.0005309581587609017
+        "roundOf16": 0.07983270101417485,
+        "quarterfinal": 0.022752538739850524,
+        "semifinal": 0.006484535942438945,
+        "final": 0.0018481105282169839,
+        "champion": 0.0005267165692078539
       }
     },
     {
@@ -901,15 +901,15 @@
       "fifaRank": 4,
       "iso3": "ENG",
       "impliedProbability": 0.14285714285714285,
-      "normalizedProbability": 0.11385259947144476,
+      "normalizedProbability": 0.11294308148299838,
       "groupAdvanceProbability": 0.90999099909991,
       "stages": {
         "roundOf32": 0.90999099909991,
-        "roundOf16": 0.600479613434064,
-        "quarterfinal": 0.3962410249184613,
-        "semifinal": 0.26146924277833605,
-        "final": 0.17253681628030534,
-        "champion": 0.11385259947144476
+        "roundOf16": 0.5995171398582656,
+        "quarterfinal": 0.39497181987442226,
+        "semifinal": 0.2602139757535445,
+        "final": 0.17143327642714976,
+        "champion": 0.11294308148299838
       }
     },
     {
@@ -921,15 +921,15 @@
       "fifaRank": 11,
       "iso3": "HRV",
       "impliedProbability": 0.01098901098901099,
-      "normalizedProbability": 0.008757892267034214,
+      "normalizedProbability": 0.00868792934484603,
       "groupAdvanceProbability": 0.6805111821086262,
       "stages": {
         "roundOf32": 0.6805111821086262,
-        "roundOf16": 0.28493653086929666,
-        "quarterfinal": 0.11930564663501729,
-        "semifinal": 0.04995441362177888,
-        "final": 0.020916390050924313,
-        "champion": 0.008757892267034214
+        "roundOf16": 0.284479822805266,
+        "quarterfinal": 0.11892349708721955,
+        "semifinal": 0.04971459142511853,
+        "final": 0.020782609501920544,
+        "champion": 0.00868792934484603
       }
     },
     {
@@ -941,15 +941,15 @@
       "fifaRank": 33,
       "iso3": "PAN",
       "impliedProbability": 0.000999000999000999,
-      "normalizedProbability": 0.0007961720242758376,
+      "normalizedProbability": 0.0007898117586223664,
       "groupAdvanceProbability": 0.19011406844106463,
       "stages": {
         "roundOf32": 0.19011406844106463,
-        "roundOf16": 0.06359350869980081,
-        "quarterfinal": 0.021272146674433633,
-        "semifinal": 0.007115572538617219,
-        "final": 0.00238017221896913,
-        "champion": 0.0007961720242758376
+        "roundOf16": 0.06349157839218247,
+        "quarterfinal": 0.02120400957060323,
+        "semifinal": 0.007081411948731653,
+        "final": 0.0023649487150374277,
+        "champion": 0.0007898117586223664
       }
     },
     {
@@ -961,15 +961,15 @@
       "fifaRank": 74,
       "iso3": "GHA",
       "impliedProbability": 0.002849002849002849,
-      "normalizedProbability": 0.002270564661823685,
+      "normalizedProbability": 0.0022524261264415635,
       "groupAdvanceProbability": 0.4807692307692308,
       "stages": {
         "roundOf32": 0.4807692307692308,
-        "roundOf16": 0.164731292856965,
-        "quarterfinal": 0.056443709600360506,
-        "semifinal": 0.019339934132709784,
-        "final": 0.006626656095175644,
-        "champion": 0.002270564661823685
+        "roundOf16": 0.16446725472322185,
+        "quarterfinal": 0.05626291398248173,
+        "semifinal": 0.01924708657128929,
+        "final": 0.006584272218784288,
+        "champion": 0.0022524261264415635
       }
     }
   ]
