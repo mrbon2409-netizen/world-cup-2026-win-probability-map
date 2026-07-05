@@ -67267,6 +67267,982 @@
           }
         }
       ]
+    },
+    {
+      "metadata": {
+        "snapshotDate": "2026-07-05",
+        "lastUpdated": "2026-07-05T09:14:55-04:00",
+        "titleOddsLabel": "FOX Sports World Cup title odds snapshot (updated Jul. 4, 2026; refreshed automatically)",
+        "groupAdvanceLabel": "Dimers/Polymarket World Cup 2026 group-stage To Advance probabilities, converted to fair American odds (article updated Jun. 1, 2026; accessed Jun. 2, 2026)",
+        "rankingLabel": "FIFA/Coca-Cola Men's World Ranking (last official update: 2026-04-01; next update listed for 2026-06-11)",
+        "titleOddsSourceUrl": "https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds",
+        "groupAdvanceSourceUrl": "https://www.dimers.com/news/2026-fifa-world-cup-complete-group-stage-preview-and-polymarket-odds",
+        "groupBreakdownSourceUrl": "https://www.bet365.com/hub/en-gb/football/football-competitions/world-cup?affiliate=365_01056479",
+        "rankingSourceUrl": "https://inside.fifa.com/fifa-world-ranking/men?dateId=id13678",
+        "totalTeams": 48
+      },
+      "teams": [
+        {
+          "team": "Mexico",
+          "group": "A",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 2700,
+          "groupAdvanceOddsAmerican": -1011,
+          "fifaRank": 15,
+          "iso3": "MEX",
+          "impliedProbability": 0.03571428571428571,
+          "normalizedProbability": 0.02502557673753325,
+          "groupAdvanceProbability": 0.90999099909991,
+          "stages": {
+            "roundOf32": 0.90999099909991,
+            "roundOf16": 0.44351314518837326,
+            "quarterfinal": 0.21616028087030176,
+            "semifinal": 0.10535260912296553,
+            "final": 0.05134695515905611,
+            "champion": 0.02502557673753325
+          }
+        },
+        {
+          "team": "South Korea",
+          "group": "A",
+          "confederation": "AFC",
+          "oddsAmerican": 35000,
+          "groupAdvanceOddsAmerican": -108,
+          "fifaRank": 25,
+          "iso3": "KOR",
+          "impliedProbability": 0.002849002849002849,
+          "normalizedProbability": 0.0019963423038488063,
+          "groupAdvanceProbability": 0.5192307692307693,
+          "stages": {
+            "roundOf32": 0.5192307692307693,
+            "roundOf16": 0.1707400241019772,
+            "quarterfinal": 0.05614489271029167,
+            "semifinal": 0.018462273236926754,
+            "final": 0.006070998030644756,
+            "champion": 0.0019963423038488063
+          }
+        },
+        {
+          "team": "Czechia",
+          "group": "A",
+          "confederation": "UEFA",
+          "oddsAmerican": 15000,
+          "groupAdvanceOddsAmerican": -186,
+          "fifaRank": 41,
+          "iso3": "CZE",
+          "impliedProbability": 0.006622516556291391,
+          "normalizedProbability": 0.00464050429570153,
+          "groupAdvanceProbability": 0.6503496503496503,
+          "stages": {
+            "roundOf32": 0.6503496503496503,
+            "roundOf16": 0.24200846925131353,
+            "quarterfinal": 0.09005632455998976,
+            "semifinal": 0.03351180898066936,
+            "final": 0.012470432772423146,
+            "champion": 0.00464050429570153
+          }
+        },
+        {
+          "team": "South Africa",
+          "group": "A",
+          "confederation": "CAF",
+          "oddsAmerican": 80000,
+          "groupAdvanceOddsAmerican": 456,
+          "fifaRank": 60,
+          "iso3": "ZAF",
+          "impliedProbability": 0.0012484394506866417,
+          "normalizedProbability": 0.0008748016837090276,
+          "groupAdvanceProbability": 0.17985611510791366,
+          "stages": {
+            "roundOf32": 0.17985611510791366,
+            "roundOf16": 0.06199006457882136,
+            "quarterfinal": 0.021365790672064625,
+            "semifinal": 0.00736403509407609,
+            "final": 0.0025381233813962095,
+            "champion": 0.0008748016837090276
+          }
+        },
+        {
+          "team": "Switzerland",
+          "group": "B",
+          "confederation": "UEFA",
+          "oddsAmerican": 7000,
+          "groupAdvanceOddsAmerican": -456,
+          "fifaRank": 19,
+          "iso3": "CHE",
+          "impliedProbability": 0.014084507042253521,
+          "normalizedProbability": 0.009869241530294804,
+          "groupAdvanceProbability": 0.8201438848920863,
+          "stages": {
+            "roundOf32": 0.8201438848920863,
+            "roundOf16": 0.33881981140906225,
+            "quarterfinal": 0.13997405420925332,
+            "semifinal": 0.057826417440863226,
+            "final": 0.023889388450848446,
+            "champion": 0.009869241530294804
+          }
+        },
+        {
+          "team": "Canada",
+          "group": "B",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 20000,
+          "groupAdvanceOddsAmerican": -285,
+          "fifaRank": 30,
+          "iso3": "CAN",
+          "impliedProbability": 0.004975124378109453,
+          "normalizedProbability": 0.003486149993288214,
+          "groupAdvanceProbability": 0.7402597402597403,
+          "stages": {
+            "roundOf32": 0.7402597402597403,
+            "roundOf16": 0.2534991562622732,
+            "quarterfinal": 0.08680983002417016,
+            "semifinal": 0.029727698900222515,
+            "final": 0.010180138374378056,
+            "champion": 0.003486149993288214
+          }
+        },
+        {
+          "team": "Qatar",
+          "group": "B",
+          "confederation": "AFC",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 567,
+          "fifaRank": 55,
+          "iso3": "QAT",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.14992503748125938,
+          "stages": {
+            "roundOf32": 0.14992503748125938,
+            "roundOf16": 0.051253194905438636,
+            "quarterfinal": 0.017521356220059257,
+            "semifinal": 0.005989829987313292,
+            "final": 0.0020476761516806954,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "Bosnia and Herzegovina",
+          "group": "B",
+          "confederation": "UEFA",
+          "oddsAmerican": 25000,
+          "groupAdvanceOddsAmerican": 144,
+          "fifaRank": 65,
+          "iso3": "BIH",
+          "impliedProbability": 0.00398406374501992,
+          "normalizedProbability": 0.0027916978033901635,
+          "groupAdvanceProbability": 0.4098360655737705,
+          "stages": {
+            "roundOf32": 0.4098360655737705,
+            "roundOf16": 0.15109907994730534,
+            "quarterfinal": 0.0557074739846501,
+            "semifinal": 0.02053832927925655,
+            "final": 0.0075721072849111405,
+            "champion": 0.0027916978033901635
+          }
+        },
+        {
+          "team": "Brazil",
+          "group": "C",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 1100,
+          "groupAdvanceOddsAmerican": -2400,
+          "fifaRank": 6,
+          "iso3": "BRA",
+          "impliedProbability": 0.08333333333333333,
+          "normalizedProbability": 0.05839301238757758,
+          "groupAdvanceProbability": 0.96,
+          "stages": {
+            "roundOf32": 0.96,
+            "roundOf16": 0.5483895400480747,
+            "quarterfinal": 0.31326154961889474,
+            "semifinal": 0.17894724698984668,
+            "final": 0.10222166507253255,
+            "champion": 0.05839301238757758
+          }
+        },
+        {
+          "team": "Morocco",
+          "group": "C",
+          "confederation": "CAF",
+          "oddsAmerican": 3000,
+          "groupAdvanceOddsAmerican": -245,
+          "fifaRank": 8,
+          "iso3": "MAR",
+          "impliedProbability": 0.03225806451612903,
+          "normalizedProbability": 0.022603746730675195,
+          "groupAdvanceProbability": 0.7101449275362319,
+          "stages": {
+            "roundOf32": 0.7101449275362319,
+            "roundOf16": 0.35638029084656414,
+            "quarterfinal": 0.17884646750138433,
+            "semifinal": 0.08975260349482961,
+            "final": 0.04504159319801912,
+            "champion": 0.022603746730675195
+          }
+        },
+        {
+          "team": "Scotland",
+          "group": "C",
+          "confederation": "UEFA",
+          "oddsAmerican": 20000,
+          "groupAdvanceOddsAmerican": 122,
+          "fifaRank": 43,
+          "iso3": "SCT",
+          "impliedProbability": 0.004975124378109453,
+          "normalizedProbability": 0.003486149993288214,
+          "groupAdvanceProbability": 0.45045045045045046,
+          "stages": {
+            "roundOf32": 0.45045045045045046,
+            "roundOf16": 0.17036753282553727,
+            "quarterfinal": 0.06443571365515435,
+            "semifinal": 0.024370612906044774,
+            "final": 0.00921735385123288,
+            "champion": 0.003486149993288214
+          }
+        },
+        {
+          "team": "Haiti",
+          "group": "C",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 150000,
+          "groupAdvanceOddsAmerican": 1150,
+          "fifaRank": 83,
+          "iso3": "HTI",
+          "impliedProbability": 0.0006662225183211193,
+          "normalizedProbability": 0.00046683287718249903,
+          "groupAdvanceProbability": 0.08,
+          "stages": {
+            "roundOf32": 0.08,
+            "roundOf16": 0.028595933366278005,
+            "quarterfinal": 0.010221592563607646,
+            "semifinal": 0.003653699748077088,
+            "final": 0.0013060119317049894,
+            "champion": 0.00046683287718249903
+          }
+        },
+        {
+          "team": "United States",
+          "group": "D",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 3000,
+          "groupAdvanceOddsAmerican": -733,
+          "fifaRank": 16,
+          "iso3": "USA",
+          "impliedProbability": 0.03225806451612903,
+          "normalizedProbability": 0.022603746730675195,
+          "groupAdvanceProbability": 0.879951980792317,
+          "stages": {
+            "roundOf32": 0.879951980792317,
+            "roundOf16": 0.42306126639760333,
+            "quarterfinal": 0.20339841154148877,
+            "semifinal": 0.09778941515936236,
+            "final": 0.04701496754442223,
+            "champion": 0.022603746730675195
+          }
+        },
+        {
+          "team": "Turkiye",
+          "group": "D",
+          "confederation": "UEFA",
+          "oddsAmerican": 8000,
+          "groupAdvanceOddsAmerican": -163,
+          "fifaRank": 22,
+          "iso3": "TUR",
+          "impliedProbability": 0.012345679012345678,
+          "normalizedProbability": 0.008650816650011495,
+          "groupAdvanceProbability": 0.6197718631178707,
+          "stages": {
+            "roundOf32": 0.6197718631178707,
+            "roundOf16": 0.2637526951899094,
+            "quarterfinal": 0.11224369539781932,
+            "semifinal": 0.04776689446713356,
+            "final": 0.020327878540950133,
+            "champion": 0.008650816650011495
+          }
+        },
+        {
+          "team": "Australia",
+          "group": "D",
+          "confederation": "AFC",
+          "oddsAmerican": 45000,
+          "groupAdvanceOddsAmerican": 186,
+          "fifaRank": 27,
+          "iso3": "AUS",
+          "impliedProbability": 0.0022172949002217295,
+          "normalizedProbability": 0.0015536943429067208,
+          "groupAdvanceProbability": 0.34965034965034963,
+          "stages": {
+            "roundOf32": 0.34965034965034963,
+            "roundOf16": 0.1183532778401174,
+            "quarterfinal": 0.040061445353930074,
+            "semifinal": 0.01356041364578005,
+            "final": 0.0045900694949993475,
+            "champion": 0.0015536943429067208
+          }
+        },
+        {
+          "team": "Paraguay",
+          "group": "D",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 20000,
+          "groupAdvanceOddsAmerican": 108,
+          "fifaRank": 40,
+          "iso3": "PRY",
+          "impliedProbability": 0.004975124378109453,
+          "normalizedProbability": 0.003486149993288214,
+          "groupAdvanceProbability": 0.4807692307692308,
+          "stages": {
+            "roundOf32": 0.4807692307692308,
+            "roundOf16": 0.17948102695316173,
+            "quarterfinal": 0.06700395319521606,
+            "semifinal": 0.025013951725149836,
+            "final": 0.009338221867076344,
+            "champion": 0.003486149993288214
+          }
+        },
+        {
+          "team": "Germany",
+          "group": "E",
+          "confederation": "UEFA",
+          "oddsAmerican": 1300,
+          "groupAdvanceOddsAmerican": -1567,
+          "fifaRank": 10,
+          "iso3": "DEU",
+          "impliedProbability": 0.07142857142857142,
+          "normalizedProbability": 0.0500511534750665,
+          "groupAdvanceProbability": 0.9400119976004799,
+          "stages": {
+            "roundOf32": 0.9400119976004799,
+            "roundOf16": 0.5228649564507878,
+            "quarterfinal": 0.2908343333724963,
+            "semifinal": 0.16177142572794598,
+            "final": 0.0899824786110593,
+            "champion": 0.0500511534750665
+          }
+        },
+        {
+          "team": "Ecuador",
+          "group": "E",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 8000,
+          "groupAdvanceOddsAmerican": -213,
+          "fifaRank": 23,
+          "iso3": "ECU",
+          "impliedProbability": 0.012345679012345678,
+          "normalizedProbability": 0.008650816650011495,
+          "groupAdvanceProbability": 0.6805111821086262,
+          "stages": {
+            "roundOf32": 0.6805111821086262,
+            "roundOf16": 0.2842363608948884,
+            "quarterfinal": 0.11872003132179708,
+            "semifinal": 0.049587061249565655,
+            "final": 0.020711556558667486,
+            "champion": 0.008650816650011495
+          }
+        },
+        {
+          "team": "Ivory Coast",
+          "group": "E",
+          "confederation": "CAF",
+          "oddsAmerican": 25000,
+          "groupAdvanceOddsAmerican": -122,
+          "fifaRank": 34,
+          "iso3": "CIV",
+          "impliedProbability": 0.00398406374501992,
+          "normalizedProbability": 0.0027916978033901635,
+          "groupAdvanceProbability": 0.5495495495495496,
+          "stages": {
+            "roundOf32": 0.5495495495495496,
+            "roundOf16": 0.19106413212212145,
+            "quarterfinal": 0.06642804568487413,
+            "semifinal": 0.023095309436159856,
+            "final": 0.008029640379341008,
+            "champion": 0.0027916978033901635
+          }
+        },
+        {
+          "team": "Curacao",
+          "group": "E",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 350000,
+          "groupAdvanceOddsAmerican": 1567,
+          "fifaRank": 82,
+          "iso3": "CUW",
+          "impliedProbability": 0.00028563267637817766,
+          "normalizedProbability": 0.00020014742892057443,
+          "groupAdvanceProbability": 0.059988002399520096,
+          "stages": {
+            "roundOf32": 0.059988002399520096,
+            "roundOf16": 0.01917438853135713,
+            "quarterfinal": 0.006128845116442502,
+            "semifinal": 0.0019590060147113585,
+            "final": 0.0006261709168305564,
+            "champion": 0.00020014742892057443
+          }
+        },
+        {
+          "team": "Netherlands",
+          "group": "F",
+          "confederation": "UEFA",
+          "oddsAmerican": 1700,
+          "groupAdvanceOddsAmerican": -809,
+          "fifaRank": 7,
+          "iso3": "NLD",
+          "impliedProbability": 0.05555555555555555,
+          "normalizedProbability": 0.03892867492505172,
+          "groupAdvanceProbability": 0.88998899889989,
+          "stages": {
+            "roundOf32": 0.88998899889989,
+            "roundOf16": 0.4759503329400551,
+            "quarterfinal": 0.25452979722868496,
+            "semifinal": 0.1361180215529654,
+            "final": 0.07279350391674093,
+            "champion": 0.03892867492505172
+          }
+        },
+        {
+          "team": "Japan",
+          "group": "F",
+          "confederation": "AFC",
+          "oddsAmerican": 5000,
+          "groupAdvanceOddsAmerican": -104,
+          "fifaRank": 18,
+          "iso3": "JPN",
+          "impliedProbability": 0.0196078431372549,
+          "normalizedProbability": 0.013739532326488843,
+          "groupAdvanceProbability": 0.5098039215686274,
+          "stages": {
+            "roundOf32": 0.5098039215686274,
+            "roundOf16": 0.24746679148587755,
+            "quarterfinal": 0.12012424835784827,
+            "semifinal": 0.05831018762920153,
+            "final": 0.028304676431555334,
+            "champion": 0.013739532326488843
+          }
+        },
+        {
+          "team": "Sweden",
+          "group": "F",
+          "confederation": "UEFA",
+          "oddsAmerican": 8000,
+          "groupAdvanceOddsAmerican": -178,
+          "fifaRank": 38,
+          "iso3": "SWE",
+          "impliedProbability": 0.012345679012345678,
+          "normalizedProbability": 0.008650816650011495,
+          "groupAdvanceProbability": 0.6402877697841727,
+          "stages": {
+            "roundOf32": 0.6402877697841727,
+            "roundOf16": 0.27071454272630757,
+            "quarterfinal": 0.11445847804998223,
+            "semifinal": 0.04839320069614109,
+            "final": 0.02046071128601167,
+            "champion": 0.008650816650011495
+          }
+        },
+        {
+          "team": "Tunisia",
+          "group": "F",
+          "confederation": "CAF",
+          "oddsAmerican": 50000,
+          "groupAdvanceOddsAmerican": 426,
+          "fifaRank": 44,
+          "iso3": "TUN",
+          "impliedProbability": 0.001996007984031936,
+          "normalizedProbability": 0.0013986350272473672,
+          "groupAdvanceProbability": 0.19011406844106463,
+          "stages": {
+            "roundOf32": 0.19011406844106463,
+            "roundOf16": 0.0711790659679433,
+            "quarterfinal": 0.026649576612682014,
+            "semifinal": 0.009977651771309543,
+            "final": 0.003735651650921196,
+            "champion": 0.0013986350272473672
+          }
+        },
+        {
+          "team": "Belgium",
+          "group": "G",
+          "confederation": "UEFA",
+          "oddsAmerican": 5000,
+          "groupAdvanceOddsAmerican": -1150,
+          "fifaRank": 9,
+          "iso3": "BEL",
+          "impliedProbability": 0.0196078431372549,
+          "normalizedProbability": 0.013739532326488843,
+          "groupAdvanceProbability": 0.92,
+          "stages": {
+            "roundOf32": 0.92,
+            "roundOf16": 0.39684841667717247,
+            "quarterfinal": 0.17118333241215075,
+            "semifinal": 0.07384112437965666,
+            "final": 0.031851884017096634,
+            "champion": 0.013739532326488843
+          }
+        },
+        {
+          "team": "Iran",
+          "group": "G",
+          "confederation": "AFC",
+          "oddsAmerican": 30000,
+          "groupAdvanceOddsAmerican": 104,
+          "fifaRank": 21,
+          "iso3": "IRN",
+          "impliedProbability": 0.0033222591362126247,
+          "normalizedProbability": 0.002327960626747279,
+          "groupAdvanceProbability": 0.49019607843137253,
+          "stages": {
+            "roundOf32": 0.49019607843137253,
+            "roundOf16": 0.16814772361381025,
+            "quarterfinal": 0.0576782601912729,
+            "semifinal": 0.019784875032461888,
+            "final": 0.006786634665332041,
+            "champion": 0.002327960626747279
+          }
+        },
+        {
+          "team": "Egypt",
+          "group": "G",
+          "confederation": "CAF",
+          "oddsAmerican": 30000,
+          "groupAdvanceOddsAmerican": -156,
+          "fifaRank": 29,
+          "iso3": "EGY",
+          "impliedProbability": 0.0033222591362126247,
+          "normalizedProbability": 0.002327960626747279,
+          "groupAdvanceProbability": 0.609375,
+          "stages": {
+            "roundOf32": 0.609375,
+            "roundOf16": 0.2001256855189941,
+            "quarterfinal": 0.06572355282781099,
+            "semifinal": 0.021584362772364304,
+            "final": 0.007088550393944718,
+            "champion": 0.002327960626747279
+          }
+        },
+        {
+          "team": "New Zealand",
+          "group": "G",
+          "confederation": "OFC",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 355,
+          "fifaRank": 85,
+          "iso3": "NZL",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.21978021978021978,
+          "stages": {
+            "roundOf32": 0.21978021978021978,
+            "roundOf16": 0.06960052130074365,
+            "quarterfinal": 0.02204125817227548,
+            "semifinal": 0.006980077918061656,
+            "final": 0.002210467631266898,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "Spain",
+          "group": "H",
+          "confederation": "UEFA",
+          "oddsAmerican": 550,
+          "groupAdvanceOddsAmerican": -900,
+          "fifaRank": 2,
+          "iso3": "ESP",
+          "impliedProbability": 0.15384615384615385,
+          "normalizedProbability": 0.10780248440783555,
+          "groupAdvanceProbability": 0.9,
+          "stages": {
+            "roundOf32": 0.9,
+            "roundOf16": 0.5887348730058891,
+            "quarterfinal": 0.38512083410362263,
+            "semifinal": 0.25192673928657594,
+            "final": 0.1647978409563,
+            "champion": 0.10780248440783555
+          }
+        },
+        {
+          "team": "Uruguay",
+          "group": "H",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 8000,
+          "groupAdvanceOddsAmerican": -355,
+          "fifaRank": 17,
+          "iso3": "URY",
+          "impliedProbability": 0.012345679012345678,
+          "normalizedProbability": 0.008650816650011495,
+          "groupAdvanceProbability": 0.7802197802197802,
+          "stages": {
+            "roundOf32": 0.7802197802197802,
+            "roundOf16": 0.31709178196520577,
+            "quarterfinal": 0.12887035260955115,
+            "semifinal": 0.05237463954058697,
+            "final": 0.021285755889234006,
+            "champion": 0.008650816650011495
+          }
+        },
+        {
+          "team": "Saudi Arabia",
+          "group": "H",
+          "confederation": "AFC",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 163,
+          "fifaRank": 61,
+          "iso3": "SAU",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.38022813688212925,
+          "stages": {
+            "roundOf32": 0.38022813688212925,
+            "roundOf16": 0.10790883676975385,
+            "quarterfinal": 0.030624553849393634,
+            "semifinal": 0.008691255753924385,
+            "final": 0.0024665804749876997,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "Cape Verde",
+          "group": "H",
+          "confederation": "CAF",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 733,
+          "fifaRank": 69,
+          "iso3": "CPV",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.12004801920768307,
+          "stages": {
+            "roundOf32": 0.12004801920768307,
+            "roundOf16": 0.04290477300885506,
+            "quarterfinal": 0.015334026826021679,
+            "semifinal": 0.005480331492550346,
+            "final": 0.0019586527145806,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "France",
+          "group": "I",
+          "confederation": "UEFA",
+          "oddsAmerican": 170,
+          "groupAdvanceOddsAmerican": -3233,
+          "fifaRank": 1,
+          "iso3": "FRA",
+          "impliedProbability": 0.37037037037037035,
+          "normalizedProbability": 0.25952449950034484,
+          "groupAdvanceProbability": 0.96999699969997,
+          "stages": {
+            "roundOf32": 0.96999699969997,
+            "roundOf16": 0.7451642057019573,
+            "quarterfinal": 0.5724447535726188,
+            "semifinal": 0.43975944279841506,
+            "final": 0.3378288757534045,
+            "champion": 0.25952449950034484
+          }
+        },
+        {
+          "team": "Senegal",
+          "group": "I",
+          "confederation": "CAF",
+          "oddsAmerican": 10000,
+          "groupAdvanceOddsAmerican": -170,
+          "fifaRank": 14,
+          "iso3": "SEN",
+          "impliedProbability": 0.009900990099009901,
+          "normalizedProbability": 0.006937783650009219,
+          "groupAdvanceProbability": 0.6296296296296297,
+          "stages": {
+            "roundOf32": 0.6296296296296297,
+            "roundOf16": 0.25557141428977065,
+            "quarterfinal": 0.10373836415623452,
+            "semifinal": 0.0421081842338197,
+            "final": 0.01709202949064183,
+            "champion": 0.006937783650009219
+          }
+        },
+        {
+          "team": "Norway",
+          "group": "I",
+          "confederation": "UEFA",
+          "oddsAmerican": 4000,
+          "groupAdvanceOddsAmerican": 108,
+          "fifaRank": 31,
+          "iso3": "NOR",
+          "impliedProbability": 0.024390243902439025,
+          "normalizedProbability": 0.017090637771973928,
+          "groupAdvanceProbability": 0.4807692307692308,
+          "stages": {
+            "roundOf32": 0.4807692307692308,
+            "roundOf16": 0.2466612828942267,
+            "quarterfinal": 0.12655092003637353,
+            "semifinal": 0.0649276415582425,
+            "final": 0.033311481553069414,
+            "champion": 0.017090637771973928
+          }
+        },
+        {
+          "team": "Iraq",
+          "group": "I",
+          "confederation": "AFC",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 809,
+          "fifaRank": 57,
+          "iso3": "IRQ",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.11001100110011001,
+          "stages": {
+            "roundOf32": 0.11001100110011001,
+            "roundOf16": 0.04001017981395307,
+            "quarterfinal": 0.014551403702690759,
+            "semifinal": 0.005292236893292826,
+            "final": 0.0019247470489428223,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "Argentina",
+          "group": "J",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 460,
+          "groupAdvanceOddsAmerican": -1900,
+          "fifaRank": 3,
+          "iso3": "ARG",
+          "impliedProbability": 0.17857142857142858,
+          "normalizedProbability": 0.12512788368766625,
+          "groupAdvanceProbability": 0.95,
+          "stages": {
+            "roundOf32": 0.95,
+            "roundOf16": 0.6333586468768463,
+            "quarterfinal": 0.4222559742880734,
+            "semifinal": 0.28151523422185115,
+            "final": 0.18768432402312643,
+            "champion": 0.12512788368766625
+          }
+        },
+        {
+          "team": "Algeria",
+          "group": "J",
+          "confederation": "CAF",
+          "oddsAmerican": 35000,
+          "groupAdvanceOddsAmerican": -108,
+          "fifaRank": 28,
+          "iso3": "DZA",
+          "impliedProbability": 0.002849002849002849,
+          "normalizedProbability": 0.0019963423038488063,
+          "groupAdvanceProbability": 0.5192307692307693,
+          "stages": {
+            "roundOf32": 0.5192307692307693,
+            "roundOf16": 0.1707400241019772,
+            "quarterfinal": 0.05614489271029167,
+            "semifinal": 0.018462273236926754,
+            "final": 0.006070998030644756,
+            "champion": 0.0019963423038488063
+          }
+        },
+        {
+          "team": "Austria",
+          "group": "J",
+          "confederation": "UEFA",
+          "oddsAmerican": 10000,
+          "groupAdvanceOddsAmerican": -194,
+          "fifaRank": 24,
+          "iso3": "AUT",
+          "impliedProbability": 0.009900990099009901,
+          "normalizedProbability": 0.006937783650009219,
+          "groupAdvanceProbability": 0.6598639455782312,
+          "stages": {
+            "roundOf32": 0.6598639455782312,
+            "roundOf16": 0.26534302144950433,
+            "quarterfinal": 0.10669914533708208,
+            "semifinal": 0.042905622893234116,
+            "final": 0.017253113603119315,
+            "champion": 0.006937783650009219
+          }
+        },
+        {
+          "team": "Jordan",
+          "group": "J",
+          "confederation": "AFC",
+          "oddsAmerican": 150000,
+          "groupAdvanceOddsAmerican": 614,
+          "fifaRank": 63,
+          "iso3": "JOR",
+          "impliedProbability": 0.0006662225183211193,
+          "normalizedProbability": 0.00046683287718249903,
+          "groupAdvanceProbability": 0.1400560224089636,
+          "stages": {
+            "roundOf32": 0.1400560224089636,
+            "roundOf16": 0.04475831386201101,
+            "quarterfinal": 0.01430360955075985,
+            "semifinal": 0.0045710668818165325,
+            "final": 0.0014607957777294008,
+            "champion": 0.00046683287718249903
+          }
+        },
+        {
+          "team": "Portugal",
+          "group": "K",
+          "confederation": "UEFA",
+          "oddsAmerican": 1400,
+          "groupAdvanceOddsAmerican": -733,
+          "fifaRank": 5,
+          "iso3": "PRT",
+          "impliedProbability": 0.06666666666666667,
+          "normalizedProbability": 0.046714409910062066,
+          "groupAdvanceProbability": 0.879951980792317,
+          "stages": {
+            "roundOf32": 0.879951980792317,
+            "roundOf16": 0.4891672262835015,
+            "quarterfinal": 0.2719291285127176,
+            "semifinal": 0.15116599592228264,
+            "final": 0.08403350699558051,
+            "champion": 0.046714409910062066
+          }
+        },
+        {
+          "team": "Colombia",
+          "group": "K",
+          "confederation": "CONMEBOL",
+          "oddsAmerican": 2500,
+          "groupAdvanceOddsAmerican": -300,
+          "fifaRank": 13,
+          "iso3": "COL",
+          "impliedProbability": 0.038461538461538464,
+          "normalizedProbability": 0.026950621101958887,
+          "groupAdvanceProbability": 0.75,
+          "stages": {
+            "roundOf32": 0.75,
+            "roundOf16": 0.3856228556508039,
+            "quarterfinal": 0.19827331573370763,
+            "semifinal": 0.10194496295011439,
+            "final": 0.05241641030938468,
+            "champion": 0.026950621101958887
+          }
+        },
+        {
+          "team": "DR Congo",
+          "group": "K",
+          "confederation": "CAF",
+          "oddsAmerican": 70000,
+          "groupAdvanceOddsAmerican": 138,
+          "fifaRank": 46,
+          "iso3": "COD",
+          "impliedProbability": 0.0014265335235378032,
+          "normalizedProbability": 0.0009995950765348516,
+          "groupAdvanceProbability": 0.42016806722689076,
+          "stages": {
+            "roundOf32": 0.42016806722689076,
+            "roundOf16": 0.12551720388743295,
+            "quarterfinal": 0.0374958729626922,
+            "semifinal": 0.011201177573197342,
+            "final": 0.0033461383643777582,
+            "champion": 0.0009995950765348516
+          }
+        },
+        {
+          "team": "Uzbekistan",
+          "group": "K",
+          "confederation": "AFC",
+          "oddsAmerican": 150000,
+          "groupAdvanceOddsAmerican": 257,
+          "fifaRank": 50,
+          "iso3": "UZB",
+          "impliedProbability": 0.0006662225183211193,
+          "normalizedProbability": 0.00046683287718249903,
+          "groupAdvanceProbability": 0.2801120448179272,
+          "stages": {
+            "roundOf32": 0.2801120448179272,
+            "roundOf16": 0.07792875068951682,
+            "quarterfinal": 0.02168021795698306,
+            "semifinal": 0.006031558911228903,
+            "final": 0.001678013706864378,
+            "champion": 0.00046683287718249903
+          }
+        },
+        {
+          "team": "England",
+          "group": "L",
+          "confederation": "UEFA",
+          "oddsAmerican": 1000,
+          "groupAdvanceOddsAmerican": -1011,
+          "fifaRank": 4,
+          "iso3": "ENG",
+          "impliedProbability": 0.09090909090909091,
+          "normalizedProbability": 0.06370146805917555,
+          "groupAdvanceProbability": 0.90999099909991,
+          "stages": {
+            "roundOf32": 0.90999099909991,
+            "roundOf16": 0.5346376824694998,
+            "quarterfinal": 0.3141101964734653,
+            "semifinal": 0.1845459434749582,
+            "final": 0.10842438620402912,
+            "champion": 0.06370146805917555
+          }
+        },
+        {
+          "team": "Croatia",
+          "group": "L",
+          "confederation": "UEFA",
+          "oddsAmerican": 9000,
+          "groupAdvanceOddsAmerican": -213,
+          "fifaRank": 11,
+          "iso3": "HRV",
+          "impliedProbability": 0.01098901098901099,
+          "normalizedProbability": 0.00770017745770254,
+          "groupAdvanceProbability": 0.6805111821086262,
+          "stages": {
+            "roundOf32": 0.6805111821086262,
+            "roundOf16": 0.2776951913934768,
+            "quarterfinal": 0.11331866595360418,
+            "semifinal": 0.04624178038181966,
+            "final": 0.018869814914304783,
+            "champion": 0.00770017745770254
+          }
+        },
+        {
+          "team": "Panama",
+          "group": "L",
+          "confederation": "CONCACAF",
+          "oddsAmerican": 100000,
+          "groupAdvanceOddsAmerican": 426,
+          "fifaRank": 33,
+          "iso3": "PAN",
+          "impliedProbability": 0.000999000999000999,
+          "normalizedProbability": 0.0007000161325184126,
+          "groupAdvanceProbability": 0.19011406844106463,
+          "stages": {
+            "roundOf32": 0.19011406844106463,
+            "roundOf16": 0.0619773516435299,
+            "quarterfinal": 0.020204670534082692,
+            "semifinal": 0.006586740165001004,
+            "final": 0.002147283021915763,
+            "champion": 0.0007000161325184126
+          }
+        },
+        {
+          "team": "Ghana",
+          "group": "L",
+          "confederation": "CAF",
+          "oddsAmerican": 35000,
+          "groupAdvanceOddsAmerican": 108,
+          "fifaRank": 74,
+          "iso3": "GHA",
+          "impliedProbability": 0.002849002849002849,
+          "normalizedProbability": 0.0019963423038488063,
+          "groupAdvanceProbability": 0.4807692307692308,
+          "stages": {
+            "roundOf32": 0.4807692307692308,
+            "roundOf16": 0.16054483347168116,
+            "quarterfinal": 0.05361125859325566,
+            "semifinal": 0.01790258201276785,
+            "final": 0.005978267459742092,
+            "champion": 0.0019963423038488063
+          }
+        }
+      ]
     }
   ]
 }
