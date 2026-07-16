@@ -2,13 +2,13 @@
   "automationEnabled": true,
   "timezone": "America/Toronto",
   "scheduleLabel": "Daily at 08:00 America/Toronto",
-  "lastAutoUpdateAt": "2026-07-15T09:19:09-04:00",
-  "lastSuccessfulSnapshotDate": "2026-07-15",
-  "nextScheduledUpdateAt": "2026-07-16T08:00:00-04:00",
+  "lastAutoUpdateAt": "2026-07-16T09:25:44-04:00",
+  "lastSuccessfulSnapshotDate": "2026-07-16",
+  "nextScheduledUpdateAt": "2026-07-17T08:00:00-04:00",
   "dataSourceStatus": "fresh",
   "dataSourceLabel": "FOX Sports title odds, ESPN FIFA World Cup scoreboard, and generated daily snapshot history",
   "runMode": "Local scheduled build",
   "buildTarget": "dist",
   "lastBuildStatus": "success",
-  "note": "The daily update script refreshes remote title odds when FOX Sports is reachable, checks completed scores from ESPN, appends or replaces the selected snapshot date, updates automation status, and syncs embedded static JSON for file-based viewing. Title odds refresh kept existing data: https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds: Only parsed 3 title odds Scores checked from ESPN scoreboard (66 completed matches updated)."
+  "note": "The daily update script refreshes remote title odds when FOX Sports is reachable, checks completed scores from ESPN, appends or replaces the selected snapshot date, updates automation status, and syncs embedded static JSON for file-based viewing. Title odds refresh kept existing data: https://www.foxsports.com/stories/soccer/world-cup-2026-champion-odds: Only parsed 2 title odds Scores checked from ESPN scoreboard (66 completed matches updated)."
 }
